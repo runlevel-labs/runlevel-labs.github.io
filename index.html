@@ -227,8 +227,8 @@ Keine Show. Keine Buzzwords. Nur Technik, Klarheit und Dinge, die funktionieren.
           <h3>Schachbrett</h3>
           <p>Ein leichtgewichtiges, browserbasiertes Schachbrett mit PGN-Replay, Koordinaten-Notation und optionaler Engine. Fokus: Klarheit, UI-Feinschliff, Logik.</p>
           <p class="links">
-            <a href="https://klangpfad.github.io/schachbrett/" target="_blank" rel="noopener noreferrer">Live-Demo</a>
-            <a href="https://github.com/Klangpfad/schachbrett" target="_blank" rel="noopener noreferrer">Code</a>
+            <a href="https://runlevel-labs.github.io/schachbrett/" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+            <a href="https://github.com/runlevel-labs/schachbrett" target="_blank" rel="noopener noreferrer">Code</a>
           </p>
           <span class="tag">Web · UI · Logik</span>
         </article>
@@ -286,7 +286,7 @@ Keine Show. Keine Buzzwords. Nur Technik, Klarheit und Dinge, die funktionieren.
       <div class="card contact-card">
         <p><strong>E-Mail:</strong> <a href="mailto:klangpfad@posteo.de">klangpfad@posteo.de</a></p>
         <div class="contact-links">
-          <a class="button" href="https://github.com/Klangpfad" target="_blank" rel="noopener noreferrer">GitHub Profil</a>
+          <a class="button" href="https://github.com/runlevel-labs" target="_blank" rel="noopener noreferrer">GitHub Profil</a>
           <a class="button" href="https://www.runlevel-labs.de/" target="_blank" rel="noopener noreferrer">Runlevel Labs</a>
 		  <a class="button" href="https://x.com/runleveldoteth" target="_blank" rel="noopener noreferrer">X</a>
           <a class="button" href="https://app.ens.domains/runlevel.eth" target="_blank" rel="noopener noreferrer">ENS</a>
@@ -505,7 +505,7 @@ Keine Show. Keine Buzzwords. Nur Technik, Klarheit und Dinge, die funktionieren.
     }
 
     const repoGrid = document.getElementById('repo-grid');
-    const repoEndpoint = 'https://api.github.com/users/Klangpfad/repos?sort=updated&per_page=9';
+    const repoEndpoint = 'https://api.github.com/users/runlevel-labs/repos?sort=updated&per_page=9';
 
     const escapeHtml = (value = '') => value
       .replace(/&/g, '&amp;')
@@ -538,11 +538,11 @@ Keine Show. Keine Buzzwords. Nur Technik, Klarheit und Dinge, die funktionieren.
           const description = repo.description ? escapeHtml(repo.description) : 'Keine Beschreibung hinterlegt.';
           const language = repo.language ? `<span class="mini-tag">${escapeHtml(repo.language)}</span>` : '';
           const liveFallbacks = {
-            'runlevel-tools': 'https://klangpfad.github.io/runlevel-tools/',
-            'ginas-coffee-quest': 'https://klangpfad.github.io/ginas-coffee-quest/',
-            'gina-tv': 'https://klangpfad.github.io/gina-tv',
-            'crypto-kurse': 'https://klangpfad.github.io/crypto-kurse/',
-            schachbrett: 'https://klangpfad.github.io/schachbrett'
+            'runlevel-tools': 'https://runlevel-labs.github.io/runlevel-tools/',
+            'ginas-coffee-quest': 'https://runlevel-labs.github.io/ginas-coffee-quest/',
+            'gina-tv': 'https://runlevel-labs.github.io/gina-tv',
+            'crypto-kurse': 'https://runlevel-labs.github.io/crypto-kurse/',
+            schachbrett: 'https://runlevel-labs.github.io/schachbrett'
           };
           const liveUrl = repo.homepage || liveFallbacks[repo.name.toLowerCase()] || '';
           const homepage = liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noopener noreferrer">Live</a>` : '';
@@ -573,7 +573,7 @@ Keine Show. Keine Buzzwords. Nur Technik, Klarheit und Dinge, die funktionieren.
           <article class="repo-card">
             <h3>GitHub konnte gerade nicht geladen werden</h3>
             <p>Die Seite bleibt bewusst leichtgewichtig. Das Profil ist trotzdem direkt erreichbar.</p>
-            <p class="links"><a href="https://github.com/Klangpfad" target="_blank" rel="noopener noreferrer">github.com/Klangpfad</a></p>
+            <p class="links"><a href="https://github.com/runlevel-labs" target="_blank" rel="noopener noreferrer">github.com/runlevel-labs</a></p>
           </article>`;
 
         setupCardTilt();
