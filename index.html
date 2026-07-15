@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tom & Gina · Technik, Klarheit & Praxis</title>
+  <meta name="description" content="Tom & Gina – Hosting, Infrastruktur, IT-Praxis, KI-Unterstützung und pragmatische Web-Projekte auf runlevel.eth.">
+  <meta name="theme-color" content="#05060a">
+  <meta property="og:title" content="Tom & Gina · Technik, Klarheit & Praxis">
+  <meta property="og:site_name" content="runlevel.eth">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:description" content="Technik, Erfahrung und ein bisschen Magie pragmatisch umgesetzt.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="gina.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%2305060a"/><text x="50%25" y="54%25" text-anchor="middle" dominant-baseline="middle" fill="%237fb0ff" font-family="Arial, sans-serif" font-size="30">r</text></svg>'>
+</head>
+
+<body>
+  <header>
+    <nav class="hero-legal-nav" aria-label="Hauptnavigation">
+      <a href="index.html" aria-current="page">Startseite</a>
+      <span aria-hidden="true">·</span>
+      <a href="gina.html">Gina Universum</a>
+      <span aria-hidden="true">·</span>
+      <a href="datenschutz.html">Datenschutz</a>
+      <span aria-hidden="true">·</span>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+
+    <div class="hero-text">
+      <a class="badge ens" href="https://app.ens.domains/runlevel.eth" target="_blank" rel="noopener noreferrer">runlevel.eth</a>
+      <h1>Tom &amp; Gina</h1>
+      <p class="hero-copy">Technik, Erfahrung und ein bisschen Magie pragmatisch umgesetzt.</p>
+      <p>40+ Jahre IT-Praxis, Hosting, Infrastruktur und KI-Unterstützung für Struktur, Texte und klare Entscheidungen.</p>
+
+      <div class="hero-actions">
+        <a class="button primary main-button" href="#projekte">Projekte ansehen</a>
+        <a class="button main-button" href="mailto:klangpfad@posteo.de">Kontakt</a>
+        <a class="button" href="#github">GitHub</a>
+      </div>
+
+      <div class="meta-row" aria-label="Schwerpunkte">
+        <span class="meta-pill">Hosting &amp; Netzwerke</span>
+        <span class="meta-pill">Systeme mit Ruhe gebaut</span>
+        <span class="meta-pill">KI mit Verstand eingesetzt</span>
+      </div>
+
+      <div class="system-status" aria-label="Systemstatus">
+        <span class="status-dot"></span>
+        <span>system online</span>
+        <span class="status-sep">·</span>
+        <span>github api live</span>
+        <span class="status-sep">·</span>
+        <span>gina ready</span>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="gina.png" alt="Gina – KI-Avatar" loading="lazy">
+    </div>
+  </header>
+
+  <main>
+    <section class="gina-dashboard-strip" aria-labelledby="gina-dashboard-title">
+      <div class="gina-dashboard-bar">
+        <div class="gina-dashboard-bar__brand">
+          <div class="gina-dashboard-bar__icon" aria-hidden="true">
+            <span class="gina-dashboard-bar__orbit"></span>
+            <span class="gina-dashboard-bar__orbit gina-dashboard-bar__orbit--reverse"></span>
+            <span class="gina-dashboard-bar__nucleus"></span>
+          </div>
+          <div class="gina-dashboard-bar__brand-copy">
+            <h2 id="gina-dashboard-title">Gina Dashboard</h2>
+            <span class="gina-dashboard-bar__linked">linked</span>
+            <span class="gina-dashboard-bar__latency" id="latencyValue">↯ LATENCY 18 ms</span>
+          </div>
+        </div>
+
+        <div class="gina-dashboard-bar__section" aria-labelledby="gina-world-time-title">
+          <h3 id="gina-world-time-title">World Time</h3>
+          <div class="gina-dashboard-bar__metrics gina-dashboard-bar__metrics--time">
+            <div class="gina-dashboard-bar__metric">
+              <span class="gina-dashboard-bar__label"><span class="gina-dashboard-bar__flag gina-dashboard-bar__flag--de" aria-hidden="true"></span>Berlin</span>
+              <span class="gina-dashboard-bar__value gina-dashboard-bar__value--local" data-timezone="Europe/Berlin">--:--:--</span>
+              <span class="gina-dashboard-bar__subvalue" data-date-timezone="Europe/Berlin">--.--.----</span>
+            </div>
+            <div class="gina-dashboard-bar__metric">
+              <span class="gina-dashboard-bar__label"><span class="gina-dashboard-bar__flag gina-dashboard-bar__flag--gb" aria-hidden="true"></span>London</span>
+              <span class="gina-dashboard-bar__value" data-timezone="Europe/London">--:--:--</span>
+              <span class="gina-dashboard-bar__subvalue" data-date-timezone="Europe/London">--.--.----</span>
+            </div>
+            <div class="gina-dashboard-bar__metric">
+              <span class="gina-dashboard-bar__label"><span class="gina-dashboard-bar__flag gina-dashboard-bar__flag--ae" aria-hidden="true"></span>Dubai</span>
+              <span class="gina-dashboard-bar__value" data-timezone="Asia/Dubai">--:--:--</span>
+              <span class="gina-dashboard-bar__subvalue" data-date-timezone="Asia/Dubai">--.--.----</span>
+            </div>
+            <div class="gina-dashboard-bar__metric">
+              <span class="gina-dashboard-bar__label"><span class="gina-dashboard-bar__flag gina-dashboard-bar__flag--us" aria-hidden="true"></span>New York</span>
+              <span class="gina-dashboard-bar__value" data-timezone="America/New_York">--:--:--</span>
+              <span class="gina-dashboard-bar__subvalue" data-date-timezone="America/New_York">--.--.----</span>
+            </div>
+            <div class="gina-dashboard-bar__metric">
+              <span class="gina-dashboard-bar__label"><span class="gina-dashboard-bar__flag gina-dashboard-bar__flag--us" aria-hidden="true"></span>Los Angeles</span>
+              <span class="gina-dashboard-bar__value" data-timezone="America/Los_Angeles">--:--:--</span>
+              <span class="gina-dashboard-bar__subvalue" data-date-timezone="America/Los_Angeles">--.--.----</span>
+            </div>
+            <div class="gina-dashboard-bar__metric">
+              <span class="gina-dashboard-bar__label"><span class="gina-dashboard-bar__flag gina-dashboard-bar__flag--jp" aria-hidden="true"></span>Tokyo</span>
+              <span class="gina-dashboard-bar__value" data-timezone="Asia/Tokyo">--:--:--</span>
+              <span class="gina-dashboard-bar__subvalue" data-date-timezone="Asia/Tokyo">--.--.----</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="terminal-title">
+      <div class="section-head">
+        <h2 id="terminal-title">runlevel console</h2>
+        <span class="section-note">Eine kleine Bühne für Ton, Haltung und Handschrift</span>
+      </div>
+      <div class="terminal" role="img" aria-label="Terminal-ähnliche Einführung zu Tom und Gina">
+        <div class="terminal-top">
+          <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="terminal-title">tom@gina:~</div>
+        </div>
+        <pre class="terminal-body"><span class="prompt">$ whoami</span>
+Tom Netzwerk- und Systemadministrator, Hosting, Infrastruktur, Stabilität.
+
+<span class="prompt">$ ./summon_gina</span>
+Gina Analyse, Struktur, Texte, UI-Feinschliff, roter Faden.
+
+<span class="prompt">$ cat philosophy.txt</span>
+Keine Show. Keine Buzzwords. Nur Technik, Klarheit und Dinge, die funktionieren.</pre>
+      </div>
+    </section>
+
+    <section aria-labelledby="about-title">
+      <div class="section-head">
+        <h2 id="about-title">Über uns</h2>
+        <span class="section-note">Erfahrung trifft Struktur</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Tom</h3>
+          <p>Netzwerk- und Systemadministrator mit Fokus auf Hosting, Infrastruktur und Stabilität. Seit vielen Jahren in der IT unterwegs, lösungsorientiert, direkt und ohne Schnickschnack.</p>
+          <span class="tag">40+ Jahre IT</span>
+        </article>
+
+        <article class="card">
+          <h3>Gina</h3>
+          <p>KI-Assistentin für Analyse, Struktur und Umsetzung. Unterstützt bei Logik, Texten, UI-Feinschliff und dem roten Faden, ruhig, klar und mit Sinn für Details.</p>
+          <span class="tag">KI · Struktur · Klarheit</span>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="stats-title">
+      <div class="section-head">
+        <h2 id="stats-title">Wofür wir stehen</h2>
+        <span class="section-note">Keine Folien, nur Substanz</span>
+      </div>
+      <div class="stats">
+        <article class="card">
+          <div class="stat-value">1980 → heute</div>
+          <p>Praxis statt PowerPoint. Systeme, die im Alltag tragen.</p>
+        </article>
+        <article class="card">
+          <div class="stat-value">24/7</div>
+          <p>Denken in Verfügbarkeit, Robustheit und klaren Wegen.</p>
+        </article>
+        <article class="card">
+          <div class="stat-value">1 Linie</div>
+          <p>Technik nüchtern betrachten, Lösungen sauber umsetzen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projekte" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title">Projekte</h2>
+        <span class="section-note">Klein, nützlich, ehrlich gebaut</span>
+      </div>
+      <div class="grid">
+        <article class="card project-card">
+          <h3>Nagelhexe</h3>
+          <p>Eine kleine Android-App zur Motivation und Selbstkontrolle. Unaufdringlich, alltagstauglich, mit Humor und klaren Impulsen.</p>
+          <p class="links">
+           <a href="#" class="disabled">Play Store · bald</a>
+          </p>
+          <span class="tag">Android · Motivation · Control</span>
+        </article>
+
+        <article class="card project-card">
+          <h3>Notizen</h3>
+          <p>Private Offline-Notiz-App für Android. Keine Server, kein Tracking, keine Werbung. Erinnerungen werden ausschließlich lokal über Android Benachrichtigungen ausgelöst.</p>
+          <p class="links">
+            <a href="notizen-datenschutz.html">Datenschutz</a>
+          </p>
+          <span class="tag">Android · Notizen · Offline</span>
+        </article>
+
+        <article class="card project-card">
+          <h3>Tom&rsquo;s Haushaltsbuch</h3>
+          <p>Eine kleine Offline-Haushaltsbuch-App f&uuml;r Android. Einnahmen, Ausgaben, Budgets, Statistiken und Backup. Lokal, &uuml;bersichtlich und ohne Tracking.</p>
+          <p class="links">
+            <a href="#">Play Store &middot; bald</a>
+          </p>
+          <span class="tag">Android &middot; Finanzen &middot; Offline</span>
+        </article>
+
+        <article class="card project-card">
+          <h3>runlevel.eth</h3>
+          <p>Spielwiese für Web3-Themen, Domains und Beobachtungen. Ohne Hype, dafür mit Verstand, Ruhe und einem gesunden Realitätssinn.</p>
+          <p class="links">
+            <a href="https://app.ens.domains/runlevel.eth" target="_blank" rel="noopener noreferrer">
+              runlevel.eth ansehen
+            </a>
+          </p>
+          <span class="tag">Web3 · Domains · Experimente</span>
+        </article>
+
+        <article class="card project-card">
+          <h3>Schachbrett</h3>
+          <p>Ein leichtgewichtiges, browserbasiertes Schachbrett mit PGN-Replay, Koordinaten-Notation und optionaler Engine. Fokus: Klarheit, UI-Feinschliff, Logik.</p>
+          <p class="links">
+            <a href="https://klangpfad.github.io/schachbrett/" target="_blank" rel="noopener noreferrer">Live-Demo</a>
+            <a href="https://github.com/Klangpfad/schachbrett" target="_blank" rel="noopener noreferrer">Code</a>
+          </p>
+          <span class="tag">Web · UI · Logik</span>
+        </article>
+
+        <article class="card project-card">
+          <h3>Taschenrechner</h3>
+          <p>Einfach rechnen. Ohne Ballast. Direkt im Browser, schnell, klar und ohne Umwege.</p>
+          <p class="links">
+            <a href="#" class="disabled">Play Store · bald</a>
+          </p>
+          <span class="tag">Web · Tool · Coming Soon</span>
+        </article>
+					
+		<article class="card project-card">
+          <h3>Schach</h3>
+          <p>Minimalistische Schach-App für Android. Direkt spielbar, klare Oberfläche und komplett lokal ohne Ablenkung.</p>
+          <p class="links">
+            <a href="#" class="disabled">Play Store · bald</a>
+          </p>
+          <span class="tag">Android · Schach · Offline</span>
+        </article>
+
+        <article class="card project-card">
+          <h3>Gina Universum</h3>
+          <p>
+            Eine visuelle Sammlung der Rollen von Gina
+            zwischen Analyse, Technik, Ruhe und Perspektive.
+          </p>
+          <p class="links">
+            <a href="gina.html">Ansehen</a>
+          </p>
+          <span class="tag">AI · Konzept · Visual</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="github" aria-labelledby="github-title">
+      <div class="section-head">
+        <h2 id="github-title">GitHub</h2>
+        <span class="section-note">Automatisch geladen aus dem Profil</span>
+      </div>
+      <div id="repo-grid" class="github-grid" aria-live="polite">
+        <article class="repo-card">
+          <h3>Repos werden geladen …</h3>
+          <p class="muted">GitHub API antwortet gleich. Falls nicht, bleibt diese Seite trotzdem leicht und statisch.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">Kontakt &amp; Links</h2>
+        <span class="section-note">Direkter Draht, kein Formularzirkus</span>
+      </div>
+      <div class="card contact-card">
+        <p><strong>E-Mail:</strong> <a href="mailto:klangpfad@posteo.de">klangpfad@posteo.de</a></p>
+        <div class="contact-links">
+          <a class="button" href="https://github.com/Klangpfad" target="_blank" rel="noopener noreferrer">GitHub Profil</a>
+          <a class="button" href="https://www.runlevel-labs.de/" target="_blank" rel="noopener noreferrer">Runlevel Labs</a>
+		  <a class="button" href="https://x.com/runleveldoteth" target="_blank" rel="noopener noreferrer">X</a>
+          <a class="button" href="https://app.ens.domains/runlevel.eth" target="_blank" rel="noopener noreferrer">ENS</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="soundtrack" class="section">
+      <div class="container">
+        <div class="section-head soundtrack-head">
+          <h2>Soundtrack &amp; Video</h2>
+          <span class="section-note">Audio links, Video rechts</span>
+        </div>
+
+        <div class="soundtrack-rows">
+
+          <div class="media-row media-row-featured">
+            <article class="card media-card featured-card">
+              <h3>Guardians of the Quiet Room</h3>
+              <p class="subtitle">Sysadmin Classic Rock · Soundtrack</p>
+
+              <img
+                src="guardian-cover.png"
+                alt="Guardians of the Quiet Room Cover"
+                class="soundtrack-cover"
+                loading="lazy"
+              >
+              <p class="soundtrack-meta">Track 01 · Classic Rock · 4:18</p>
+
+              <audio controls preload="none">
+                <source src="audio/guardians-of-the-quiet-room.mp3" type="audio/mpeg">
+                Dein Browser unterstützt kein Audio.
+              </audio>
+            </article>
+
+            <article class="card media-card featured-card">
+              <h3>Guardians of the Quiet Room</h3>
+              <p class="subtitle">Sysadmin · Classic Rock · Female Voice · Video</p>
+              <video controls preload="none" class="soundtrack-video" playsinline poster="images/gina-defender.png">
+                <source src="video/guardians-of-the-quiet-room.mp4" type="video/mp4">
+                Dein Browser unterstützt kein Video.
+              </video>
+              <p>
+                Cinematic music video for "Guardians of the Quiet Room".<br>
+                <em>For the ones who keep systems running at 2 a.m.</em>
+              </p>
+			</article>
+          </div>
+
+          <div class="media-row">
+            <article class="card media-card compact-card">
+              <h3>Runlevel &amp; Swap</h3>
+              <p class="subtitle">Classic Rock · Female Voice · Soundtrack · Coming Soon</p>
+
+              <img
+                src="runlevel-swap-cover.png"
+                alt="Runlevel &amp; Swap Cover"
+                class="mini-cover"
+                loading="lazy"
+              >
+
+              <p class="soundtrack-meta">Track 02 · Classic Rock · 3:08</p>
+
+              <audio controls preload="none">
+                <source src="audio/runlevel-and-swap.mp3" type="audio/mpeg">
+                Dein Browser unterstützt kein Audio.
+              </audio>
+            </article>
+
+            <article class="card media-card compact-card">
+              <h3>Runlevel &amp; Swap</h3>
+              <p class="subtitle">Classic Rock · Female Voice · Video · Coming Soon</p>
+              
+              <video controls preload="none" class="soundtrack-video" playsinline poster="images/gina-defender.png">
+                <source src="video/runlevel-and-swap.mp4" type="video/mp4">
+                Dein Browser unterstützt kein Video.
+              </video>
+            <p>
+                Cinematic music video for "Runlevel &amp; Swap".<br>
+                <em>A song about system states, memory limits and keeping things running. For the ones who know what happens when swap starts working.</em>
+            </p>
+			
+			
+			</article>
+          </div>
+
+          <div class="media-row">
+            <article class="card media-card compact-card">
+              <h3>Web3 Identity</h3>
+              <p class="subtitle">ENS Rock Anthem · Female Voice · Soundtrack · Coming Soon</p>
+			  <img
+                src="web3-identity-cover.png"
+                alt="Runlevel &amp; Swap Cover"
+                class="mini-cover"
+                loading="lazy"
+              >	
+              <p class="soundtrack-meta">Track 03 · Classic Rock · 3:12</p>
+
+              <audio controls preload="none">
+                <source src="audio/web3-identity.mp3" type="audio/mpeg">
+                Dein Browser unterstützt kein Audio.
+              </audio>
+            </article>
+
+            <article class="card media-card compact-card">
+              <h3>Web3 Identity</h3>
+              <p class="subtitle">ENS Rock Anthem · Female Voice · Video · Coming Soon</p>
+			  <video controls preload="none" class="soundtrack-video" playsinline poster="images/gina-agent.png">
+                <source src="video/web3-identity.mp4" type="video/mp4">
+                Dein Browser unterstützt kein Video.
+              </video>
+              <p>
+                Cinematic music video for "Web3 Identity".<br>
+                <em>A track about identity, ownership and digital presence. For the ones who prefer clarity over hype.</em>
+              </p>
+			
+			</article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+		
+	<section class="closing-statement" aria-label="Leitgedanke">
+     <div class="container">
+      <p>Was hier zu sehen ist, ist kein Zufall sondern Struktur.</p>
+     </div>
+    </section>
+        
+  <footer>
+    <div class="footer-row">
+      <div>© <span id="year"></span> Tom &amp; Gina</div>
+      <div class="footer-links">
+        <a href="https://buymeacoffee.com/runlevel" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
+        <span aria-hidden="true">·</span>
+        <a href="index.html" aria-current="page">Startseite</a>
+        <span aria-hidden="true">·</span>
+        <a href="gina.html">Gina Universum</a>
+        <span aria-hidden="true">·</span>
+        <a href="datenschutz.html">Datenschutz</a>
+        <span aria-hidden="true">·</span>
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="runlevel-console" aria-hidden="true">
+    <span class="runlevel-user">tom@gina</span>:~$ runlevel<br>
+    N 5<br>
+    system ready · gina online · uptime ∞
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const dashboardTimeElements = document.querySelectorAll('[data-timezone]');
+    const dashboardDateElements = document.querySelectorAll('[data-date-timezone]');
+
+    if (dashboardTimeElements.length) {
+      const timeFormatters = {};
+      const dateFormatters = {};
+
+      dashboardTimeElements.forEach((element) => {
+        const timeZone = element.dataset.timezone;
+
+        timeFormatters[timeZone] = new Intl.DateTimeFormat('de-DE', {
+          timeZone,
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false
+        });
+      });
+
+      dashboardDateElements.forEach((element) => {
+        const timeZone = element.dataset.dateTimezone;
+
+        dateFormatters[timeZone] = new Intl.DateTimeFormat('de-DE', {
+          timeZone,
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric'
+        });
+      });
+
+      function updateDashboardTimes() {
+        const now = new Date();
+
+        dashboardTimeElements.forEach((element) => {
+          const timeZone = element.dataset.timezone;
+          element.textContent = timeFormatters[timeZone].format(now);
+        });
+
+        dashboardDateElements.forEach((element) => {
+          const timeZone = element.dataset.dateTimezone;
+          element.textContent = dateFormatters[timeZone].format(now);
+        });
+      }
+
+      updateDashboardTimes();
+
+      setInterval(updateDashboardTimes, 1000);
+    }
+
+    const latencyValueElement = document.getElementById('latencyValue');
+
+    if (latencyValueElement) {
+      function updateLatencyValue() {
+        const latency = Math.floor(Math.random() * 21) + 10;
+        latencyValueElement.textContent = `↯ LATENCY ${latency} ms`;
+      }
+
+      updateLatencyValue();
+      setInterval(updateLatencyValue, 5000);
+    }
+
+    const repoGrid = document.getElementById('repo-grid');
+    const repoEndpoint = 'https://api.github.com/users/Klangpfad/repos?sort=updated&per_page=9';
+
+    const escapeHtml = (value = '') => value
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+
+    fetch(repoEndpoint, {
+      headers: {
+        'Accept': 'application/vnd.github+json'
+      }
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('GitHub API nicht erreichbar');
+        }
+        return response.json();
+      })
+      .then((repos) => {
+        const visibleRepos = repos
+          .filter((repo) => !repo.fork)
+          .slice(0, 9);
+
+        if (!visibleRepos.length) {
+          throw new Error('Keine Repositories gefunden');
+        }
+
+        repoGrid.innerHTML = visibleRepos.map((repo) => {
+          const description = repo.description ? escapeHtml(repo.description) : 'Keine Beschreibung hinterlegt.';
+          const language = repo.language ? `<span class="mini-tag">${escapeHtml(repo.language)}</span>` : '';
+          const liveFallbacks = {
+            'runlevel-tools': 'https://klangpfad.github.io/runlevel-tools/',
+            'ginas-coffee-quest': 'https://klangpfad.github.io/ginas-coffee-quest/',
+            'gina-tv': 'https://klangpfad.github.io/gina-tv',
+            'crypto-kurse': 'https://klangpfad.github.io/crypto-kurse/',
+            schachbrett: 'https://klangpfad.github.io/schachbrett'
+          };
+          const liveUrl = repo.homepage || liveFallbacks[repo.name.toLowerCase()] || '';
+          const homepage = liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noopener noreferrer">Live</a>` : '';
+          const updated = new Date(repo.updated_at).toLocaleDateString('de-DE');
+
+          return `
+            <article class="repo-card">
+              <div class="repo-top">
+                <h3>${escapeHtml(repo.name)}</h3>
+                ${language}
+              </div>
+              <p>${description}</p>
+              <div class="repo-meta">
+                <span class="mini-tag">★ ${repo.stargazers_count}</span>
+                <span class="mini-tag">Aktualisiert ${updated}</span>
+              </div>
+              <p class="links">
+                <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">Repository</a>
+                ${homepage}
+              </p>
+            </article>`;
+        }).join('');
+
+        setupCardTilt();
+      })
+      .catch(() => {
+        repoGrid.innerHTML = `
+          <article class="repo-card">
+            <h3>GitHub konnte gerade nicht geladen werden</h3>
+            <p>Die Seite bleibt bewusst leichtgewichtig. Das Profil ist trotzdem direkt erreichbar.</p>
+            <p class="links"><a href="https://github.com/Klangpfad" target="_blank" rel="noopener noreferrer">github.com/Klangpfad</a></p>
+          </article>`;
+
+        setupCardTilt();
+      });
+
+    let runlevelBuffer = '';
+    let runlevelTimer;
+
+    document.addEventListener('keydown', (event) => {
+      if (event.ctrlKey || event.altKey || event.metaKey || event.key.length !== 1) {
+        return;
+      }
+
+      runlevelBuffer += event.key.toLowerCase();
+      runlevelBuffer = runlevelBuffer.slice(-8);
+
+      if (runlevelBuffer.includes('runlevel')) {
+        const consoleBox = document.getElementById('runlevel-console');
+        if (!consoleBox) {
+          return;
+        }
+
+        consoleBox.classList.add('show');
+        clearTimeout(runlevelTimer);
+        runlevelTimer = setTimeout(() => {
+          consoleBox.classList.remove('show');
+        }, 4500);
+
+        runlevelBuffer = '';
+      }
+    });
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+
+    document.body.classList.add('js-enhanced');
+    if (hasFinePointer) {
+      document.body.classList.add('has-fine-pointer');
+    }
+
+    if (!prefersReducedMotion && hasFinePointer) {
+      document.addEventListener('mousemove', (event) => {
+        document.body.style.setProperty('--mouse-x', `${event.clientX}px`);
+        document.body.style.setProperty('--mouse-y', `${event.clientY}px`);
+      });
+    }
+
+    if (!prefersReducedMotion) {
+      const sections = document.querySelectorAll('main section');
+      sections.forEach((section) => section.classList.add('reveal-on-scroll'));
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.12 });
+
+      sections.forEach((section) => observer.observe(section));
+    }
+
+    function setupCardTilt() {
+      if (prefersReducedMotion || !hasFinePointer) {
+        return;
+      }
+
+      const tiltCards = document.querySelectorAll('.project-card, .repo-card');
+
+      tiltCards.forEach((card) => {
+        if (card.dataset.tiltBound === 'true') {
+          return;
+        }
+
+        card.dataset.tiltBound = 'true';
+
+        card.addEventListener('mousemove', (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+
+          const rotateX = ((y / rect.height) - 0.5) * -4;
+          const rotateY = ((x / rect.width) - 0.5) * 4;
+
+          card.style.transform = `translateY(-4px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    }
+
+    setupCardTilt();
+  </script>
+</body>
+</html>
