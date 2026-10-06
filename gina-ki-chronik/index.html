@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Eine quellenbasierte Timeline wichtiger Meilensteine der KI-Geschichte."
+    >
+    <title>Gina KI-Chronik · Runlevel Labs</title>
+    <link rel="stylesheet" href="css/style.css?v=20260915-2">
+    <link rel="icon" href="../runlevel-labs-logo.png" type="image/png">
+    <link rel="canonical" href="https://runlevel-labs.github.io/gina-ki-chronik/">
+  </head>
+  <body>
+    <a class="skip-link" href="#timeline">Zur Timeline springen</a>
+
+    <header class="site-header">
+      <div class="shell hero-nav-shell">
+        <a class="site-brand" href="../index.html" aria-label="Runlevel Labs – Startseite">
+          <img src="../runlevel-labs-logo.png" alt="" width="88" height="88">
+          <span>Runlevel Labs</span>
+        </a>
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Hauptnavigation öffnen">
+          <span aria-hidden="true">☰</span> Menü
+        </button>
+        <nav id="main-navigation" class="hero-legal-nav" aria-label="Hauptnavigation">
+          <a href="../index.html">Startseite</a>
+          <a href="../werkstatt.html">Werkstatt</a>
+          <a href="../dieb/index.html">Kissen-404</a>
+          <a href="../gina.html">Gina</a>
+          <a href="index.html" aria-current="page">KI-Chronik</a>
+          <a href="../datenschutz.html">Datenschutz</a>
+          <a href="../impressum.html">Impressum</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro shell" aria-labelledby="page-title">
+        <p class="intro__eyebrow">Gina KI-Chronik</p>
+        <h1 id="page-title">KI-Geschichte im Überblick</h1>
+        <p class="intro__text">
+          Wichtige Meilensteine aus Forschung, Modellen, Werkzeugen, Open Source,
+          Robotik sowie Gesellschaft und Regulierung – sachlich zusammengefasst
+          und mit nachvollziehbaren Quellen.
+        </p>
+
+        <div class="controls" aria-label="Timeline durchsuchen und filtern">
+          <div class="search">
+            <label for="search-input">Timeline durchsuchen</label>
+            <div class="search__field">
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m16.25 16.25 4 4"></path>
+              </svg>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Titel, Jahr oder Beschreibung durchsuchen"
+                autocomplete="off"
+              >
+            </div>
+          </div>
+
+          <fieldset class="filters">
+            <legend>Nach Kategorie filtern</legend>
+            <div id="category-filters" class="filter-list"></div>
+          </fieldset>
+
+          <p id="result-status" class="result-status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="latest shell" aria-labelledby="latest-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="latest-title">Neueste Entwicklungen</h2>
+            <p>Geprüfte, hervorgehobene Entwicklungen – neueste zuerst.</p>
+          </div>
+        </div>
+        <div id="latest-list" class="latest-list"></div>
+      </section>
+
+      <section id="timeline" class="timeline-section shell" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="timeline-title">Historische Timeline</h2>
+            <p>Alle passenden Einträge – chronologisch aufsteigend.</p>
+          </div>
+        </div>
+
+        <div id="loading-state" class="notice" role="status">
+          Timeline wird geladen …
+        </div>
+        <div id="error-state" class="notice notice--error" role="alert" hidden>
+          <strong>Die Timeline konnte nicht geladen werden.</strong>
+          <span>
+            Bitte lade die Seite erneut. Falls das Problem bleibt, versuche es später noch einmal.
+          </span>
+        </div>
+        <ol id="timeline-list" class="timeline" aria-label="KI-Meilensteine"></ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <strong>Powered by Heart ❤️</strong>
+        <span>Tom + Gina + Sir Codi 👻</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer-Navigation">
+          <a href="../index.html">Startseite</a>
+          <a href="../werkstatt.html">Werkstatt</a>
+          <a href="../dieb/index.html">Kissen-404</a>
+          <a href="../gina.html">Gina</a>
+          <a href="index.html" aria-current="page">KI-Chronik</a>
+          <a href="../datenschutz.html">Datenschutz</a>
+          <a href="../impressum.html">Impressum</a>
+      </nav>
+      <div class="footer-meta">
+        <span>© <span id="year">2026</span> Runlevel Labs</span>
+      </div>
+    </footer>
+
+    <script src="../navigation.js" defer></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="data/ai-history.js?v=20261006-6" defer></script>
+    <script src="js/app.js?v=20261006-1" defer></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum – Thomas Harms</title>
+  <meta name="description" content="Impressum der privaten Website von Thomas Harms.">
+  <link rel="canonical" href="https://runlevel-labs.github.io/impressum.html">
+  <meta property="og:title" content="Impressum – runlevel-labs">
+  <meta property="og:site_name" content="runlevel-labs">
+  <meta property="og:description" content="Impressum der privaten Website von Thomas Harms.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://runlevel-labs.github.io/impressum.html">
+  <meta property="og:image" content="https://runlevel-labs.github.io/gina.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="navigation.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="hero-nav-shell">
+      <a class="site-brand" href="index.html" aria-label="Runlevel Labs – Startseite">
+        <img src="runlevel-labs-logo.png" alt="" width="82" height="82">
+        <span>Runlevel Labs</span>
+      </a>
+      <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Hauptnavigation öffnen">
+        <span aria-hidden="true">☰</span> Menü
+      </button>
+      <nav id="main-navigation" class="hero-legal-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Startseite</a>
+        <a href="werkstatt.html">Werkstatt</a>
+        <a href="dieb/index.html">Kissen-404</a>
+        <a href="gina.html">Gina</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" aria-current="page">Impressum</a>
+      </nav>
+    </div>
+
+    <div class="hero-text">
+      <div class="hero-brand-title">Tom &amp; Gina</div>
+      <p class="hero-copy">Technik, Erfahrung und ein bisschen Magie pragmatisch umgesetzt.</p>
+      <p>40+ Jahre IT-Praxis, Hosting, Infrastruktur und KI-Unterst&uuml;tzung f&uuml;r Struktur, Texte und klare Entscheidungen.</p>
+
+      <div class="hero-actions">
+        <a class="button primary main-button" href="index.html#projekte">Projekte ansehen</a>
+        <a class="button main-button" href="mailto:klangpfad@posteo.de">Kontakt</a>
+        <a class="button" href="index.html#github">GitHub</a>
+      </div>
+
+      <div class="meta-row" aria-label="Schwerpunkte">
+        <span class="meta-pill">Hosting &amp; Netzwerke</span>
+        <span class="meta-pill">Systeme mit Ruhe gebaut</span>
+        <span class="meta-pill">KI mit Verstand eingesetzt</span>
+      </div>
+
+      <div class="system-status" aria-label="Systemstatus">
+        <span class="status-dot"></span>
+        <span>system online</span>
+        <span class="status-sep">&middot;</span>
+        <span>github api live</span>
+        <span class="status-sep">&middot;</span>
+        <span>gina ready</span>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="gina.png" alt="Gina - KI-Avatar" loading="lazy">
+    </div>
+  </header>
+
+  <main class="container content-page">
+    <section class="panel">
+      <h1>Impressum</h1>
+
+      <p>Angaben gemäß § 5 DDG</p>
+
+      <p>
+        Thomas Harms<br>
+        Alter Schloßweg 9A<br>
+        94099 Ruhstorf a.d. Rott<br>
+		Deutschland
+      </p>
+
+      <p>
+        E-Mail:
+        <a href="mailto:klangpfad@posteo.de">klangpfad@posteo.de</a>
+      </p>
+
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>
+        Thomas Harms<br>
+        Alter Schloßweg 9A<br>
+        94099 Ruhstorf a.d. Rott<br>
+		Deutschland
+      </p>
+
+      <p>Diese Website wird privat betrieben.</p>
+
+      <h2>KI-Transparenz</h2>
+      <p>
+        Einige Illustrationen und Texte dieser Website wurden mit Unterstützung künstlicher
+        Intelligenz erstellt. Auswahl, Bearbeitung und redaktionelle Verantwortung liegen bei mir.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <strong>Powered by Heart ❤️</strong>
+      <span>Tom + Gina + Sir Codi 👻</span>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer-Navigation">
+      <a href="index.html">Startseite</a>
+      <a href="werkstatt.html">Werkstatt</a>
+      <a href="dieb/index.html">Kissen-404</a>
+      <a href="gina.html">Gina</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="impressum.html" aria-current="page">Impressum</a>
+    </nav>
+
+    <div class="footer-meta">
+      <span>© <span id="year"></span> Runlevel Labs</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

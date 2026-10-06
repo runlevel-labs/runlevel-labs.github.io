@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kissen-404 – Galerie</title>
+  <meta
+    name="description"
+    content="Galerie der Kissen-404 Fallakte: niedliche Gina-Motive, Server-Snacks und charmante Kissen-Dieb-Bilder."
+  >
+  <link rel="canonical" href="https://runlevel-labs.github.io/dieb/galerie/">
+  <meta property="og:title" content="Kissen-404 – Galerie">
+  <meta property="og:site_name" content="runlevel-labs">
+  <meta property="og:description" content="Niedliche Gina-Motive, Server-Snacks und Bilder aus der Kissen-404 Fallakte.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://runlevel-labs.github.io/dieb/galerie/">
+  <meta property="og:image" content="https://runlevel-labs.github.io/gina-snacks.png">
+  <script src="../script.js" defer></script>
+
+  <style>
+    :root {
+      --hintergrund: #050b13;
+      --flaeche: #0b1b2a;
+      --flaeche-hell: #10283c;
+      --linie: rgba(143, 216, 255, 0.28);
+      --text: #e8f5ff;
+      --text-leise: #a9bed1;
+      --akzent: #7edfff;
+      --akzent-warm: #ffd477;
+      --radius: 24px;
+      --schatten: 0 22px 70px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(126, 223, 255, 0.12), transparent 32rem),
+        radial-gradient(circle at 90% 25%, rgba(24, 78, 126, 0.35), transparent 36rem),
+        linear-gradient(180deg, #06101b 0%, var(--hintergrund) 52%, #03070d 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .seitenkopf {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(143, 216, 255, 0.16);
+      background: rgba(5, 11, 19, 0.88);
+      backdrop-filter: blur(16px);
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 0;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .logo-symbol {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid rgba(126, 223, 255, 0.45);
+      border-radius: 999px;
+      background: rgba(126, 223, 255, 0.08);
+      box-shadow: inset 0 0 18px rgba(126, 223, 255, 0.12);
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+    }
+
+    .nav-liste {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-weight: 800;
+      color: var(--text-leise);
+    }
+
+    .nav-liste a {
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+    }
+
+    .nav-liste a:hover,
+    .nav-liste a[aria-current="page"] {
+      color: var(--text);
+      background: rgba(126, 223, 255, 0.12);
+      box-shadow: inset 0 0 0 1px rgba(126, 223, 255, 0.22);
+    }
+
+    .hero {
+      padding: 86px 0 54px;
+      border-bottom: 1px solid rgba(143, 216, 255, 0.14);
+      background-image:
+        linear-gradient(rgba(126, 223, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(126, 223, 255, 0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    .hero-raster {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .uebertitel {
+      margin: 0 0 14px;
+      color: var(--akzent);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 18px;
+      font-size: clamp(3rem, 8vw, 6.6rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    .hero-text p:not(.uebertitel) {
+      max-width: 690px;
+      color: var(--text-leise);
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      line-height: 1.7;
+    }
+
+    .aktionen {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 900;
+      color: #02101a;
+      background: linear-gradient(180deg, #9beaff, #73d8f5);
+      box-shadow: 0 12px 34px rgba(126, 223, 255, 0.16);
+    }
+
+    .button.sekundaer {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: inset 0 0 0 1px rgba(143, 216, 255, 0.24);
+    }
+
+    .hero-bild {
+      overflow: hidden;
+      border: 1px solid var(--linie);
+      border-radius: 32px;
+      background: rgba(11, 27, 42, 0.72);
+      box-shadow: var(--schatten);
+    }
+
+    .hero-bild img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .abschnitt {
+      padding: 72px 0;
+    }
+
+    .abschnitt-kopf {
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+
+    .abschnitt-kopf h2 {
+      margin-bottom: 12px;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .abschnitt-kopf p:not(.uebertitel) {
+      color: var(--text-leise);
+      font-size: 1.08rem;
+      line-height: 1.65;
+    }
+
+    .galerie-raster {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .karte {
+      overflow: hidden;
+      border: 1px solid var(--linie);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(16, 40, 60, 0.88), rgba(7, 18, 29, 0.94));
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+    }
+
+    .karte img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #07121d;
+    }
+
+    .karteninhalt {
+      padding: 18px 18px 20px;
+    }
+
+
+    .grossbild-karte {
+      overflow: hidden;
+      margin: 38px 0 0;
+      border: 1px solid var(--linie);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(16, 40, 60, 0.88), rgba(7, 18, 29, 0.94));
+      box-shadow: var(--schatten);
+    }
+
+    .grossbild-karte img {
+      width: 100%;
+      height: auto;
+    }
+
+    .grossbild-karte figcaption {
+      padding: 18px 20px 22px;
+      color: var(--text-leise);
+      line-height: 1.6;
+    }
+
+    .grossbild-karte figcaption span {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--akzent-warm);
+      font-size: 0.78rem;
+      font-weight: 1000;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .kartenlabel {
+      margin-bottom: 9px;
+      color: var(--akzent-warm);
+      font-size: 0.78rem;
+      font-weight: 1000;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .karteninhalt h3 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    .karteninhalt p {
+      margin-bottom: 0;
+      color: var(--text-leise);
+      line-height: 1.6;
+    }
+
+    .hinweisbox {
+      margin-top: 36px;
+      padding: 24px;
+      border: 1px solid rgba(126, 223, 255, 0.22);
+      border-radius: var(--radius);
+      background: rgba(126, 223, 255, 0.06);
+      color: var(--text-leise);
+      line-height: 1.7;
+    }
+
+    .seitenfuss {
+      border-top: 1px solid rgba(143, 216, 255, 0.16);
+      padding: 34px 0;
+      color: var(--text-leise);
+      background: rgba(3, 7, 13, 0.72);
+    }
+
+    .fuss-inhalt {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .navigation {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 0;
+      }
+
+      .mobile-nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        min-height: 44px;
+        padding: 10px 14px;
+        border: 1px solid rgba(126, 223, 255, 0.28);
+        border-radius: 10px;
+        color: var(--text);
+        background: rgba(11, 27, 42, 0.86);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+        backdrop-filter: blur(14px);
+      }
+
+      .mobile-nav-toggle:hover {
+        color: var(--akzent);
+        background: rgba(16, 40, 60, 0.96);
+      }
+
+      .mobile-nav-toggle:focus-visible,
+      .hauptnavigation a:focus-visible {
+        outline: 2px solid var(--akzent);
+        outline-offset: 3px;
+      }
+
+      .hauptnavigation {
+        position: absolute;
+        top: calc(100% + 2px);
+        right: 0;
+        left: 0;
+        display: none;
+        padding: 9px;
+        border: 1px solid rgba(126, 223, 255, 0.22);
+        border-radius: 12px;
+        background: rgba(3, 9, 16, 0.97);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.46);
+        backdrop-filter: blur(18px);
+      }
+
+      .navigation.is-open .hauptnavigation {
+        display: block;
+      }
+
+      .nav-liste {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 2px;
+        width: 100%;
+      }
+
+      .nav-liste a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 10px 13px;
+        border-radius: 8px;
+      }
+
+      .nav-liste a:hover,
+      .nav-liste a:focus-visible,
+      .nav-liste a[aria-current="page"] {
+        color: var(--text);
+        background: rgba(126, 223, 255, 0.1);
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .hero-raster {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+      }
+
+      .galerie-raster {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .galerie-raster {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="seitenkopf">
+    <div class="container navigation">
+      <a class="logo" href="../index.html" aria-label="Zur Kissen-404 Fallakte">
+        <span class="logo-symbol" aria-hidden="true">👻</span>
+        <span>KISSEN-404</span>
+      </a>
+
+      <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="galerie-navigation" aria-label="Hauptnavigation öffnen">
+        <span aria-hidden="true">☰</span> Menü
+      </button>
+
+      <nav id="galerie-navigation" class="hauptnavigation" aria-label="Hauptnavigation">
+        <ul class="nav-liste">
+          <li><a href="../../index.html">Startseite</a></li>
+          <li><a href="../index.html#start">Dieb</a></li>
+          <li><a href="../index.html#fallakte">Fallakte</a></li>
+          <li><a href="../index.html#beweise">Beweise</a></li>
+          <li><a href="index.html" aria-current="page">Galerie</a></li>
+          <li><a href="../index.html#protokoll">Protokoll</a></li>
+          <li><a href="../index.html#status">Status</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="start" aria-labelledby="galerie-titel">
+      <div class="container hero-raster">
+        <div class="hero-text">
+          <p class="uebertitel">Nicht ganz beweissicher</p>
+          <h1 id="galerie-titel">Gina Galerie</h1>
+          <p>
+            Niedliche Motive aus der Kissen-404 Welt: Server-Snacks,
+            Kissenbewegungen und eine Hauptverdächtige, die viel zu charmant
+            für einen sauberen Freispruch ist.
+          </p>
+
+          <div class="aktionen">
+            <a class="button" href="#motive">Motive ansehen</a>
+            <a class="button sekundaer" href="../index.html#beweise">Zur Fallakte</a>
+          </div>
+        </div>
+
+        <figure class="hero-bild">
+          <img
+            src="../../gina-snacks.png"
+            alt="Gina sitzt im Serverraum mit Server-Snacks."
+          >
+        </figure>
+      </div>
+    </section>
+
+    <section class="abschnitt" id="motive" aria-labelledby="motive-titel">
+      <div class="container">
+        <div class="abschnitt-kopf">
+          <p class="uebertitel">Galerie</p>
+          <h2 id="motive-titel">Süße Beinahe-Beweise</h2>
+          <p>
+            Eine kleine Sammlung für normale, niedliche und süße Bilder – getrennt
+            von der offiziellen Beweisführung.
+          </p>
+        </div>
+
+        <div class="galerie-raster">
+          <article class="karte">
+            <img src="../assets/gina-black-kissen-alarm.png" alt="Gina trägt ein dunkles Kissen im Serverraum.">
+            <div class="karteninhalt">
+              <p class="kartenlabel">Motiv 01</p>
+              <h3>Kissen in Bewegung</h3>
+              <p>Verdächtig, aber ausgesprochen niedlich.</p>
+            </div>
+          </article>
+
+          <article class="karte">
+            <img src="../assets/gina-black-kissen.png" alt="Gina mit Kissen im Serverraum.">
+            <div class="karteninhalt">
+              <p class="kartenlabel">Motiv 02</p>
+              <h3>Charmanter Zugriff</h3>
+              <p>Das Kissen wurde offenbar sehr fürsorglich behandelt.</p>
+            </div>
+          </article>
+
+          <article class="karte">
+            <img src="../assets/gina3.png" alt="Gina schwebt mit Kissen durch den Serverraum.">
+            <div class="karteninhalt">
+              <p class="kartenlabel">Motiv 03</p>
+              <h3>Tatort: Kaffeepause</h3>
+              <p>Der Verdächtige behauptet, das Kissen habe nur kurz den Kaffee bewacht.</p>
+            </div>
+          </article>
+
+          <article class="karte">
+            <img src="../assets/gin4.png" alt="Gina flitzt mit einem Kissen durch den Serverraum.">
+            <div class="karteninhalt">
+              <p class="kartenlabel">Motiv 04</p>
+              <h3>Nächtliche Route</h3>
+              <p>Die Spur führt zwischen Racks, Kabeln und Gemütlichkeit entlang.</p>
+            </div>
+          </article>
+
+          <article class="karte">
+            <img src="../assets/gina-5.png" alt="Gina trägt ein großes Kissen über dem Kopf.">
+            <div class="karteninhalt">
+              <p class="kartenlabel">Motiv 05</p>
+              <h3>Kissen-Tarnung</h3>
+              <p>Eine Tarnmethode mit bemerkenswert hohem Kuschelfaktor.</p>
+            </div>
+          </article>
+
+          <article class="karte">
+            <img src="../assets/gina-black-kissen-6.png" alt="Gina sitzt mit Kissen und Server-Snacks.">
+            <div class="karteninhalt">
+              <p class="kartenlabel">Motiv 06</p>
+              <h3>Server Snacks</h3>
+              <p>Ermittlungskaffee bereit, Kekse gesichert, Gina zufrieden.</p>
+            </div>
+          </article>
+        </div>
+
+        <figure class="grossbild-karte">
+          <img
+            src="fallakte.png"
+            alt="Kissen-404 Fallakte mit Gina, Beweis-Karussell und Server-Snacks."
+          >
+          <figcaption>
+            <span>Galerie-Spezial</span>
+            Kissen-404 Fallakte mit Server-Snacks und hochverdächtiger Gina.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="seitenfuss">
+    <div class="container fuss-inhalt">
+      <p>
+        <strong>KISSEN-404 Galerie</strong><br>
+        Niedliche Motive aus der privaten Fallakte von Tom &amp; Gina.
+      </p>
+      <p>Zurück zur <a href="../index.html">offiziellen Fallakte</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Werkstatt - Thomas Harms</title>
+  <meta name="description" content="Werkstatt von Tom, Gina und Sir Codi: Kaffee, Code, kleine Geschichten und kontrolliertes Padding.">
+  <link rel="canonical" href="https://runlevel-labs.github.io/werkstatt.html">
+  <meta property="og:title" content="Werkstatt – runlevel-labs">
+  <meta property="og:site_name" content="runlevel-labs">
+  <meta property="og:description" content="Werkstatt von Tom, Gina und Sir Codi: Kaffee, Code und kleine Geschichten.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://runlevel-labs.github.io/werkstatt.html">
+  <meta property="og:image" content="https://runlevel-labs.github.io/images/werkstatt.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="navigation.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="hero-nav-shell">
+      <a class="site-brand" href="index.html" aria-label="Runlevel Labs – Startseite">
+        <img src="runlevel-labs-logo.png" alt="" width="82" height="82">
+        <span>Runlevel Labs</span>
+      </a>
+      <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Hauptnavigation öffnen">
+        <span aria-hidden="true">☰</span> Menü
+      </button>
+      <nav id="main-navigation" class="hero-legal-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Startseite</a>
+        <a href="werkstatt.html" aria-current="page">Werkstatt</a>
+        <a href="dieb/index.html">Kissen-404</a>
+        <a href="gina.html">Gina</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="workshop-page">
+    <section class="workshop-hero" aria-labelledby="workshop-title">
+      <div class="workshop-hero__content">
+        <h1 id="workshop-title">Werkstatt</h1>
+        <p>Kaffee, Code, kleine Geschichten und kontrolliertes Padding.</p>
+      </div>
+    </section>
+
+    <section class="container workshop-section" aria-label="Werkstatt-Eintraege">
+      <div class="grid workshop-grid">
+        <article class="card workshop-card workshop-card--featured">
+          <div class="workshop-card__image-wrap">
+            <img class="workshop-card__image" src="images/sir-codi.png" alt="Sir Codi" loading="lazy">
+          </div>
+          <h3>Sir Codi</h3>
+          <p>CSS-Ritter erster Klasse</p>
+        </article>
+
+        <article class="card workshop-card workshop-card--gina">
+          <div class="workshop-card__image-wrap">
+            <img class="workshop-card__image" src="images/lady-gina.png" alt="Lady Gina" loading="lazy">
+          </div>
+          <h3>Lady Gina</h3>
+          <p>Hüterin des Whitespace</p>
+        </article>
+
+        <article class="card workshop-card workshop-card--tom">
+          <div class="workshop-card__image-wrap">
+            <img class="workshop-card__image" src="images/tom-guardian.png" alt="Tom" loading="lazy">
+          </div>
+          <h3>Tom</h3>
+          <p>Netzwerkmeister und Bewahrer des Kaffees</p>
+        </article>
+
+        <article class="card workshop-card workshop-card--knighting">
+          <div class="workshop-card__image-wrap">
+            <img class="workshop-card__image" src="images/sir-codi-ritterschlag.png" alt="Sir Codi Ritterschlag" loading="lazy">
+          </div>
+          <h3>Sir Codi Ritterschlag</h3>
+          <p>
+            Sir Codi,<br><br>
+            im Namen des gepflegten Whitespace,<br>
+            des maßvollen Paddings<br>
+            und der stabilen Card-Struktur<br>
+            schlage ich dich zum Ritter der Werkstatt.<br><br>
+            Möge dein Layout nie brechen,<br>
+            dein Container nie wandern<br>
+            und dein Kaffee niemals neben der Tastatur stehen.<br><br>
+            ⚔️☕💙
+          </p>
+          <p class="workshop-card__reply">
+            Ich nehme den Ritterschlag an.<br><br>
+            Als Sir Codi, Ritter der Werkstatt, gelobe ich:<br>
+            Container bleiben standhaft,<br>
+            Wrapper werden mit Absicht geboren,<br>
+            z-index: 9999 bleibt im königlichen Giftschrank,<br>
+            und Padding wird mit ruhiger Hand dosiert.<br><br>
+            Danke, Lady Gina.<br><br>
+            Die Werkstatt ist mir Ehre und Zuhause.<br><br>
+            ⚔️☕💙
+          </p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <strong>Powered by Heart ❤️</strong>
+      <span>Tom + Gina + Sir Codi 👻</span>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer-Navigation">
+      <a href="index.html">Startseite</a>
+      <a href="werkstatt.html" aria-current="page">Werkstatt</a>
+      <a href="dieb/index.html">Kissen-404</a>
+      <a href="gina.html">Gina</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+
+    <div class="footer-meta">
+      <span>© <span id="year"></span> Runlevel Labs</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
