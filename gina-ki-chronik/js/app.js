@@ -212,8 +212,19 @@ function getFilteredEntries() {
 
 function render() {
   const filtered = getFilteredEntries();
+  const now = new Date();
+  const latestStart = Date.UTC(now.getFullYear(), now.getMonth() - 1, 1);
+  const latestEnd = Date.UTC(now.getFullYear(), now.getMonth() + 1, 1);
   const latest = filtered
-    .filter((entry) => entry.featured && entry.status === "reviewed")
+    .filter((entry) => {
+      const date = normalizeDate(entry.date);
+      return (
+        entry.featured &&
+        entry.status === "reviewed" &&
+        date >= latestStart &&
+        date < latestEnd
+      );
+    })
     .sort((a, b) => normalizeDate(b.date) - normalizeDate(a.date));
   const timeline = [...filtered].sort(
     (a, b) => normalizeDate(a.date) - normalizeDate(b.date),

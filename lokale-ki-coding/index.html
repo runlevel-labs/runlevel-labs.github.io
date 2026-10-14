@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lokale KI fürs Coding · Runlevel Labs</title>
+  <meta name="description" content="Lokale Coding-KI im Entwickleralltag: sechs Modelle mit Speicher-Richtwerten, Quantisierung, Tools, Lizenzen und einer praktischen Einordnung.">
+  <meta name="theme-color" content="#05060a">
+  <link rel="canonical" href="https://runlevel-labs.github.io/lokale-ki-coding/">
+  <meta property="og:title" content="Lokale KI fürs Coding · Runlevel Labs">
+  <meta property="og:description" content="Was hilft beim Programmieren wirklich – auf dem eigenen Rechner oder im Firmennetz?">
+  <meta property="og:site_name" content="runlevel-labs">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://runlevel-labs.github.io/lokale-ki-coding/">
+  <meta property="og:image" content="https://runlevel-labs.github.io/gina.png">
+  <link rel="icon" type="image/png" href="../runlevel-labs-logo.png">
+  <link rel="stylesheet" href="../style.css?v=20260915-2">
+  <link rel="stylesheet" href="css/models.css?v=20261013-2">
+  <script src="../navigation.js" defer></script>
+  <script src="data/models.js?v=20261013-1" defer></script>
+  <script src="js/app.js?v=20261012-1" defer></script>
+</head>
+<body class="coding-page">
+  <header>
+    <div class="hero-nav-shell">
+      <a class="site-brand" href="../index.html" aria-label="Runlevel Labs – Startseite">
+        <img src="../runlevel-labs-logo.png" alt="" width="82" height="82">
+        <span>Runlevel Labs</span>
+      </a>
+      <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Hauptnavigation öffnen">
+        <span aria-hidden="true">☰</span> Menü
+      </button>
+      <nav id="main-navigation" class="hero-legal-nav" aria-label="Hauptnavigation">
+        <a href="../index.html">Startseite</a>
+        <a href="../werkstatt.html">Werkstatt</a>
+        <a href="../dieb/index.html">Kissen-404</a>
+        <a href="../gina.html">Gina</a>
+        <a href="../gina-ki-chronik/index.html">KI-Chronik</a>
+        <a href="index.html" aria-current="page">Lokale KI</a>
+        <a href="../datenschutz.html">Datenschutz</a>
+        <a href="../impressum.html">Impressum</a>
+      </nav>
+    </div>
+    <div class="hero-text">
+      <p class="coding-eyebrow">KI mit Verstand eingesetzt</p>
+      <h1>Lokale KI fürs Coding</h1>
+      <p class="hero-copy">Wie brauchbar ist das Modell im echten Entwickleralltag?</p>
+      <p>Eine kleine Auswahl für Code-Chat, Refactoring, Tests und Repository-Arbeit – auf dem eigenen Rechner oder im Firmennetz. Ein teurer KI-Server ist für den Einstieg nicht nötig.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#modelle">Modelle ansehen</a>
+        <a class="button" href="#praxis">Was passt zu meinem Rechner?</a>
+      </div>
+      <div class="meta-row" aria-label="Schwerpunkte">
+        <span class="meta-pill">Lokal betreiben</span>
+        <span class="meta-pill">Speicher realistisch planen</span>
+        <span class="meta-pill">Code prüfen &amp; testen</span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="../gina.png" alt="Gina – KI-Avatar" loading="lazy">
+    </div>
+  </header>
+
+  <main>
+    <section id="praxis" aria-labelledby="praxis-title">
+      <div class="section-head">
+        <h2 id="praxis-title">Erst die Aufgabe, dann das Modell</h2>
+        <span class="section-note">Kleine Auswahl statt Rangliste</span>
+      </div>
+      <div class="grid coding-guide">
+        <article class="card">
+          <h3>Normaler Entwicklungsrechner</h3>
+          <p>Mit 16 GB RAM ist ein 7B-Modell in 4-Bit-Quantisierung ein vernünftiger Start für kleine Funktionen, Erklärungen und Testentwürfe. CPU-Betrieb geht, eine passende GPU macht die Nutzung angenehmer.</p>
+        </article>
+        <article class="card">
+          <h3>Mehr Dateien, mehr Reserve</h3>
+          <p>Für 14B bis 30B sind eher 24 bis 48 GB RAM oder eine GPU mit ausreichend VRAM sinnvoll. Für Repo-Fragen relevante Dateien suchen und zuführen; ein großes Kontextfenster liest das Repository nicht von allein.</p>
+        </article>
+        <article class="card">
+          <h3>Ein klarer Arbeitsauftrag</h3>
+          <p>Fehlermeldung, betroffene Dateien und gewünschtes Verhalten mitgeben. Kleine Diffs anfordern, Änderungen lesen und Tests ausführen. Agenten brauchen zusätzlich einen lokalen Client mit Datei- und Werkzeugzugriff.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="modelle" aria-labelledby="models-title">
+      <div class="section-head">
+        <h2 id="models-title">Modelle für die Praxis</h2>
+        <span id="data-date" class="section-note"></span>
+      </div>
+      <div class="coding-notes">
+        <p><strong>So sind die Angaben gemeint:</strong> RAM ist eine Empfehlung für den gesamten Rechner bei CPU- oder Unified-Memory-Betrieb. VRAM ist eine separate Schätzung für vollständige GPU-Ausführung. Beides nicht einfach addieren. Bei GPU-Offloading wird Arbeit auf beide Speicher verteilt.</p>
+        <p>Die Speicher-Richtwerte gelten für die genannte 4-Bit-Variante, einen Nutzer und den angegebenen kleinen Kontext. Modellgewichte, Kontext-Cache und Laufzeitpuffer brauchen Platz; IDE, Betriebssystem, größere Kontexte und parallele Anfragen benötigen weitere Reserve. Q5 braucht mehr Speicher. Die Angaben sind Planungswerte, keine hier gemessenen Anforderungen.</p>
+        <p>Die Praxisurteile und Sprach-Auswahl sind redaktionelle Einschätzungen auf Basis der verlinkten Dokumentation, keine eigenen Modelltests. Die Sprachen sind typische Startpunkte, keine zugesicherte Rangfolge. Auch bewusst ältere, leicht lokal betreibbare Modelle sind dabei.</p>
+      </div>
+      <p id="load-state" role="status">Modellauswahl wird geladen …</p>
+      <noscript><p>Für die Modellkarten bitte JavaScript aktivieren. Die vollständigen Angaben stehen auch in der <a href="data/models.json">Modelldatei</a>.</p></noscript>
+      <div id="model-list" class="coding-models"></div>
+    </section>
+
+    <section id="tools" aria-labelledby="tools-title">
+      <div class="section-head">
+        <h2 id="tools-title">Der lokale Werkzeugkasten</h2>
+        <span class="section-note">Vom Desktop bis zum Firmennetz</span>
+      </div>
+      <div class="grid coding-tools">
+        <article class="card">
+          <h3>Ollama</h3>
+          <p>Einfacher Start per Kommandozeile und lokaler API. Die Befehle auf den Karten laden lokale Modellpakete; der erste Download benötigt Internet. Den Kontext bewusst klein einstellen und bei rein lokalem Betrieb Cloud-Funktionen deaktivieren.</p>
+          <p class="links"><a href="https://docs.ollama.com/faq">Ollama-Dokumentation</a></p>
+        </article>
+        <article class="card">
+          <h3>LM Studio</h3>
+          <p>Oberfläche für Modellauswahl, lokalen Chat und einen lokalen API-Server. Eine passende GGUF-Variante und Kontextlänge wählen. Nach dem Download können Chat, Dokumentverarbeitung und Server offline arbeiten.</p>
+          <p class="links"><a href="https://lmstudio.ai/docs/app/offline">Offline-Betrieb</a></p>
+        </article>
+        <article class="card">
+          <h3>llama.cpp</h3>
+          <p>Direkter GGUF-Betrieb auf CPU, GPU oder mit gemischter Ausführung. Gut, wenn Kontext, Quantisierung und Offloading selbst kontrolliert werden sollen. Aktuellen Build und das richtige Chat-Template verwenden.</p>
+          <p class="links"><a href="https://github.com/ggml-org/llama.cpp">Projekt &amp; Dokumentation</a></p>
+        </article>
+        <article class="card">
+          <h3>vLLM</h3>
+          <p>Eher für einen GPU-Server im Firmennetz und mehrere Anfragen geeignet. Modellformat, Quantisierung, Tool-Parser und Parallelität separat planen. Die GGUF-Speicherwerte der Karten sind keine vLLM-Zusage.</p>
+          <p class="links"><a href="https://docs.vllm.ai/en/stable/models/supported_models/">Unterstützte Modelle</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="offline-title">
+      <div class="section-head"><h2 id="offline-title">Lokal heißt: den gesamten Weg lokal halten</h2></div>
+      <div class="card coding-notes">
+        <p>Alle sechs Modellgewichte lassen sich lokal betreiben. Für vertraulichen Code müssen auch IDE-Erweiterung, Chat-Endpunkt, Repo-Suche und gegebenenfalls Embedding-Modell lokal bleiben. Cloud-Fallbacks, Online-Werkzeuge, Telemetrie und Protokollierung bewusst konfigurieren.</p>
+        <p>Im Firmennetz den Modellserver nur für berechtigte Nutzer erreichbar machen und Zugriff sowie Logs nach den eigenen Vorgaben regeln. Mehrere Nutzer erhöhen den Speicherbedarf. Die Modelllizenz und die Lizenz des gewählten Tools sind getrennte Fragen.</p>
+        <p>Die Angaben beschreiben Möglichkeiten des lokalen Betriebs; sie sind keine pauschale Zusage für jede Installation. Hintergrund: <a href="https://docs.ollama.com/faq">Ollama-FAQ</a> und <a href="https://lmstudio.ai/docs/app/offline">LM Studio offline</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><strong>Powered by Heart ❤️</strong><span>Tom + Gina + Sir Codi 👻</span></div>
+    <nav class="footer-links" aria-label="Footer-Navigation">
+      <a href="../index.html">Startseite</a>
+      <a href="../werkstatt.html">Werkstatt</a>
+      <a href="../dieb/index.html">Kissen-404</a>
+      <a href="../gina.html">Gina</a>
+      <a href="../gina-ki-chronik/index.html">KI-Chronik</a>
+      <a href="index.html" aria-current="page">Lokale KI</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+      <a href="../impressum.html">Impressum</a>
+    </nav>
+    <div class="footer-meta"><span>© <span id="year">2026</span> Runlevel Labs</span></div>
+  </footer>
+</body>
+</html>

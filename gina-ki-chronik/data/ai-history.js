@@ -538,5 +538,126 @@ window.GinaChronikData = [
     "sourceUrl": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "embeddinggemma-2-2026",
+    "date": "2026-10-06",
+    "title": "Google veröffentlicht EmbeddingGemma 2 für lokale multimodale Suche",
+    "category": "Open Source",
+    "summary": "Google veröffentlicht EmbeddingGemma 2 unter Apache 2.0. Das kompakte Modell bildet Text, Code, Bilder, Audio und Video in einem gemeinsamen Vektorraum ab und ermöglicht damit die Suche über verschiedene Medien hinweg. Es ist für die lokale Ausführung auf Alltagsgeräten ausgelegt.",
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "openai-mathematics-results-2026",
+    "date": "2026-10-06",
+    "title": "OpenAI veröffentlicht KI-generierte mathematische Forschungsresultate",
+    "category": "Forschung",
+    "summary": "OpenAI veröffentlicht mathematische Forschungsresultate eines internen, noch nicht öffentlich verfügbaren Modells samt Manuskripten, Beweismaterialien und ausgewählten Zusammenfassungen der Modellbegründungen. Ein Teil der Beweise ist in Lean formalisiert und damit maschinell prüfbar. Die Ergebnisse befinden sich in unterschiedlichen Prüfstadien; nicht formalisierte Resultate können noch Fehler enthalten.",
+    "sourceName": "OpenAI – Forschungsbericht und verlinktes Repository",
+    "sourceUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "mistral-large-4-preview-2026",
+    "date": "2026-10-06",
+    "title": "Mistral stellt Large 4 als öffentliche API-Vorschau vor",
+    "category": "Modelle",
+    "summary": "Mistral stellt eine öffentliche API-Vorschau von Mistral Large 4 vor. Das nativ multimodale Mixture-of-Experts-Modell ist auf Programmierung, Agentenaufgaben und das Verständnis verschiedener Medien ausgerichtet. Die Veröffentlichung der Modellgewichte ist für Ende Oktober angekündigt; zum Zeitpunkt der Vorstellung sind sie noch nicht verfügbar. Die Leistungsangaben stammen aus den veröffentlichten Auswertungen des Herstellers.",
+    "sourceName": "Mistral",
+    "sourceUrl": "https://mistral.ai/news/mistral-large-4/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "claude-haiku-5-5-2026",
+    "date": "2026-10-07",
+    "title": "Claude Haiku 5.5 ergänzt die Modellfamilie um ein schnelles kleines Modell",
+    "category": "Modelle",
+    "summary": "Anthropic veröffentlicht Claude Haiku 5.5 für schnelle, häufig wiederkehrende Aufgaben und die Zusammenarbeit mit größeren Modellen in Agentensystemen. Erstmals bietet ein Haiku-Modell einen einstellbaren Denkaufwand. Nach Angaben von Anthropic verbessert es unter anderem die Computersteuerung und Wissensarbeit gegenüber Haiku 4.5 und kostet im Durchschnitt rund 75 Prozent weniger im Betrieb.",
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "liquid-open-d1-2026",
+    "date": "2026-10-07",
+    "title": "Liquid AI veröffentlicht Open d1 für lokale strukturierte Entscheidungen",
+    "category": "Open Source",
+    "summary": "Liquid AI veröffentlicht d1-3B und d1-omni-600M mit offenen Modellgewichten. Die kleinen Entscheidungsmodelle liefern strukturierte Antworten in einem einzigen Rechendurchlauf, ohne Antworttexte zu erzeugen, und können lokal betrieben werden. d1-3B verarbeitet Text und Bilder; die kleinere multimodale Variante unterstützt zusätzlich Audio und ist noch eine experimentelle Forschungsversion.",
+    "sourceName": "Liquid AI",
+    "sourceUrl": "https://www.liquid.ai/blog/d1-open",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "synthid-detector-public-2026",
+    "date": "2026-10-07",
+    "title": "Google öffnet SynthID Detector für die Öffentlichkeit",
+    "category": "Werkzeuge",
+    "summary": "Google macht SynthID Detector öffentlich zugänglich. Das Werkzeug prüft Bilder, Videos und Audiodateien auf KI-Wasserzeichen von Google und unterstützten Partnern, darunter OpenAI, NVIDIA und Kakao; Apple soll folgen. Die Prüfung soll die Herkunft KI-generierter Medien nachvollziehbarer machen. Sie beruht auf Wasserzeichen und erkennt deshalb nicht beliebige KI-Inhalte.",
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/intl/de-de/produkte/suchen-entdecken/synthid-detektor/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "anthropic-oss-scanner-2026",
+    "date": "2026-10-08",
+    "title": "Anthropic startet OSS Scanner für freiwillige KI-Sicherheitsprüfungen",
+    "category": "Werkzeuge",
+    "summary": "Anthropic startet OSS Scanner für geeignete Open-Source-Projekte, die sich freiwillig anmelden. Leistungsfähige Claude-Modelle prüfen den Code regelmäßig und kostenlos auf Schwachstellen. Die Berichte enthalten Fehlernachweise und, soweit verfügbar, mögliche Patches. Die Ergebnisse werden ohne menschliche Vorprüfung ausgeliefert und können fehlerhaft sein; Projektverantwortliche müssen sie selbst überprüfen.",
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "jetbrains-mellum-2-1-2026",
+    "date": "2026-10-08",
+    "title": "JetBrains veröffentlicht Mellum2.1 für lokal betriebene Coding-Agenten",
+    "category": "Open Source",
+    "summary": "JetBrains veröffentlicht Mellum2.1 mit offenen Modellgewichten unter Apache 2.0. Das Mixture-of-Experts-Modell besitzt zwölf Milliarden Parameter, von denen pro Verarbeitungsschritt rund 2,5 Milliarden aktiv sind. Durch verstärktes Training in realen Softwareumgebungen kann es laut JetBrains Code-Repositories untersuchen, Dateien bearbeiten und Änderungen überprüfen. Das Modell lässt sich auf eigener Infrastruktur betreiben.",
+    "sourceName": "JetBrains – offizieller Modellbericht",
+    "sourceUrl": "https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "meta-muse-wonder-2026",
+    "date": "2026-10-12",
+    "title": "Meta stellt Muse Wonder und Muse Wonder Full für Agentenaufgaben vor",
+    "category": "Modelle",
+    "summary": "Meta veröffentlicht Muse Wonder und Muse Wonder Full für anspruchsvolle persönliche und berufliche Agentenaufgaben sowie Softwareentwicklung. Active Memory soll relevante Informationen über Gespräche hinweg verfügbar machen; Active Focus soll das Bearbeiten längerer Aufgaben und die Erholung von Fehlern unterstützen. Muse Wonder ist über die Meta Model API und Muse Code zugänglich, Muse Wonder Full zunächst für Abonnenten von Muse Code.",
+    "sourceName": "Meta AI Research",
+    "sourceUrl": "https://research.meta.ai/blog/muse-wonder",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "anthropic-ai-self-replication-2026",
+    "date": "2026-10-12",
+    "title": "Anthropic untersucht KI-Replikation auf ressourcenarmer Hardware",
+    "category": "Forschung",
+    "summary": "Anthropic untersucht, ob KI-Agenten Modelle auf schwach ausgestatteten Geräten ausführen und deren Verbreitung organisieren können. Im Labor laufen Modellteile verteilt auf einfachen TV-Boxen; leistungsfähigere Agenten bewältigen zudem Replikationsschritte in einer abgeschotteten Testumgebung mit stark vereinfachtem Zugriff. Die Studie belegt keine unkontrollierte Selbstverbreitung kleiner Modelle im Internet.",
+    "sourceName": "Anthropic – Forschungsbericht",
+    "sourceUrl": "https://www.anthropic.com/research/self-replicating-ai",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "gemini-4-argon-broad-availability-2026",
+    "date": "2026-10-13",
+    "title": "Google macht Gemini 4 Argon breiter verfügbar",
+    "category": "Modelle",
+    "summary": "Google erweitert den Zugang zu Gemini 4 Argon nach der zunächst eingeschränkten Bereitstellung für ausgewählte Cyberverteidiger. Entwickler können das Modell für komplexe, mehrstufige Aufgaben über die kostenpflichtige Gemini API nutzen. In der Gemini-App erhalten Google-AI-Pro- und Ultra-Abonnenten Zugang. Damit folgt auf die ursprüngliche Vorstellung die breitere Verfügbarkeit für Entwicklung und Anwendung.",
+    "sourceName": "Google – Entwicklerankündigung",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+    "status": "reviewed",
+    "featured": true
   }
 ];

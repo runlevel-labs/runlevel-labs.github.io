@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-13",
+  "models": [
+    {
+      "id": "qwen25-coder-7b",
+      "name": "Qwen2.5-Coder 7B Instruct",
+      "provider": "Qwen / Alibaba Cloud",
+      "profile": "Kleiner Einstieg",
+      "parameters": "7,6 Mrd. · dichtes Modell",
+      "quantization": "GGUF Q4_K_M; Q5_K_M bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 4,7 GB bei Q4_K_M",
+        "ram": "16 GB System-RAM empfohlen",
+        "vram": "ca. 6–8 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg",
+        "note": "CPU-Betrieb ist möglich, aber langsamer. Die Reserve neben dem Modell wird für Kontext, Betriebssystem und IDE gebraucht."
+      },
+      "strengths": "Überschaubare Funktionen erklären, kleine Fehler eingrenzen und Testentwürfe erzeugen.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "SQL", "Bash"],
+      "useCases": ["Code-Chat", "Refactoring", "Tests"],
+      "repo": "Einzelne Dateien und gezielt ausgewählte Ausschnitte zuführen; für große Repositories einen lokalen Datei- oder Suchzugriff ergänzen.",
+      "agents": "Für beaufsichtigte kleine Schritte; längere Werkzeugketten sind nicht der Schwerpunkt dieser Auswahl.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Ollama ist der einfache Start. Das hier verlinkte 7B-Paket nutzt Q4_K_M.",
+      "ollamaCommand": "ollama run qwen2.5-coder:7b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokal ohne Cloud-Inferenz nutzbar. IDE-Anbindung und Zusatzwerkzeuge müssen ebenfalls lokal arbeiten.",
+      "verdict": "Unser Einstieg für einen normalen Entwicklungsrechner: kleine Aufgaben klar eingrenzen, Änderungen prüfen und Tests selbst ausführen.",
+      "limitations": "Bei neuen APIs und größeren Änderungen passende Dokumentation mitgeben. Kleine Modelle verlieren bei langen Aufgaben leichter den roten Faden.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/qwen2.5-coder:7b" }
+      ]
+    },
+    {
+      "id": "qwen25-coder-14b",
+      "name": "Qwen2.5-Coder 14B Instruct",
+      "provider": "Qwen / Alibaba Cloud",
+      "profile": "Mehr Spielraum für Code-Chat",
+      "parameters": "14,8 Mrd. · dichtes Modell",
+      "quantization": "GGUF Q4_K_M; Q5_K_M bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 9 GB bei Q4_K_M",
+        "ram": "24–32 GB System-RAM empfohlen",
+        "vram": "ca. 11–14 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg",
+        "note": "Eine 16-GB-GPU bietet mehr Reserve als eine 12-GB-Karte. Teilweises GPU-Offloading ist möglich, kostet aber Geschwindigkeit."
+      },
+      "strengths": "Code erklären, abgegrenzte Refactorings entwerfen und zusammenhängende Funktionen samt Testfällen bearbeiten.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "C++", "Go"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests"],
+      "repo": "Mehrere relevante Dateien gezielt mitgeben. Ein großes Kontextfenster ersetzt keine Suche nach den richtigen Stellen.",
+      "agents": "Beaufsichtigte Änderungen bevorzugen; mit kleinen Patches und wiederholten Prüfungen arbeiten.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Das verlinkte Ollama-Paket nutzt Q4_K_M. Für CPU-Betrieb genügend freien RAM einplanen.",
+      "ollamaCommand": "ollama run qwen2.5-coder:14b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokal ohne Cloud-Inferenz nutzbar. Repo-Suche und Embeddings bei Bedarf ebenfalls lokal betreiben.",
+      "verdict": "Ein sinnvoller nächster Versuch, wenn der 7B-Einstieg zu knapp wird und der Rechner genug Speicher hat. Für regelmäßigen Chat ist GPU-Beschleunigung angenehm.",
+      "limitations": "Kein automatischer Ersatz für Projektwissen. Bei komplexen Umbauten Abhängigkeiten und vorhandene Tests ausdrücklich mitgeben.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/qwen2.5-coder:14b" }
+      ]
+    },
+    {
+      "id": "deepseek-coder-v2-lite",
+      "name": "DeepSeek-Coder V2 Lite Instruct",
+      "provider": "DeepSeek",
+      "profile": "Alternative für Code-Aufgaben",
+      "parameters": "16 Mrd. gesamt · 2,4 Mrd. aktiv (MoE)",
+      "quantization": "GGUF Q4_K_M; Ollama-Standardpaket: Q4_0",
+      "memory": {
+        "weightsGb": "ca. 8,9 GB im Ollama-Q4_0-Paket; Q4_K_M abweichend",
+        "ram": "24–32 GB System-RAM empfohlen",
+        "vram": "ca. 12–16 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg",
+        "note": "Richtwerte beziehen sich auf das verlinkte Q4_0-Paket. MoE spart Rechenarbeit, die vollständigen Modellgewichte müssen trotzdem gespeichert werden. Cache-Verhalten hängt vom Backend ab."
+      },
+      "strengths": "Code vervollständigen, Funktionen reparieren und Lösungsvorschläge für klar beschriebene Programmieraufgaben liefern.",
+      "languages": ["Python", "JavaScript", "Java", "C++", "Go", "Rust"],
+      "useCases": ["Code-Chat", "Refactoring", "Tests"],
+      "repo": "Relevante Ausschnitte mitgeben; für Repository-Fragen eine lokale Suche vor den Chat setzen.",
+      "agents": "Eher als Code-Assistent einsetzen. Für Agenten mit vielen Werkzeugaufrufen zuerst Qwen3-Coder oder Devstral prüfen.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Der einfache Ollama-Befehl lädt Q4_0. Für Q4_K_M eine passende GGUF-Datei mit erhaltenem Chat-Template auswählen.",
+      "ollamaCommand": "ollama run deepseek-coder-v2:16b",
+      "license": {
+        "name": "DeepSeek Model License",
+        "note": "Kommerzielle Nutzung wird erlaubt, es gelten eigene Nutzungsbedingungen. Die MIT-Lizenz des Repository-Codes gilt nicht als Modelllizenz.",
+        "url": "https://github.com/deepseek-ai/DeepSeek-Coder-V2/blob/main/LICENSE-MODEL"
+      },
+      "offline": "Modellgewichte lokal betreibbar, ohne DeepSeek-Cloudkonto. Die eigene Modelllizenz vor einem Firmeneinsatz berücksichtigen.",
+      "verdict": "Eine bewusst ältere Alternative für klassische Code-Aufgaben. Interessant zum Vergleich am eigenen Projekt, wenn bereits ein 16B-Modell in den Speicher passt.",
+      "limitations": "Neuere Framework-APIs benötigen zusätzliche Dokumentation. Für verlässliche Werkzeugketten nicht unsere erste Wahl.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/deepseek-coder-v2:16b" }
+      ]
+    },
+    {
+      "id": "devstral-small-2",
+      "name": "Devstral Small 2 · 24B Instruct",
+      "provider": "Mistral AI",
+      "profile": "Repository-Arbeit & Agenten",
+      "parameters": "24 Mrd. · dichtes Modell",
+      "quantization": "GGUF Q4_K_M; Q5_K_M mit mehr Speicher",
+      "memory": {
+        "weightsGb": "ca. 15 GB bei Q4_K_M im Ollama-Paket",
+        "ram": "32 GB System-RAM, mit IDE lieber 48 GB",
+        "vram": "ca. 18–24 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg; Textbetrieb ohne Bilder",
+        "note": "24 GB VRAM schaffen Reserve für kleine Kontexte. Bildverarbeitung und längere Kontexte erhöhen den Bedarf; auf Unified-Memory-Geräten teilen Modell und Anwendungen denselben Speicher."
+      },
+      "strengths": "Für Software-Engineering-Agenten ausgelegt: Dateien untersuchen, Änderungen über mehrere Dateien planen und Werkzeuge einbinden.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "Go", "C++"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Ein lokaler Coding-Agent kann Dateien suchen und lesen. Das Modell allein hat ohne diesen Zugriff keine Kenntnis des Repositories.",
+      "agents": "Passendes Mistral-Chat-Template und Tool-Parser verwenden. Änderungen als Diff prüfen; Shell- und Testzugriff gezielt freigeben.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Ollama ab 0.13.3; aktuelle Backends und passende Templates verwenden. vLLM ist ein eigener Serverweg mit separat geplanter Quantisierung.",
+      "ollamaCommand": "ollama run devstral-small-2:24b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Diese Small-2-Variante steht unter Apache 2.0; nicht auf andere Devstral-Größen übertragen.",
+        "url": "https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512#license"
+      },
+      "offline": "Lokal nutzbar, auch mit einem lokalen Agenten. Bei Agenten zusätzlich Zielserver, Telemetrie und Netzwerkwerkzeuge kontrollieren.",
+      "verdict": "Unser Kandidat für beaufsichtigte Arbeit über mehrere Dateien. Passt eher auf eine gut ausgestattete Workstation als auf einen kleinen Laptop.",
+      "limitations": "Agentenqualität hängt stark von Runtime, Werkzeugen und Prompt ab. Die Speicherangaben hier gelten für Textbetrieb und einen einzelnen Nutzer.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/devstral-small-2:24b" }
+      ]
+    },
+    {
+      "id": "qwen3-coder-30b",
+      "name": "Qwen3-Coder 30B-A3B Instruct",
+      "provider": "Qwen / Alibaba Cloud",
+      "profile": "Agenten auf der Workstation",
+      "parameters": "30,5 Mrd. gesamt · 3,3 Mrd. aktiv (MoE)",
+      "quantization": "GGUF Q4_K_M; Q5_K_M bei größerer Reserve",
+      "memory": {
+        "weightsGb": "ca. 19 GB bei Q4_K_M",
+        "ram": "32–48 GB System-RAM empfohlen",
+        "vram": "ca. 22–26 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg",
+        "note": "24 GB VRAM können bei kleinem Kontext reichen; Reserve prüfen. Die 3,3 Mrd. aktiven Parameter machen daraus kein 3B-Speichermodell. CPU-Offloading benötigt weiterhin RAM und kostet Tempo."
+      },
+      "strengths": "Auf Agenten-Coding und Werkzeugaufrufe ausgerichtet; Kandidat für Repo-Fragen, zusammenhängende Patches und Testarbeit.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "Go", "Rust", "C++"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Lokalen Datei- und Suchzugriff ergänzen. Große Modell-Kontextgrenzen nicht ungeprüft als sinnvolle Laptop-Einstellung übernehmen.",
+      "agents": "Qwen-kompatibles Tool-Calling und korrektes Chat-Template verwenden. Erst kleine Aufgaben mit Diff- und Testkontrolle ausprobieren.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Das verlinkte Ollama-Paket nutzt Q4_K_M. Für Agenten muss auch der Client das Werkzeugformat korrekt verarbeiten.",
+      "ollamaCommand": "ollama run qwen3-coder:30b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/blob/main/LICENSE"
+      },
+      "offline": "Mit lokalen Gewichten und lokal konfiguriertem Agenten ohne Cloud-Inferenz nutzbar. Online-Suche oder externe Werkzeuge ändern diese Aussage.",
+      "verdict": "Ein Kandidat für lokale Agentenarbeit, wenn genug Speicher vorhanden ist. Für einen kleinen Rechner lieber mit 7B beginnen, statt alles in RAM auszulagern.",
+      "limitations": "Lange Kontexte und parallele Nutzer erhöhen den Speicherbedarf erheblich. Repository-Arbeit bleibt auf gute Dateiauswahl und überprüfbare Patches angewiesen.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/qwen3-coder:30b" }
+      ]
+    },
+    {
+      "id": "mellum21-12b-thinking",
+      "name": "Mellum2.1 · 12B-A2.5B Thinking",
+      "provider": "JetBrains",
+      "profile": "Beaufsichtigte Coding-Agenten",
+      "parameters": "12 Mrd. gesamt · 2,5 Mrd. aktiv (MoE)",
+      "quantization": "Offizielles GGUF Q4_K_M; Q6_K bei mehr Speicher",
+      "memory": {
+        "weightsGb": "ca. 8,1 GB bei Q4_K_M",
+        "ram": "24–32 GB System-RAM empfohlen",
+        "vram": "ca. 10–12 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg; ein Nutzer",
+        "note": "Planungswerte für Q4_K_M, keine eigenen Messungen. MoE reduziert aktive Rechenarbeit, nicht die insgesamt zu speichernden Gewichte. Größere Kontexte, Denk-Ausgaben und parallele Anfragen brauchen zusätzliche Reserve."
+      },
+      "strengths": "Laut JetBrains auf Repository-Arbeit mit Werkzeugen trainiert: Fehler eingrenzen, Dateien bearbeiten und Änderungen mit Tests prüfen.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "Bash"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Datei- und Suchzugriff über einen lokalen Client bereitstellen. Das Modell kennt das Repository nicht automatisch; zunächst auf ausgewählte Dateien und kleine Änderungen begrenzen.",
+      "agents": "Thinking-Ausgaben und Werkzeugaufrufe müssen zum Client passen. Die offizielle vLLM-Konfiguration nutzt den Qwen3-Reasoning-Parser und den Hermes-Tool-Parser. Diffs lesen und Tests lokal ausführen.",
+      "tools": ["Ollama (offizielles HF-GGUF)", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (Originalgewichte; separates GPU-Setup)"],
+      "toolNote": "Die offiziellen GGUF-Dateien sind verfügbar. Der Ollama-Befehl lädt Q4_K_M direkt aus dem JetBrains-Repository auf Hugging Face. Aktuelle Runtimes und das enthaltene Chat-Template verwenden; vLLM getrennt mit den Originalgewichten planen.",
+      "ollamaCommand": "ollama run hf.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die offiziellen Modellgewichte und GGUF-Varianten stehen unter Apache 2.0. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking#license"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Cloud-Modell-API möglich. Für vertraulichen Code müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal konfiguriert sein.",
+      "verdict": "Ein kompakter Kandidat für beaufsichtigte Repo-Arbeit und Tests. Interessant, wenn die größeren Agentenmodelle zu viel Speicher brauchen und ein passender lokaler Client vorhanden ist.",
+      "limitations": "Thinking kann längere Ausgaben erzeugen. Geschwindigkeit und Zuverlässigkeit müssen am eigenen Projekt geprüft werden; Agentenqualität hängt auch von Backend, Werkzeugformat und Dateiauswahl ab.",
+      "checkedAt": "2026-10-13",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking" },
+        { "label": "Offizielle GGUF-Dateien / Größe", "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF" }
+      ]
+    }
+  ]
+}

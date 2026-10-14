@@ -1260,6 +1260,8 @@ body.legal::before {
 
 .box h1 {
   margin-top: 0;
+  hyphens: auto;
+  overflow-wrap: anywhere;
 }
 
 .box h2 {
@@ -1803,6 +1805,8 @@ audio {
 
 .panel h1 {
   margin-top: 0;
+  hyphens: auto;
+  overflow-wrap: anywhere;
 }
 
 .panel h2 {
@@ -1837,7 +1841,7 @@ body:has(.workshop-page) > header {
   left: 50%;
   width: min(1080px, 100%);
   max-width: 1080px;
-  padding: 1.55rem 1.5rem 0;
+  padding: 1.2rem 1.5rem 0;
   transform: translateX(-50%);
   z-index: 5;
 }
@@ -1856,6 +1860,12 @@ body:has(.workshop-page) .hero-legal-nav {
   justify-content: flex-end;
   gap: 1rem;
   font-size: 0.88rem;
+}
+
+@media (min-width: 721px) and (max-width: 900px) {
+  body:has(.workshop-page) .hero-legal-nav {
+    gap: 0.85rem;
+  }
 }
 
 .workshop-page {
