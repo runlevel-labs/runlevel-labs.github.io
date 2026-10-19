@@ -213,7 +213,7 @@ function getFilteredEntries() {
 function render() {
   const filtered = getFilteredEntries();
   const now = new Date();
-  const latestStart = Date.UTC(now.getFullYear(), now.getMonth() - 1, 1);
+  const latestStart = Date.UTC(now.getFullYear(), now.getMonth(), 1);
   const latestEnd = Date.UTC(now.getFullYear(), now.getMonth() + 1, 1);
   const latest = filtered
     .filter((entry) => {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-17",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -216,6 +216,43 @@
       "sources": [
         { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking" },
         { "label": "Offizielle GGUF-Dateien / Größe", "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF" }
+      ]
+    },
+    {
+      "id": "lfm25-24b-a2b",
+      "name": "LFM2.5-24B-A2B",
+      "provider": "Liquid AI",
+      "profile": "Weitere Option für lokale Agenten",
+      "parameters": "24 Mrd. gesamt · rund 2 Mrd. aktiv (MoE)",
+      "quantization": "Offizielles GGUF Q4_K_M; Q5_K_M bei mehr Speicher",
+      "memory": {
+        "weightsGb": "ca. 14,5 GB bei Q4_K_M",
+        "ram": "32–48 GB System-RAM als Planungswert",
+        "vram": "ca. 18–24 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg; ein Nutzer",
+        "note": "Schätzungen für Q4_K_M, keine eigenen Messungen. Die rund 2 Mrd. aktiven Parameter reduzieren die Rechenarbeit; alle 24 Mrd. Parameter müssen trotzdem gespeichert werden. Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE benötigen zusätzliche Reserve."
+      },
+      "strengths": "Laut Liquid AI für lokale Agenten, Werkzeugaufrufe und mehrstufige Aufgaben trainiert. Als zusätzlichen Kandidaten für abgegrenzte Code-Fragen und beaufsichtigte Dateiänderungen ausprobieren.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Bash"],
+      "useCases": ["Code-Chat", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Dateien und Suche über einen lokalen Agentenclient bereitstellen. Zunächst wenige relevante Dateien auswählen und Änderungen als kleine Diffs prüfen.",
+      "agents": "Das Modell erzeugt Denk-Ausgaben vor der Antwort. Client und Runtime müssen das enthaltene Chat-Template, Thinking und Werkzeugaufrufe unterstützen; Dateiänderungen und Tests beaufsichtigen.",
+      "tools": ["Ollama (offizielles HF-GGUF)", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (Originalgewichte; separates GPU-Setup)"],
+      "toolNote": "Der Ollama-Befehl lädt das offizielle Q4_K_M-Paket von Hugging Face. Eine aktuelle Runtime mit LFM2-MoE-Unterstützung verwenden. Die Speicherwerte gelten für GGUF, nicht für vLLM mit Originalgewichten.",
+      "ollamaCommand": "ollama run hf.co/LiquidAI/LFM2.5-24B-A2B-GGUF:Q4_K_M",
+      "license": {
+        "name": "LFM Open License v1.0",
+        "note": "Eigene Liquid-Lizenz mit Umsatzgrenze für die kostenlose kommerzielle Nutzung. Bei einem Unternehmensjahresumsatz ab 10 Mio. US-Dollar die gesonderten kommerziellen Bedingungen mit Liquid AI klären.",
+        "url": "https://www.liquid.ai/lfm-license"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Liquid-Cloud-API möglich. Für rein lokalen Betrieb auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal konfigurieren.",
+      "verdict": "Eine zusätzliche Option für lokale Agenten auf einem Rechner mit genügend Speicher. Die Coding-Qualität wurde hier nicht selbst getestet; zunächst an kleinen Aufgaben mit den vorhandenen Modellen vergleichen.",
+      "limitations": "Allgemeines Agentenmodell, keine neue Spitzenempfehlung fürs Coding. Hersteller-Benchmarks ersetzen keine Prüfung am eigenen Projekt. Denk-Ausgaben, größere Kontexte und Werkzeugketten können Laufzeit und Speicherbedarf erhöhen.",
+      "checkedAt": "2026-10-17",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B" },
+        { "label": "Offizielle GGUF-Dateien / Größe", "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-GGUF" },
+        { "label": "Liquid AI – Modellvorstellung", "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b" }
       ]
     }
   ]

@@ -60,7 +60,8 @@ Zulässige Statuswerte:
 - `draft`: Entwurf, noch nicht geprüft
 
 Nur geprüfte Einträge mit `"featured": true` erscheinen unter „Neueste
-Entwicklungen“. Entwürfe werden dort unabhängig von `featured` ausgeschlossen.
+Entwicklungen“, sofern ihr Datum im aktuellen Kalendermonat liegt. Entwürfe
+werden dort unabhängig von `featured` ausgeschlossen.
 Die historische Timeline wird chronologisch aufsteigend sortiert, „Neueste
 Entwicklungen“ chronologisch absteigend.
 

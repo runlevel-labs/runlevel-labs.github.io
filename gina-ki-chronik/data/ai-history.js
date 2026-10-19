@@ -659,5 +659,60 @@ window.GinaChronikData = [
     "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "gemini-4-argon-robotics-2026",
+    "date": "2026-10-13",
+    "title": "Google zeigt Gemini 4 Argon für Robotik",
+    "category": "Robotik",
+    "summary": "Google demonstriert, wie Gemini 4 Argon räumliche Aufgaben plant, physikalische Simulationen aus Kameradaten erstellt und Roboter steuert. Das Modell verbindet visuelle Wahrnehmung, Planung und Codegenerierung: In einem Beispiel übt ein Spot-Roboter das Bedienen eines Treteimers zunächst in einer vom Modell erstellten Simulation. Die gezeigten Anwendungen sind Herstellerdemonstrationen und belegen keinen breiten Alltagseinsatz.",
+    "sourceName": "Google – Entwicklerbericht",
+    "sourceUrl": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "meta-muse-spark-open-2026",
+    "date": "2026-10-15",
+    "title": "Meta veröffentlicht die Modellgewichte von Muse Spark Open",
+    "category": "Open Source",
+    "summary": "Meta veröffentlicht Muse Spark Open mit offenen Modellgewichten für Programmierung und längerfristige Agentenaufgaben. Das nativ multimodale Mixture-of-Experts-Modell besitzt 816 Milliarden Parameter, von denen pro Verarbeitungsschritt 42 Milliarden aktiv sind, und ein Kontextfenster von einer Million Tokens. Es kann auf eigener Infrastruktur betrieben und angepasst werden. Die Gewichte stehen unter der Muse Model License mit eingeschränkten kommerziellen Nutzungsbedingungen.",
+    "sourceName": "Meta AI Research",
+    "sourceUrl": "https://research.meta.ai/blog/muse-spark-open",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "reflection-beam-open-weights-2026",
+    "date": "2026-10-16",
+    "title": "Reflection veröffentlicht die Modellgewichte von Beam unter Apache 2.0",
+    "category": "Open Source",
+    "summary": "Reflection veröffentlicht nach einer eingeschränkten Vorschau die Modellgewichte von Beam unter Apache 2.0. Das Mixture-of-Experts-Modell mit 501 Milliarden Parametern, von denen pro Verarbeitungsschritt rund 23 Milliarden aktiv sind, ist für Programmierung, Schlussfolgern und längerfristige Agentenaufgaben ausgelegt. Die Veröffentlichung ermöglicht den Betrieb auf eigener Infrastruktur und die Anpassung des Modells; ergänzend stehen Dokumentation und Integrationen für bestehende Werkzeuge bereit.",
+    "sourceName": "Reflection – offizielle Veröffentlichung",
+    "sourceUrl": "https://reflection.ai/blog/beam-is-available",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "claude-quantum-circuit-design-2026",
+    "date": "2026-10-16",
+    "title": "Claude entwirft effizientere Quantenschaltungen",
+    "category": "Forschung",
+    "summary": "Anthropic stellt eine Studie vor, in der Claude Schaltungsentwürfe für acht grundlegende Quantenrechenaufgaben entwickelt und mit einem automatischen Prüfer verbessert. Laut Forschungspapier benötigen die Entwürfe bei sieben der acht Aufgaben weniger Qubits und Toffoli-Gatter als die bisherigen Vergleichsverfahren. Einzelne mathematische Ergebnisse wurden zusätzlich in Lean formalisiert. Die Arbeit betrifft rechnerisch geprüfte Schaltungsentwürfe und belegt noch keinen praktischen Einsatz auf Quantenhardware.",
+    "sourceName": "Anthropic – Forschungsbericht und verlinktes Forschungspapier",
+    "sourceUrl": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "claude-ecdsa-curve-origins-2026",
+    "date": "2026-10-16",
+    "title": "Claude rekonstruiert die Herkunft von NIST-Kurvenparametern",
+    "category": "Forschung",
+    "summary": "Anthropic berichtet, dass ein internes Claude-Forschungsmodell die lange ungeklärte Herkunft der Ausgangswerte mehrerer standardisierter elliptischer Kurven rekonstruiert hat. Die Werte lassen sich durch den Pseudozufallszahlengenerator lrand48 mit Unix-Zeitstempeln als Startwert nachbilden; der Bericht veröffentlicht Code zum Nachrechnen. Das Ergebnis ist kein kryptografischer Bruch von ECDSA und kein Nachweis einer Schwachstelle in den Kurven. Einige Auswahlkriterien und die Herkunft weiterer Kurvenparameter bleiben offen.",
+    "sourceName": "Anthropic – Forschungsbericht mit Reproduktionscode",
+    "sourceUrl": "https://www.anthropic.com/research/ecdsa-curve-origins",
+    "status": "reviewed",
+    "featured": true
   }
 ];
