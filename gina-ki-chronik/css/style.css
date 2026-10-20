@@ -350,10 +350,23 @@ h3 {
 
 .card__meta {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 0.65rem;
   margin-top: auto;
+}
+
+.card__meta .category,
+.card__meta .status {
+  flex-shrink: 0;
+}
+
+.card__meta .source {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .category,

@@ -713,5 +713,16 @@
     "sourceUrl": "https://www.anthropic.com/research/ecdsa-curve-origins",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "dream-labs-dream-1-2026",
+    "date": "2026-10-19",
+    "title": "Dream Labs öffnet Dream-1 für die Übertragung von Fähigkeiten auf neue Roboter",
+    "category": "Robotik",
+    "summary": "Dream Labs macht Dream-1 über eine öffentliche API verfügbar. Das KI-Modell lernt, zukünftige Bilder und Roboteraktionen gemeinsam vorherzusagen, und kann laut Hersteller zuvor ungesehene Zweiarm-Roboter mit Parallelgreifern ohne roboterspezifisches Nachtraining steuern. Die Übertragbarkeit hängt von der Roboterkonfiguration und deren Bewegungsberechnung ab. Dream-1 ist eine Forschungs-Beta mit schwankender Leistung; die veröffentlichten Tests und Demonstrationen belegen noch keinen breiten Alltagseinsatz.",
+    "sourceName": "Dream Labs – offizieller Forschungsbericht",
+    "sourceUrl": "https://dreamlabs.ai/research/dream-1/",
+    "status": "reviewed",
+    "featured": true
   }
 ]
