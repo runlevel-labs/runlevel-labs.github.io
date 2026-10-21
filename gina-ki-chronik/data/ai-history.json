@@ -724,5 +724,27 @@
     "sourceUrl": "https://dreamlabs.ai/research/dream-1/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "minimax-m3-1-flash-2026",
+    "date": "2026-10-19",
+    "title": "MiniMax veröffentlicht M3.1 Flash",
+    "category": "Modelle",
+    "summary": "MiniMax veröffentlicht M3.1 Flash für Programmierung, Agentenaufgaben und Computersteuerung über die MiniMax API, M Plan und MiniMax Code. Laut Hersteller verbessert das Modell die Leistung in diesen Aufgaben, beschleunigt die Online-Inferenz auf nahezu das Dreifache und senkt die Nutzungskosten für Agentenaufgaben gegenüber dem Vorgänger um 70 Prozent. Die Modellgewichte sind angekündigt, aber noch nicht veröffentlicht.",
+    "sourceName": "MiniMax – offizielle Veröffentlichung",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m31f",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "metr-anthropic-risk-report-review-2026",
+    "date": "2026-10-20",
+    "title": "METR prüft Anthropics Sicherheitsbewertung",
+    "category": "Gesellschaft und Regulierung",
+    "summary": "METR veröffentlicht eine externe Prüfung des Abschnitts zu Fehlsteuerung in Anthropics Risikobericht vom August 2026. Für die untersuchten, bis zum 15. Juli 2026 eingesetzten Modelle schätzt METR das Risiko katastrophaler Schäden durch Fehlsteuerung als niedrig ein, vor allem wegen begrenzter Modellfähigkeiten. Zugleich sieht METR deutliche Lücken in Nachweisen, Prüfmethoden und Überwachung und bezweifelt, dass höhere Risiken damit zuverlässig erkannt würden. Der Bericht trägt zur externen KI-Sicherheitsbewertung bei, liefert jedoch keinen abschließenden Sicherheitsnachweis.",
+    "sourceName": "METR – externer Prüfbericht",
+    "sourceUrl": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/",
+    "status": "reviewed",
+    "featured": true
   }
 ]
