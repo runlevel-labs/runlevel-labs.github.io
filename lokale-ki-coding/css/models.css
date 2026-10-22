@@ -27,6 +27,19 @@
   margin-top: 1.5rem;
 }
 
+@media (min-width: 721px) {
+  #lfm25-24b-a2b,
+  #bonsai2-9b,
+  #spark-x26-4b,
+  #recursive-flint-40b {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 7;
+    row-gap: 0;
+    align-self: stretch;
+  }
+}
+
 .coding-model,
 .coding-guide .card,
 .coding-tools .card {

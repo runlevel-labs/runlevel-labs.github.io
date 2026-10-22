@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-22",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -327,6 +327,71 @@
         { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/XHToken/Spark-X2.6-4B" },
         { "label": "Offizielle GGUF-Dateien / Größe", "url": "https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF/tree/main" },
         { "label": "XHToken – Veröffentlichung / lokale Runtimes", "url": "https://github.com/XHToken/Spark-X2.6" }
+      ]
+    },
+    {
+      "id": "recursive-flint-40b",
+      "name": "Recursive Flint · 40B-A2.5B",
+      "provider": "Recursive",
+      "profile": "Lokale Coding-Agenten mit mehr Speicher",
+      "parameters": "39,8 Mrd. gesamt · rund 2,5 Mrd. aktiv (MoE)",
+      "quantization": "Offizielles GGUF Q4_1; NVIDIA-NVFP4 als separates Paket",
+      "memory": {
+        "weightsGb": "ca. 26 GB bei Q4_1 im verlinkten GGUF- und Ollama-Paket",
+        "ram": "48–64 GB System-RAM als Planungswert",
+        "vram": "48 GB VRAM als konservativer Planungswert; passende Runtime erforderlich",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer",
+        "note": "Planungswerte für Q4_1, keine eigenen Messungen. Recursive nennt für das Q4_1-Paket mindestens 48 GB Unified Memory auf Apple Silicon. Die rund 2,5 Mrd. aktiven Parameter reduzieren die Rechenarbeit, nicht die insgesamt zu speichernden Gewichte. Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE brauchen Reserve. Das separate NVIDIA-NVFP4-Paket ist ca. 22,9 GB groß und hat eigene Hardwareanforderungen; die Formate nicht gleichsetzen."
+      },
+      "strengths": "Für Coding-Agenten ausgelegt: Code untersuchen, Fehler beheben, Funktionen umsetzen und Tests schreiben. Unterstützt laut Hersteller Schlussfolgern und Werkzeugnutzung über mehrere Schritte.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Bash"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Repo-Fragen",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Datei- und Suchzugriff über einen lokalen Agentenclient bereitstellen. Zunächst relevante Dateien auswählen, Aufgaben eingrenzen und Änderungen als kleine Diffs prüfen.",
+      "agents": "Client und Runtime müssen Thinking, Werkzeugaufrufe und das Flint-Chat-Template unterstützen. Beim Fortsetzen von Gesprächen die Denk-Ausgaben entsprechend der Modellkarte erhalten; Änderungen und Tests beaufsichtigen.",
+      "tools": [
+        "Ollama (offizielles HF-GGUF)",
+        "llama.cpp (GGUF)",
+        "LM Studio (passende Flint-Runtime)"
+      ],
+      "toolNote": "Der Ollama-Befehl lädt ausdrücklich das offizielle Q4_1-GGUF mit ca. 26 GB von Hugging Face. Eine aktuelle Runtime mit Flint-Unterstützung verwenden. Dieses Paket ist vor allem für Apple Silicon mit Metal dokumentiert; andere Backends vorab prüfen. NVIDIA-NVFP4 benötigt ein separates Paket und passende CUDA-Unterstützung.",
+      "ollamaCommand": "ollama run hf.co/RecursiveSI/flint-int4-gguf:Q4_1",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die veröffentlichten Modellgewichte und offiziellen quantisierten Pakete stehen unter Apache 2.0. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Recursive-Cloud-API möglich. Für vertraulichen Code müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Ein zusätzlicher Kandidat für beaufsichtigte Repo-Arbeit auf einem Rechner mit mehr Speicher. Die Coding-Qualität wurde hier nicht selbst getestet; zunächst am eigenen Projekt mit den vorhandenen Agentenmodellen vergleichen.",
+      "limitations": "Hersteller-Benchmarks und Geschwindigkeitsangaben hängen von Hardware, Quantisierung und Agentenclient ab. Kein Modell für einen kleinen 16-GB-Rechner. Lange Kontexte und Denk-Ausgaben erhöhen den Bedarf; die maximale Kontextlänge ist keine sinnvolle Standardeinstellung für jeden Rechner.",
+      "checkedAt": "2026-10-22",
+      "sources": [
+        {
+          "label": "Offizielle Modellkarte",
+          "url": "https://huggingface.co/RecursiveSI/flint"
+        },
+        {
+          "label": "Offizielles Q4_1-GGUF / Hardware",
+          "url": "https://huggingface.co/RecursiveSI/flint-int4-gguf"
+        },
+        {
+          "label": "Ollama-Q4_1-Paket / Größe",
+          "url": "https://ollama.com/library/flint:40b-a2b-q4_1"
+        },
+        {
+          "label": "Offizielles NVIDIA-NVFP4-GGUF",
+          "url": "https://huggingface.co/RecursiveSI/flint-nvfp4-gguf"
+        }
       ]
     }
   ]

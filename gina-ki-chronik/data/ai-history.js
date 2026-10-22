@@ -747,5 +747,49 @@ window.GinaChronikData = [
     "sourceUrl": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "mistral-timestral-2026",
+    "date": "2026-10-15",
+    "title": "Mistral veröffentlicht Timestral für Zeitreihenprognosen",
+    "category": "Modelle",
+    "summary": "Mistral veröffentlicht Timestral, eine Familie vortrainierter Modelle für probabilistische Prognosen mehrerer zusammenhängender Zeitreihen. Die Modelle können ohne aufgabenspezifisches Nachtraining auf unbekannte Daten angewendet werden und berücksichtigen zusätzliche Einflussgrößen, darunter bekannte zukünftige Werte. Die vier Größen mit fünf bis 209 Millionen Parametern laufen auf CPUs. Mistral berichtet führende Ergebnisse auf öffentlichen Prognose-Benchmarks; ein ausführlicher technischer Bericht ist noch angekündigt.",
+    "sourceName": "Mistral – offizieller Forschungsbericht",
+    "sourceUrl": "https://mistral.ai/news/timestral/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "nvidia-isaac-platform-expansion-2026",
+    "date": "2026-10-21",
+    "title": "NVIDIA erweitert Isaac für KI-Training und Robotersteuerung",
+    "category": "Robotik",
+    "summary": "NVIDIA erweitert die Isaac-Plattform um das allgemein verfügbare Isaac Lab 3.0 für das Training von Roboterverhalten und die offene Laufzeitumgebung Isaac OS zur Verbindung von KI, Sensoren und Steuerung. Neue Referenzabläufe unterstützen das Nachtrainieren von GR00T-Modellen mit bestärkendem Lernen sowie die Erzeugung synthetischer Trainingsdaten mit Cosmos. Damit verbindet die Plattform das Lernen in Simulationen mit der Ausführung auf physischen Robotern. Der ebenfalls vorgestellte Referenzhumanoide Agile ONE SN ist für Anfang 2027 angekündigt; die Meldung belegt keinen breiten realen Einsatz.",
+    "sourceName": "NVIDIA – offizielle Plattformankündigung",
+    "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Advances-Isaac-Platform-for-General-Purpose-Robotics-With-New-Reference-Humanoid-Frameworks-Simulation-Pipelines-and-Data/default.aspx",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "recursive-flint-2026",
+    "date": "2026-10-21",
+    "title": "Recursive veröffentlicht Flint für lokal betriebene Coding-Agenten",
+    "category": "Open Source",
+    "summary": "Recursive veröffentlicht die Modellgewichte von Flint unter Apache 2.0. Das Mixture-of-Experts-Modell mit rund 40 Milliarden Parametern, von denen pro Token etwa 2,5 Milliarden aktiv sind, ist für Codeanalyse, Fehlerbehebung und mehrstufige Agentenaufgaben auf eigener Hardware ausgelegt. Laut Hersteller unterstützte das automatisierte Forschungssystem Eureka Machine die Entwicklung von Architektur, Training und Inferenz. Die veröffentlichten Leistungs- und Geschwindigkeitsangaben stammen aus Herstellervergleichen und hängen von Hardware und Laufzeitumgebung ab.",
+    "sourceName": "Recursive – offizielle Veröffentlichung",
+    "sourceUrl": "https://recursive.com/updates/introducing-recursive-flint",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "ibm-granite-speech-5-2026",
+    "date": "2026-10-21",
+    "title": "IBM stellt Granite Speech 5.0 für offene Spracherkennung und Übersetzung vor",
+    "category": "Open Source",
+    "summary": "IBM stellt Granite Speech 5.0 2B und Aktualisierungen seiner Turbo-CTC- und Plus-Modelle vor. Das neue Modell mit zwei Milliarden Parametern transkribiert sechs Sprachen einschließlich Deutsch und unterstützt Übersetzungen zwischen diesen Sprachen und Englisch. Laut IBM verbessert es die Erkennung bei Störgeräuschen und Hall sowie längere Sprachübersetzungen. Die separat aktualisierten Modelle ergänzen schnelle lokale Transkription beziehungsweise verbesserte Sprecherzuordnung und Zeitstempel. Alle vorgestellten Modelle stehen unter Apache 2.0; die Leistungsangaben stammen aus den veröffentlichten Auswertungen von IBM.",
+    "sourceName": "IBM Granite – offizielle Ankündigung auf Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+    "status": "reviewed",
+    "featured": true
   }
 ];
