@@ -791,5 +791,27 @@ window.GinaChronikData = [
     "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "hugging-face-carbon-x-2026",
+    "date": "2026-10-22",
+    "title": "Hugging Face veröffentlicht Carbon-X für DNA-Analysen",
+    "category": "Forschung",
+    "summary": "Hugging Face und Forschungspartner veröffentlichen Carbon-X, ein Sprachmodell mit 14,8 Milliarden Parametern, das DNA-Sequenzen und natürliche Sprache gemeinsam verarbeitet. Es beantwortet Fragen zu Sequenzmerkmalen und möglichen Mutationseffekten und sagt nachfolgende DNA-Basen voraus. Die Modellgewichte stehen unter Apache 2.0 und können auf eigener Infrastruktur betrieben werden. Die veröffentlichten DNA-Benchmarks stammen vom Forschungsteam; Carbon-X ist nicht klinisch validiert und nicht für medizinische Entscheidungen vorgesehen.",
+    "sourceName": "Hugging Face Biology Research – offizielle Modellkarte",
+    "sourceUrl": "https://huggingface.co/HuggingFaceBio/Carbon-X",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "anthropic-claude-duet-preview-2026",
+    "date": "2026-10-21",
+    "title": "Anthropic startet eine Forschungsvorschau von Claude Duet",
+    "category": "Werkzeuge",
+    "summary": "Anthropic stellt Claude Duet als proaktiven, auf Claude Opus 5.5 basierenden Agenten vor. Die Anwendung erstellt morgendliche Übersichten aus verbundenen Apps, meldet relevante Entwicklungen und bearbeitet delegierte Aufgaben auf einem eigenen virtuellen Computer weiter, auch wenn die Geräte des Nutzers ausgeschaltet sind. Vor Aktionen wie dem Versenden von Nachrichten oder dem Löschen von Daten verlangt sie laut Anbieter eine Freigabe. Die Forschungsvorschau startet über eine Warteliste für Pro- und Max-Abonnenten in den USA; eine allgemeine Verfügbarkeit ist damit noch nicht gegeben.",
+    "sourceName": "Anthropic – offizielle Claude-Duet-Ankündigung",
+    "sourceUrl": "https://claude.com/resources/articles/claude-duet",
+    "status": "reviewed",
+    "featured": true
   }
 ];
