@@ -812,5 +812,27 @@
     "sourceUrl": "https://claude.com/resources/articles/claude-duet",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "moonshot-kimi-k3-1-pro-2026",
+    "date": "2026-10-23",
+    "title": "Moonshot veröffentlicht Kimi K3.1 Pro für Coding und Agentenaufgaben",
+    "category": "Modelle",
+    "summary": "Moonshot stellt Kimi K3.1 Pro mit einem Kontextfenster von einer Million Tokens vor. Das auf Kimi K3 aufbauende Modell ist für Softwareentwicklung, 3D-Erstellung, Finanzanalyse und mehrstufige Agentenaufgaben ausgelegt. K3.1 Pro und eine schnellere Highspeed-Variante sind über die Kimi-Anwendungen, Kimi Code und die API verfügbar. Die vollständigen Modellgewichte sind bis zum 4. November 2026 angekündigt und zum Start noch nicht veröffentlicht. Die Leistungsangaben stammen aus den veröffentlichten Auswertungen des Herstellers.",
+    "sourceName": "Moonshot AI – offizieller Kimi-K3.1-Pro-Bericht",
+    "sourceUrl": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "google-nexus-ai-tb-screening-practice-report-2026",
+    "date": "2026-10-23",
+    "title": "Google berichtet über KI-gestütztes Tuberkulose-Screening im klinischen Einsatz",
+    "category": "Forschung",
+    "summary": "Google Research berichtet über den Übergang seiner Röntgen-KI von Forschung und klinischer Prüfung zum Einsatz mit dem Partner Nexus AI. Laut Bericht nutzen rund 40 Gesundheitseinrichtungen das System; mehr als 90 medizinische Fachkräfte haben damit über 25.000 Röntgenaufnahmen ausgewertet. Mobile Röntgensysteme mit offline arbeitender KI unterstützen auch Untersuchungen in einem südafrikanischen Bergwerk. Auffällige Befunde führen zu weiteren Tests, die klinischen Entscheidungen bleiben bei medizinischen Fachkräften. Ergänzend beschreibt Google offene Modelle wie MedGemma und MedSigLIP zur Anpassung an lokale Gesundheitssysteme. Die Einsatzangaben stammen von Google und seinen Partnern.",
+    "sourceName": "Google Research – Praxisbericht zum Tuberkulose-Screening",
+    "sourceUrl": "https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/",
+    "status": "reviewed",
+    "featured": true
   }
 ]
