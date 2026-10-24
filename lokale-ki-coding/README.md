@@ -38,7 +38,7 @@ Stylesheets in `index.html` erhöhen und JSON, Browserdaten und Seite gemeinsam
 ## Prüfung
 
 Seite über einen lokalen statischen Server oder direkt als Datei öffnen.
-Elf Modellkarten, ausklappbare Details, lokale Befehle, Quellen und das mobile
+Zwölf Modellkarten, ausklappbare Details, lokale Befehle, Quellen und das mobile
 Navigationsmenü prüfen. Auf Desktop und Smartphone auf Umbrüche achten.
 Bei fehlenden Browserdaten zeigt die Seite eine Fehlermeldung mit Link zur JSON-Datei.
 Die bestehende Gina-KI-Chronik ist unabhängig und wird nicht verändert.
