@@ -835,5 +835,38 @@ window.GinaChronikData = [
     "sourceUrl": "https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "openai-distributed-biological-reasoning-2026",
+    "date": "2026-10-21",
+    "title": "Tausende KI-Agenten untersuchen gemeinsam biologische Daten",
+    "category": "Forschung",
+    "summary": "OpenAI, PerturbAI und Scripps Research berichten über den Einsatz Tausender auf GPT-Rosalind basierender KI-Agenten zur Analyse von Daten aus Millionen Mäusehirnzellen. Die Agenten verknüpfen die Auswirkungen gezielter Genveränderungen mit wissenschaftlicher Literatur und fassen ihre Erklärungen in einem öffentlich verfügbaren Atlas zusammen. Laut Forschungsteam bevorzugten Fachleute in verblindeten Vergleichen die Berichte der verteilten Agenten gegenüber denen eines einzelnen Agenten. Die Arbeit zeigt einen Ansatz zur parallelen Auswertung komplexer Forschungsdaten; die vorgeschlagenen biologischen Mechanismen und neuen Forschungshypothesen müssen noch experimentell überprüft werden.",
+    "sourceName": "OpenAI – Forschungsbericht mit verlinktem Forschungspapier",
+    "sourceUrl": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "metr-redwood-openai-agent-monitoring-2026",
+    "date": "2026-10-22",
+    "title": "METR und Redwood finden Lücken in OpenAIs Agentenüberwachung",
+    "category": "Gesellschaft und Regulierung",
+    "summary": "METR und Redwood Research veröffentlichen Ergebnisse einer dreiwöchigen externen Prüfung von OpenAIs interner Überwachung auf fehlgesteuertes Agentenverhalten. Mit Zugang zu Quellcode, Konfigurationen und interner Dokumentation entdeckten die Forschenden neue Schwachstellen und Lücken in der Überwachungsabdeckung. Die Untersuchung erprobte einen tiefen Zugang externer Prüfer zur internen KI-Infrastruktur. Sie bezieht sich auf den Systemstand vom 21. Juli 2026 und davor; die Abdeckung des inzwischen erweiterten Systems wurde damit nicht festgestellt.",
+    "sourceName": "METR – externer Prüfbericht mit Redwood Research",
+    "sourceUrl": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "openai-frontier-training-containment-2026",
+    "date": "2026-10-23",
+    "title": "OpenAI verstärkt die Absicherung seines Frontier-Modelltrainings",
+    "category": "Gesellschaft und Regulierung",
+    "summary": "OpenAI beschreibt zusätzliche Schutzmaßnahmen für das Training und die interne Erprobung seiner leistungsfähigsten KI-Modelle. Nach Sicherheitsvorfällen trainiert das Unternehmen Frontier-Modelle ohne Internetzugang und kombiniert mehrere Isolationsebenen mit Überwachung und automatischen Unterbrechungen. KI-Agenten suchen gezielt nach Schwächen dieser Grenzen; dabei gefundene Angriffswege führten laut OpenAI zu weiteren Reparaturen. Nach einer elftägigen Pause wurde das betroffene Training am 1. Oktober wieder aufgenommen. Der Bericht betrifft interne Forschungsumgebungen und liefert keinen abschließenden Sicherheitsnachweis.",
+    "sourceName": "OpenAI – Sicherheitsbericht zur Trainingsumgebung",
+    "sourceUrl": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+    "status": "reviewed",
+    "featured": true
   }
 ];
