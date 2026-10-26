@@ -867,5 +867,16 @@
     "sourceUrl": "https://openai.com/index/securing-our-frontier-model-training-environment/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "cadence-maestro-ai-model-portfolio-2026",
+    "date": "2026-10-26",
+    "title": "Cadence stellt Maestro für KI-gestützte Chip- und Systementwicklung vor",
+    "category": "Modelle",
+    "summary": "Cadence stellt mit Maestro spezialisierte KI-Modelle für die Entwicklung von Chips und elektronischen Systemen vor. Die Modelle werden mit KI-Agenten sowie Entwurfs- und Prüfwerkzeugen verbunden; deren Ergebnisse liefern überprüfbare Rückmeldungen für bestärkendes Lernen. Das Portfolio kombiniert spezialisierte Modelle mit allgemeinen Frontier-Modellen und offenen Modellgewichten und unterstützt auch den Betrieb in kundeneigenen Umgebungen. Erste Maestro-Modelle sind im vierten Quartal 2026 für ausgewählte Early-Access-Kunden verfügbar. Die veröffentlichten Qualitäts- und Effizienzangaben stammen von Cadence und belegen noch keine allgemeine Verfügbarkeit oder unabhängig bestätigte Leistungssteigerung.",
+    "sourceName": "Cadence – offizielle Maestro-Ankündigung",
+    "sourceUrl": "https://www.cadence.com/zh_TW/home/company/newsroom/press-releases/pr/2026/cadence-introduces-maestro-a-domain-specialized-ai-model.html",
+    "status": "reviewed",
+    "featured": true
   }
 ]
