@@ -912,5 +912,27 @@ window.GinaChronikData = [
     "sourceUrl": "https://www.anthropic.com/research/formal-verification",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "baidu-unlimited-ocr-2-2026",
+    "date": "2026-10-27",
+    "title": "Baidu veröffentlicht Unlimited OCR 2 für lange Dokumente",
+    "category": "Modelle",
+    "summary": "Baidu veröffentlicht Unlimited OCR 2, ein offenes Dokumentmodell mit rund drei Milliarden Parametern. Die neue Sparse Reference Sliding Window Attention soll lange Dokumente einschließlich hundertseitiger Vorlagen in einem zusammenhängenden Ablauf verarbeiten und dabei Rechenaufwand und Speicherbedarf pro Dekodierschritt weitgehend konstant halten. Die Gewichte stehen unter MIT-Lizenz bereit; die Modellkarte beschreibt den Betrieb mit Transformers und einer angepassten SGLang-Version. Die veröffentlichten Leistungsangaben und Benchmark-Ergebnisse stammen von Baidu und sind kein unabhängiger Nachweis. Der gesamte Speicherbedarf hängt weiterhin von Bildverarbeitung, Laufzeit und Konfiguration ab; eine pauschale Zusage für beliebig lange Dokumente auf beliebiger Hardware ergibt sich daraus nicht.",
+    "sourceName": "Baidu – offizielle Unlimited-OCR-2-Modellkarte",
+    "sourceUrl": "https://huggingface.co/baidu/Unlimited-OCR-2",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "anthropic-claude-scorpion-toxin-binder-design-2026",
+    "date": "2026-10-20",
+    "title": "Claude entwirft experimentell bestätigte Proteinbinder gegen Skorpiongifte",
+    "category": "Forschung",
+    "summary": "Anthropic berichtet über ein internes Claude-Forschungsmodell, das mit menschlicher Anleitung kleine Proteine zur Bindung an Skorpion-Neurotoxine entwirft. Adaptyv Bio und Twist Bioscience untersuchen 211 ausgewählte Entwürfe im Labor; 17 erfüllen die festgelegten Bindungskriterien. Anthropic veröffentlicht die Entwürfe und zugehörigen Daten. Die Arbeit verbindet KI-gestütztes Moleküldesign mit experimenteller Überprüfung und liefert Ansätze für weitere Forschung an vernachlässigten Erkrankungen. Ob die Binder das Gift in einer zellulären Umgebung neutralisieren, wurde noch nicht bestätigt. Ein wirksames Gegengift oder ein sicheres Medikament ist damit nicht nachgewiesen.",
+    "sourceName": "Anthropic – Forschungsbericht mit experimentellen Daten",
+    "sourceUrl": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+    "status": "reviewed",
+    "featured": true
   }
 ];
