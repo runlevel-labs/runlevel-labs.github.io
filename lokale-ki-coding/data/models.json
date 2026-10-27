@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -364,7 +364,7 @@
         "llama.cpp (GGUF)",
         "LM Studio (passende Flint-Runtime)"
       ],
-      "toolNote": "Der Ollama-Befehl lädt ausdrücklich das offizielle Q4_1-GGUF mit ca. 26 GB von Hugging Face. Eine aktuelle Runtime mit Flint-Unterstützung verwenden. Dieses Paket ist vor allem für Apple Silicon mit Metal dokumentiert; andere Backends vorab prüfen. NVIDIA-NVFP4 benötigt ein separates Paket und passende CUDA-Unterstützung.",
+      "toolNote": "Der Ollama-Befehl lädt ausdrücklich das offizielle Q4_1-GGUF mit ca. 26 GB von Hugging Face. Eine aktuelle Runtime mit Flint-Unterstützung verwenden. Seit Ollama 0.40.9 vom 22. Oktober 2026 wird Flint neben macOS ausdrücklich auch unter Windows und Linux unterstützt; Hardware und Backend müssen zum gewählten Paket passen. NVIDIA-NVFP4 benötigt ein separates Paket und passende CUDA-Unterstützung.",
       "ollamaCommand": "ollama run hf.co/RecursiveSI/flint-int4-gguf:Q4_1",
       "license": {
         "name": "Apache 2.0",
@@ -374,7 +374,7 @@
       "offline": "Nach dem Download lokale Inferenz ohne Recursive-Cloud-API möglich. Für vertraulichen Code müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
       "verdict": "Ein zusätzlicher Kandidat für beaufsichtigte Repo-Arbeit auf einem Rechner mit mehr Speicher. Die Coding-Qualität wurde hier nicht selbst getestet; zunächst am eigenen Projekt mit den vorhandenen Agentenmodellen vergleichen.",
       "limitations": "Hersteller-Benchmarks und Geschwindigkeitsangaben hängen von Hardware, Quantisierung und Agentenclient ab. Kein Modell für einen kleinen 16-GB-Rechner. Lange Kontexte und Denk-Ausgaben erhöhen den Bedarf; die maximale Kontextlänge ist keine sinnvolle Standardeinstellung für jeden Rechner.",
-      "checkedAt": "2026-10-22",
+      "checkedAt": "2026-10-27",
       "sources": [
         {
           "label": "Offizielle Modellkarte",
@@ -391,6 +391,10 @@
         {
           "label": "Offizielles NVIDIA-NVFP4-GGUF",
           "url": "https://huggingface.co/RecursiveSI/flint-nvfp4-gguf"
+        },
+        {
+          "label": "Ollama 0.40.9 – Flint unter Windows und Linux",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.9"
         }
       ]
     },

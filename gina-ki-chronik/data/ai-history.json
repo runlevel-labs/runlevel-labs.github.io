@@ -878,5 +878,38 @@
     "sourceUrl": "https://www.cadence.com/zh_TW/home/company/newsroom/press-releases/pr/2026/cadence-introduces-maestro-a-domain-specialized-ai-model.html",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "openai-gpt-6-1-terra-2026",
+    "date": "2026-10-26",
+    "title": "OpenAI veröffentlicht GPT-6.1 Terra für Bildverständnis und Computerbedienung",
+    "category": "Modelle",
+    "summary": "OpenAI veröffentlicht GPT-6.1 Terra für ChatGPT Work, Codex und die API. Das Modell verbindet Bildverständnis mit der Bedienung von Computerprogrammen und ist für alltägliche Arbeitsabläufe ausgelegt. Laut OpenAI verbessert es gegenüber GPT-5.6 Terra die Ergebnisse bei Computerbedienung, Programmierung und faktischer Genauigkeit. Die regulären API-Preise liegen um 50 Prozent niedriger als beim Vorgänger. Die Leistungs- und Effizienzangaben stammen aus den veröffentlichten Auswertungen des Herstellers und sind kein unabhängiger Nachweis.",
+    "sourceName": "OpenAI – offizielle GPT-6.1-Terra-Ankündigung",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "openai-academic-scientific-results-2026",
+    "date": "2026-10-26",
+    "title": "OpenAI stellt KI-Forschungsresultate aus Mathematik, Informatik und Physik vor",
+    "category": "Forschung",
+    "summary": "OpenAI berichtet über KI-generierte Resultate zur lokalen Glättung und Kakeya-Vermutung, zur Exponential Time Hypothesis sowie zur mathematischen Existenz von Quantenfeldtheorien einschließlich der Quantenchromodynamik. Für die mathematischen und informatischen Resultate veröffentlicht das Unternehmen natürlichsprachliche Ausarbeitungen und Lean-Formalisierungen. Externe Fachleute organisieren die Untersuchung und Einordnung der informatischen und physikalischen Arbeiten; die physikalischen Ausgangsmaterialien sind zunächst nicht öffentlich. OpenAI bezeichnet die Manuskripte als Forschungsrohdaten. Die behaupteten Durchbrüche sind damit noch nicht unabhängig fachlich bestätigt und werden nicht als abschließend anerkannte Lösungen dargestellt.",
+    "sourceName": "OpenAI – Forschungsbericht zur Zusammenarbeit mit akademischen Fachgruppen",
+    "sourceUrl": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "anthropic-theorem-formal-software-verification-2026",
+    "date": "2026-10-22",
+    "title": "Claude und Theorem erstellen formale Sicherheitsbeweise für Open-Source-Software",
+    "category": "Forschung",
+    "summary": "Anthropic und Theorem berichten über mit Claude erstellte formale Sicherheitsbeweise für ausgewählte ausführbare Programme aus 123 Open-Source-Bibliotheken. Die Beweise betreffen statisch gelinkte, einsträngige RISC-V-Programme unter modellierten Linux-Bedingungen und zeigen für Eingaben unter 64 Megabyte das Ausbleiben bestimmter Abstürze und Speicherfehler. Ein Teil der Beweise und die zugrunde liegenden Systemmodelle werden veröffentlicht. Der Ansatz erweitert den Einsatz formaler Verifikation auf vorhandenen Maschinencode. Die Ergebnisse gelten nur für die geprüften Programme, Eigenschaften und Annahmen; sie bescheinigen weder vollständige Fehlerfreiheit der Bibliotheken noch Sicherheit auf beliebigen realen Systemen.",
+    "sourceName": "Anthropic – Forschungsbericht mit Theorem zur formalen Softwareverifikation",
+    "sourceUrl": "https://www.anthropic.com/research/formal-verification",
+    "status": "reviewed",
+    "featured": true
   }
 ]
