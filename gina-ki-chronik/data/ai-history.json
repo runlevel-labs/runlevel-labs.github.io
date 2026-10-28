@@ -933,5 +933,27 @@
     "sourceUrl": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "anthropic-agent-skills-aaif-2026",
+    "date": "2026-10-22",
+    "title": "Anthropic übergibt Agent Skills an die Agentic AI Foundation",
+    "category": "Open Source",
+    "summary": "Anthropic übergibt den offenen Standard Agent Skills an die Agentic AI Foundation unter dem Dach der Linux Foundation. Skills bündeln spezialisiertes Wissen und Arbeitsabläufe für KI-Agenten in einer SKILL.md-Datei mit optionalen Skripten und Referenzmaterialien. Die Übergabe umfasst Name, Logo, GitHub-Organisation und Domain. Der bereits von verschiedenen Agentenplattformen unterstützte Standard erhält damit eine herstellerneutrale organisatorische Heimat; die technische Pflege übernehmen weiterhin Mitwirkende verschiedener Unternehmen.",
+    "sourceName": "Anthropic – offizielle Ankündigung zur Übergabe von Agent Skills",
+    "sourceUrl": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "google-deepmind-genie-4-2026",
+    "date": "2026-10-27",
+    "title": "Google DeepMind stellt Genie 4 für interaktive Weltsimulation mit Ton vor",
+    "category": "Modelle",
+    "summary": "Google DeepMind stellt Genie 4 vor, ein Weltmodell, das interaktive Umgebungen in Echtzeit zusammen mit Geräuschen, Musik und Dialogen erzeugt. Nutzer können die laufende Simulation durch Texteingaben verändern; Gemini-Modelle unterstützen deren Planung und Zusammenhang. Der Ansatz eröffnet Möglichkeiten für interaktive Anwendungen und Trainingsumgebungen für Agenten und Roboter. Genie 4 startet als experimentelle Forschungsvorschau für ausgewählte Tester. Räumliche Genauigkeit, komplexe physikalische Interaktionen und langfristige Konsistenz bleiben begrenzt; eine allgemein verfügbare oder verlässlich physikalisch korrekte Simulation ist damit nicht belegt.",
+    "sourceName": "Google DeepMind – offizielle Genie-4-Ankündigung",
+    "sourceUrl": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+    "status": "reviewed",
+    "featured": true
   }
 ]

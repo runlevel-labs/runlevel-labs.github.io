@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -638,6 +638,44 @@
           "label": "Community-GGUF von bartowski / Größen und lokale Startbefehle",
           "url": "https://huggingface.co/bartowski/Nanbeige_Nanbeige4.3-33B-GGUF"
         }
+      ]
+    },
+    {
+      "id": "lfm3-17b",
+      "name": "LFM3 · 1.7B",
+      "provider": "Liquid AI",
+      "profile": "Kompaktes Experiment für kleine Code-Fragen",
+      "parameters": "1,73 Mrd. · Tri-Hybrid-Textmodell",
+      "quantization": "Offizielles GGUF Q4_K_M; Q5_K_M bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 1,1 GB für das offizielle Q4_K_M-GGUF",
+        "ram": "8–16 GB System-RAM als Planungswert mit IDE",
+        "vram": "ca. 2–4 GB für vollständige GPU-Ausführung mit kompatibler Runtime",
+        "context": "4.096 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen für GGUF Q4_K_M, keine eigenen Messungen. Die Dateigröße ist nicht der gesamte Speicherbedarf; Kontext-Cache, Laufzeitpuffer und Anwendungen brauchen Reserve. Das separate Ollama-Standardpaket umfasst ca. 1,7 GB. Die maximale Kontextlänge von 256K Tokens erfordert mehr Speicher."
+      },
+      "strengths": "Für lokale Werkzeugaufrufe und strukturierte Ausgaben entwickelt. Kleine Funktionen erklären oder einfache Testentwürfe als Experiment ausprobieren; hier wurden keine eigenen Coding-Tests durchgeführt.",
+      "languages": ["Python", "JavaScript", "Bash"],
+      "useCases": ["Code-Chat", "Tests"],
+      "repo": "Nur wenige relevante Code-Ausschnitte zuführen. Für umfangreiche Repository-Arbeit ein größeres Coding-Modell aus der Auswahl vorziehen.",
+      "agents": "Liquid AI empfiehlt das kleine Modell ausdrücklich nicht für Coding-Agenten oder komplexes mehrstufiges Schlussfolgern. Thinking ist standardmäßig aktiv; allgemeine Werkzeugexperimente benötigen ein passendes Chat-Template und einen kompatiblen Client.",
+      "tools": ["Ollama (0.40.12: zunächst Apple-Hardware)", "llama.cpp (LFM3-kompatibler GGUF-Build)"],
+      "toolNote": "Der Befehl wählt das offizielle Q4_K_M-GGUF. Ollama 0.40.12 unterstützt LFM3 zunächst auf Apple-Hardware; Windows/Linux sind dort angekündigt. Für GGUF unter Windows/Linux einen ausdrücklich LFM3-kompatiblen llama.cpp-Build verwenden. Diese Plattformgrenze betrifft die genannte Ollama-Version, nicht grundsätzlich das Modell.",
+      "ollamaCommand": "ollama run hf.co/LiquidAI/LFM3-1.7B-GGUF:Q4_K_M",
+      "license": {
+        "name": "LFM Open License v1.0",
+        "note": "Eigene Lizenz mit Umsatzgrenze für kostenlose kommerzielle Nutzung. Bei einem Unternehmensjahresumsatz ab 10 Mio. US-Dollar gesonderte kommerzielle Bedingungen mit Liquid AI klären.",
+        "url": "https://www.liquid.ai/lfm-license"
+      },
+      "offline": "Nach dem Download mit kompatibler lokaler Runtime ohne Liquid-Cloud-API nutzbar. IDE-Anbindung und Zusatzwerkzeuge ebenfalls lokal konfigurieren.",
+      "verdict": "Ein kleines Experiment für klar begrenzte Code-Fragen, keine Empfehlung für Coding-Agenten. Interessant bei wenig Modellspeicher; Vorschläge lesen und lokal testen.",
+      "limitations": "Kleine Modellgröße begrenzt komplexe Aufgaben. Hersteller-Benchmarks sind keine eigenen Praxistests; Quantisierung kann Ergebnisse verändern. Verfügbarkeit und Plattformunterstützung der Runtime vor dem Download prüfen.",
+      "checkedAt": "2026-10-28",
+      "sources": [
+        { "label": "Offizielle Modellkarte / Einsatzgrenzen", "url": "https://huggingface.co/LiquidAI/LFM3-1.7B" },
+        { "label": "Offizielles GGUF / Größen und lokale Nutzung", "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF" },
+        { "label": "Ollama 0.40.12 / Plattformunterstützung", "url": "https://github.com/ollama/ollama/releases/tag/v0.40.12" },
+        { "label": "Ollama-Standardpaket / abweichende Größe", "url": "https://ollama.com/library/lfm3:1.7b" }
       ]
     }
   ]
