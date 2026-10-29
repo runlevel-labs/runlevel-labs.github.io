@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -659,8 +659,8 @@
       "useCases": ["Code-Chat", "Tests"],
       "repo": "Nur wenige relevante Code-Ausschnitte zuführen. Für umfangreiche Repository-Arbeit ein größeres Coding-Modell aus der Auswahl vorziehen.",
       "agents": "Liquid AI empfiehlt das kleine Modell ausdrücklich nicht für Coding-Agenten oder komplexes mehrstufiges Schlussfolgern. Thinking ist standardmäßig aktiv; allgemeine Werkzeugexperimente benötigen ein passendes Chat-Template und einen kompatiblen Client.",
-      "tools": ["Ollama (0.40.12: zunächst Apple-Hardware)", "llama.cpp (LFM3-kompatibler GGUF-Build)"],
-      "toolNote": "Der Befehl wählt das offizielle Q4_K_M-GGUF. Ollama 0.40.12 unterstützt LFM3 zunächst auf Apple-Hardware; Windows/Linux sind dort angekündigt. Für GGUF unter Windows/Linux einen ausdrücklich LFM3-kompatiblen llama.cpp-Build verwenden. Diese Plattformgrenze betrifft die genannte Ollama-Version, nicht grundsätzlich das Modell.",
+      "tools": ["Ollama (ab 0.40.13 auch Windows/Linux)", "llama.cpp (LFM3-kompatibler GGUF-Build)"],
+      "toolNote": "Der Befehl wählt das offizielle Q4_K_M-GGUF. Seit Ollama 0.40.13 läuft LFM3 neben Apple Silicon auch unter Windows und Linux. Für direkten GGUF-Betrieb weiterhin einen LFM3-kompatiblen llama.cpp-Build mit passendem Chat-Template verwenden.",
       "ollamaCommand": "ollama run hf.co/LiquidAI/LFM3-1.7B-GGUF:Q4_K_M",
       "license": {
         "name": "LFM Open License v1.0",
@@ -670,12 +670,48 @@
       "offline": "Nach dem Download mit kompatibler lokaler Runtime ohne Liquid-Cloud-API nutzbar. IDE-Anbindung und Zusatzwerkzeuge ebenfalls lokal konfigurieren.",
       "verdict": "Ein kleines Experiment für klar begrenzte Code-Fragen, keine Empfehlung für Coding-Agenten. Interessant bei wenig Modellspeicher; Vorschläge lesen und lokal testen.",
       "limitations": "Kleine Modellgröße begrenzt komplexe Aufgaben. Hersteller-Benchmarks sind keine eigenen Praxistests; Quantisierung kann Ergebnisse verändern. Verfügbarkeit und Plattformunterstützung der Runtime vor dem Download prüfen.",
-      "checkedAt": "2026-10-28",
+      "checkedAt": "2026-10-29",
       "sources": [
         { "label": "Offizielle Modellkarte / Einsatzgrenzen", "url": "https://huggingface.co/LiquidAI/LFM3-1.7B" },
         { "label": "Offizielles GGUF / Größen und lokale Nutzung", "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF" },
-        { "label": "Ollama 0.40.12 / Plattformunterstützung", "url": "https://github.com/ollama/ollama/releases/tag/v0.40.12" },
+        { "label": "Ollama 0.40.13 / Windows und Linux", "url": "https://github.com/ollama/ollama/releases/tag/v0.40.13" },
         { "label": "Ollama-Standardpaket / abweichende Größe", "url": "https://ollama.com/library/lfm3:1.7b" }
+      ]
+    },
+    {
+      "id": "apex-35b-v1",
+      "name": "Apex-35B · V1.0",
+      "provider": "Apex Intelligence",
+      "profile": "Experimenteller Kandidat für Coding und Forschung",
+      "parameters": "35 Mrd. gesamt · ca. 3 Mrd. aktiv (MoE)",
+      "quantization": "Offizielles GGUF Q4_K_M; Q5_K_M bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 21,7 GB für das offizielle Q4_K_M-GGUF",
+        "ram": "32–48 GB System-RAM als Planungswert",
+        "vram": "ca. 26–32 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen für GGUF Q4_K_M, keine eigenen Messungen. Alle Gewichte benötigen Speicher, obwohl nur ein Teil pro Token aktiv ist. Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE brauchen zusätzliche Reserve. Q5_K_M umfasst ca. 25,3 GB allein für die Gewichte. Die BF16-Serverkonfigurationen der Modellkarte sind separat zu planen."
+      },
+      "strengths": "Auf Qwen3.6-35B-A3B aufgebaut und für Coding, Werkzeugnutzung sowie rechnergestützte Forschungsaufgaben weitertrainiert. Die veröffentlichten Vergleiche stammen vom Hersteller.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Bash"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Datei- und Suchzugriff über einen lokalen Client bereitstellen. Relevante Dateien auswählen, kleine Diffs anfordern und Änderungen mit lokalen Tests prüfen.",
+      "agents": "Das Modell entscheidet dynamisch über Denk-Ausgaben. Das eigene eingebettete Chat-Template verwenden; bei llama.cpp mit --jinja aktivieren. Nicht durch das Qwen-Template ersetzen. Werkzeugparser und das Erhalten von Denk-Ausgaben im Verlauf müssen zum Client passen.",
+      "tools": ["Ollama (offizielles HF-GGUF; kompatible Runtime)", "llama.cpp (GGUF)", "SGLang / vLLM (Originalgewichte; separates GPU-Setup)"],
+      "toolNote": "Der Ollama-Befehl wählt das offizielle Q4_K_M-Paket auf Hugging Face. Eine aktuelle kompatible Runtime verwenden und Werkzeugaufrufe separat prüfen. Die Herstelleranleitung beschreibt lokalen GGUF-Betrieb mit llama.cpp sowie Serverbetrieb mit Originalgewichten.",
+      "ollamaCommand": "ollama run hf.co/Apexintelligence-AI/Apex-35B-V1.0-GGUF:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die offizielle Modellkarte und das GGUF-Paket nennen Apache 2.0. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0#license"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne externe Modell-API möglich. Für vertraulichen Code müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Eine experimentelle Ergänzung für beaufsichtigte Coding- und Forschungsaufgaben auf einer Workstation mit mehr Speicher. Zunächst am eigenen Projekt vergleichen; hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Hersteller-Benchmarks sind keine unabhängige Praxisprüfung. Quantisierung, Client und Denk-Ausgaben beeinflussen die Ergebnisse. Die rund 3 Mrd. aktiven Parameter machen das Modell nicht zu einem kleinen 3B-Speichermodell; für einen 16-GB-Rechner ist es kein sinnvoller Einstieg.",
+      "checkedAt": "2026-10-29",
+      "sources": [
+        { "label": "Offizielle Modellkarte / Deployment und Einsatzgebiete", "url": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0" },
+        { "label": "Offizielles GGUF / Größen und lokale Startbefehle", "url": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0-GGUF" }
       ]
     }
   ]

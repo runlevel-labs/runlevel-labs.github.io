@@ -33,7 +33,9 @@
   #spark-x26-4b,
   #recursive-flint-40b,
   #qwen38-27b,
-  #nemotron35-bolt-e4b {
+  #nemotron35-bolt-e4b,
+  #lfm3-17b,
+  #apex-35b-v1 {
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 7;
