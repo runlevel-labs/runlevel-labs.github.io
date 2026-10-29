@@ -956,5 +956,27 @@ window.GinaChronikData = [
     "sourceUrl": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "gemini-robotics-er-2-cloud-preview-2026",
+    "date": "2026-10-27",
+    "title": "Google öffnet Gemini Robotics ER 2 als öffentliche Cloud-Vorschau",
+    "category": "Robotik",
+    "summary": "Google stellt Gemini Robotics Embodied Reasoning 2 als öffentliche Vorschau auf seiner Cloud-Plattform bereit. Das bereits zuvor vorgestellte KI-Modell verbindet räumliches und zeitliches Videoverständnis mit längerfristiger Aufgabenplanung. Es kann den Fortschritt physischer Aufgaben beurteilen und niedrigere Steuerungsebenen wie Navigations-APIs oder Aktionsmodelle als Werkzeuge koordinieren. Die Cloud-Bereitstellung ergänzt Zugriffsverwaltung und Werkzeuge zur Erprobung und Verwaltung solcher Abläufe. Der Meilenstein betrifft den öffentlichen Vorschauzugang, nicht die erste Vorstellung des Modells; ein breiter industrieller Einsatz ist damit nicht nachgewiesen.",
+    "sourceName": "Google Cloud – offizielle Ankündigung der öffentlichen ER-2-Vorschau",
+    "sourceUrl": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "gemini-4-carbon-limited-access-2026",
+    "date": "2026-10-28",
+    "title": "Google kündigt Gemini 4 Carbon mit eingeschränktem Zugang an",
+    "category": "Modelle",
+    "summary": "Google kündigt Gemini 4 Carbon für anspruchsvolle Softwareentwicklung, länger laufende Agentenaufgaben und Cyberabwehr an. Laut Hersteller verbessert das auf Gemini 4 Argon aufbauende Modell unter anderem das Finden und Beheben von Sicherheitslücken sowie die Bearbeitung komplexer, mehrstufiger Aufgaben. Der Zugang beginnt für ausgewählte Cyberverteidiger und soll über das Fairwind-Programm schrittweise auf weitere vertrauenswürdige Partner ausgeweitet werden. Eine allgemeine Verfügbarkeit für Entwickler, Unternehmen und Verbraucher ist noch angekündigt. Die Leistungs- und Sicherheitsangaben stammen aus den veröffentlichten Auswertungen von Google und belegen keine umfassende Zuverlässigkeit im realen Einsatz.",
+    "sourceName": "Google – offizielle Gemini-4-Carbon-Ankündigung",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+    "status": "reviewed",
+    "featured": true
   }
 ];
