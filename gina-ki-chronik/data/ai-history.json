@@ -977,5 +977,49 @@
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "mistral-large-4-open-weights-2026",
+    "date": "2026-10-29",
+    "title": "Mistral veröffentlicht die Modellgewichte von Large 4",
+    "category": "Open Source",
+    "summary": "Mistral veröffentlicht die Gewichte einer gegenüber der API-Vorschau vom 6. Oktober weiterentwickelten Version von Large 4. Das multimodale Modell lässt sich auf eigener Infrastruktur betreiben und anpassen. Die Veröffentlichung erweitert den Zugang zu leistungsfähigen Modellen für Programmierung, Agentenaufgaben und defensive Cybersicherheit. Die Mistral Ecosystem Open-Weight License erlaubt Nutzung und Anpassung, verlangt aber für kommerzielle Model-as-a-Service-Angebote eine gesonderte Lizenz. Es handelt sich daher um offene Modellgewichte mit Lizenzbedingungen. Die veröffentlichten Leistungsangaben stammen vom Hersteller.",
+    "sourceName": "Mistral – offizielle Veröffentlichung der Large-4-Modellgewichte",
+    "sourceUrl": "https://mistral.ai/news/mistral-large-4-oss/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "openai-gpt-6-rosalind-research-2026",
+    "date": "2026-10-30",
+    "title": "OpenAI veröffentlicht GPT-6 Rosalind für biologische Forschung",
+    "category": "Modelle",
+    "summary": "OpenAI veröffentlicht GPT-6 Rosalind für komplexe Aufgaben in den Lebenswissenschaften. Das Modell verbindet spezialisiertes biologisches Schlussfolgern mit wissenschaftlichen Werkzeugen. Laut offiziellem API-Changelog erhalten Organisationen Zugang, die im Trusted-Access-Programm für Rosalind Research zugelassen sind; die Nutzung ist auf interne Forschung durch autorisierte Personen beschränkt. Der Meilenstein betrifft die Bereitstellung eines spezialisierten Forschungsmodells. Eine allgemeine Verfügbarkeit oder experimentell bestätigte neue biologische Entdeckungen sind damit nicht belegt.",
+    "sourceName": "OpenAI – offizieller API-Changelog vom 30. Oktober 2026",
+    "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "google-suncatcher-tpu-gemma-4-orbit-response-2026",
+    "date": "2026-10-30",
+    "title": "Google meldet eine Gemma-4-Antwort von einer TPU im Orbit",
+    "category": "Forschung",
+    "summary": "Google berichtet am 30. Oktober über die erste KI-Antwort einer TPU der Rechenzentrumsklasse im Orbit im Rahmen von Project Suncatcher. Auf dem Prototypsatelliten erzeugt das offene Modell Gemma 4 nach einer von der Erde gesendeten Anfrage ein Haiku; weitere Tests betreffen Gedichte und Telemetrie. Der Versuch erprobt KI-Rechenleistung im Weltraum. Das Datum bezeichnet die Veröffentlichung des Berichts; den genauen Tag des Experiments nennt Google nicht. Weitere Untersuchungen zu thermischer Belastung und Strahlung stehen noch aus. Ein dauerhaft zuverlässiges orbitales Rechenzentrum ist damit nicht nachgewiesen.",
+    "sourceName": "Google Research – offizieller Project-Suncatcher-Bericht",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "shared-ai-training-preference-signal-google-2026",
+    "date": "2026-10-30",
+    "title": "Google kündigt Unterstützung für ein gemeinsames KI-Trainings-Opt-out an",
+    "category": "Gesellschaft und Regulierung",
+    "summary": "Google kündigt an, ein gemeinsames Signal in robots.txt zur Steuerung der Verwendung von Webinhalten für KI-Training zu unterstützen. Websitebetreiber sollen damit eine Präferenz gegenüber mehreren teilnehmenden KI-Anbietern ausdrücken können, während anbieterspezifische Regeln weiterhin gelten. Grundlage ist ein Vorschlag im Umfeld der IETF-Arbeiten zu KI-Nutzungspräferenzen. Der Schritt bereitet einen anbieterübergreifenden Mechanismus für die Kontrolle von Trainingsdaten vor. Es handelt sich um eine angekündigte Unterstützung eines Entwurfs; Google plant die Umsetzung für 2027. Ein bereits allgemein wirksamer oder verbindlich verabschiedeter Standard ist damit nicht gegeben.",
+    "sourceName": "Google Search Central – offizielle Ankündigung zum gemeinsamen Trainingssignal",
+    "sourceUrl": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+    "status": "reviewed",
+    "featured": true
   }
 ]
