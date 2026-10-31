@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-10-31",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -364,7 +364,7 @@
         "llama.cpp (GGUF)",
         "LM Studio (passende Flint-Runtime)"
       ],
-      "toolNote": "Der Ollama-Befehl lädt ausdrücklich das offizielle Q4_1-GGUF mit ca. 26 GB von Hugging Face. Eine aktuelle Runtime mit Flint-Unterstützung verwenden. Seit Ollama 0.40.9 vom 22. Oktober 2026 wird Flint neben macOS ausdrücklich auch unter Windows und Linux unterstützt; Hardware und Backend müssen zum gewählten Paket passen. NVIDIA-NVFP4 benötigt ein separates Paket und passende CUDA-Unterstützung.",
+      "toolNote": "Der Ollama-Befehl lädt ausdrücklich das offizielle Q4_1-GGUF mit ca. 26 GB von Hugging Face. Eine aktuelle Runtime mit Flint-Unterstützung verwenden. Seit Ollama 0.40.9 vom 22. Oktober 2026 wird Flint neben macOS ausdrücklich auch unter Windows und Linux unterstützt; Hardware und Backend müssen zum gewählten Paket passen. NVIDIA-NVFP4 benötigt ein separates Paket und passende CUDA-Unterstützung. LM Studio 0.4.28 vom 31. Oktober 2026 behebt das Chat-Template-Parsing für Flint; bei Nutzung mit LM Studio mindestens diese Version und eine passende Flint-Runtime einsetzen.",
       "ollamaCommand": "ollama run hf.co/RecursiveSI/flint-int4-gguf:Q4_1",
       "license": {
         "name": "Apache 2.0",
@@ -374,7 +374,7 @@
       "offline": "Nach dem Download lokale Inferenz ohne Recursive-Cloud-API möglich. Für vertraulichen Code müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
       "verdict": "Ein zusätzlicher Kandidat für beaufsichtigte Repo-Arbeit auf einem Rechner mit mehr Speicher. Die Coding-Qualität wurde hier nicht selbst getestet; zunächst am eigenen Projekt mit den vorhandenen Agentenmodellen vergleichen.",
       "limitations": "Hersteller-Benchmarks und Geschwindigkeitsangaben hängen von Hardware, Quantisierung und Agentenclient ab. Kein Modell für einen kleinen 16-GB-Rechner. Lange Kontexte und Denk-Ausgaben erhöhen den Bedarf; die maximale Kontextlänge ist keine sinnvolle Standardeinstellung für jeden Rechner.",
-      "checkedAt": "2026-10-27",
+      "checkedAt": "2026-10-31",
       "sources": [
         {
           "label": "Offizielle Modellkarte",
@@ -395,6 +395,10 @@
         {
           "label": "Ollama 0.40.9 – Flint unter Windows und Linux",
           "url": "https://github.com/ollama/ollama/releases/tag/v0.40.9"
+        },
+        {
+          "label": "LM Studio 0.4.28 – Fix für Flint-Chat-Templates",
+          "url": "https://lmstudio.ai/changelog/lmstudio"
         }
       ]
     },
@@ -712,6 +716,58 @@
       "sources": [
         { "label": "Offizielle Modellkarte / Deployment und Einsatzgebiete", "url": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0" },
         { "label": "Offizielles GGUF / Größen und lokale Startbefehle", "url": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0-GGUF" }
+      ]
+    },
+    {
+      "id": "ccore-qwen35-4b-3d-coder",
+      "name": "CCORE Qwen3.5-4B-3D-Coder",
+      "provider": "CCORE · unabhängiger Qwen-Finetune",
+      "profile": "Experimenteller Spezialist für Three.js und 3D-Webszenen",
+      "parameters": "4B-Modellfamilie · dichter Qwen3.5-Finetune",
+      "quantization": "GGUF Q4_K_M vom Modellautor; Q8_0 bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 2,71 GB für das Q4_K_M-GGUF des Modellautors",
+        "ram": "8–16 GB System-RAM als Planungswert mit IDE",
+        "vram": "ca. 4–6 GB für vollständige GPU-Ausführung im Textbetrieb",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen, keine eigenen Messungen. Q8_0 umfasst ca. 4,48 GB allein für die Gewichte. Die optionale Bildunterstützung benötigt zusätzlich den BF16-Projektor mit ca. 0,68 GB (644 MiB) und weiteren Laufzeitspeicher. Kontext-Cache, Betriebssystem und IDE brauchen Reserve. Die kurzen 64K-Visiontests des Modellautors sind keine Prüfung des vollständigen Kontextfensters; größere Kontexte erhöhen den Speicherbedarf."
+      },
+      "strengths": "Auf die Erzeugung interaktiver Three.js-Szenen in HTML und JavaScript spezialisiert. Seit 30. Oktober 2026 können die GGUF-Versionen mit passendem Projektor auch Referenzbilder verarbeiten. Der Autor stellt vollständige Gewichte, Trainingsdaten und einen technischen Bericht bereit; die Beispiele sind keine unabhängige Qualitätsmessung.",
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "useCases": [
+        "Code-Chat"
+      ],
+      "repo": "Für einzelne Webszenen und klar begrenzte Code-Ausschnitte einsetzen. Keine belegte Empfehlung für umfangreiche Repository-Arbeit. Erzeugtes HTML und JavaScript lokal im Browser prüfen.",
+      "agents": "Keine belegte Empfehlung für mehrstufige Coding-Agenten oder verlässliche Werkzeugaufrufe. Zunächst einzelne, beaufsichtigte Generierungen verwenden.",
+      "tools": [
+        "Ollama (GGUF vom Modellautor)",
+        "llama.cpp (Qwen3.5-kompatibler GGUF-Build)",
+        "LM Studio (GGUF; MTP deaktivieren)"
+      ],
+      "toolNote": "Der Befehl wählt das Q4_K_M-GGUF des unabhängigen Modellautors, kein offizielles Qwen-Paket. Eine aktuelle Qwen3.5-kompatible Runtime mit dem eingebetteten Chat-Template verwenden. In LM Studio laut Modellkarte Multi-Token Prediction (MTP) für dieses Modell deaktivieren. Für Bildreferenzen in llama.cpp das passende mmproj zusätzlich laden; der Autor nennt kurze lokale Tests mit Build b11889. Bildunterstützung in anderen Oberflächen separat prüfen.",
+      "ollamaCommand": "ollama run hf.co/ccore/Qwen3.5-4B-3D-Coder:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Modellkarte und LICENSE-Datei nennen Apache 2.0. Der unabhängige Finetune ist keine offizielle Veröffentlichung des Qwen-Teams. Die separat veröffentlichten Trainingsdaten stehen laut Autor unter MIT-Lizenz.",
+        "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne externe Modell-API möglich. Die Three.js-Beispiele des Autors laden eine Bibliothek von einem CDN; für vollständig offline nutzbare Webszenen auch diese Bibliothek lokal bereitstellen. IDE-Anbindung und Zusatzwerkzeuge ebenfalls lokal halten.",
+      "verdict": "Ein kleiner experimenteller Spezialist für Three.js-Prototypen und kreative 3D-Webszenen. Interessant als Ergänzung zum allgemeinen Coding-Modell; hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Frühe Vorschau, die weitertrainiert wird. Der Autor nennt unter anderem doppelte Variablennamen als beobachtete Fehler. Bildreferenzen werden interpretiert und nicht detailgetreu reproduziert. Allgemeine Coding-Qualität, Agentenfähigkeit und Laufzeit auf der eigenen Hardware sind nicht unabhängig bestätigt.",
+      "checkedAt": "2026-10-31",
+      "sources": [
+        {
+          "label": "Modellkarte des Autors / Einstellungen und Bildunterstützung",
+          "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder"
+        },
+        {
+          "label": "GGUF-Dateien und optionaler Bildprojektor / Größen",
+          "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder/tree/main"
+        }
       ]
     }
   ]
