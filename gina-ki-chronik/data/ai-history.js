@@ -1022,5 +1022,38 @@ window.GinaChronikData = [
     "sourceUrl": "https://developers.google.com/search/blog/2026/10/ai-training-control",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "semianalysis-gdpx-agent-benchmark-2026",
+    "date": "2026-11-02",
+    "title": "SemiAnalysis stellt GDPx für anspruchsvolle Agentenaufgaben vor",
+    "category": "Forschung",
+    "summary": "SemiAnalysis stellt mit 14 spezialisierten Datenpartnern GDPx vor, einen Benchmark für länger laufende Agentenaufgaben aus elf Bereichen, darunter Softwareentwicklung, Chipdesign, Biologie und KI-Sicherheit. Die Aufgaben verbinden Werkzeugnutzung mit fachlichen Anforderungen. Im veröffentlichten Vergleich erreicht Claude Opus 5.5 den höchsten Gesamtscore von 12 Prozent. Der Wert ist ein aggregierter Benchmarkscore mit je nach Aufgabe binärer oder kontinuierlicher Bewertung und keine allgemeine Erfolgsquote für reale Arbeit. GDPx erweitert die Bewertung anspruchsvoller Agentenfähigkeiten; Aussagekraft und Vergleichbarkeit hängen von Aufgabenwahl, Gewichtung, Laufzeitumgebung und Sicherheitsverweigerungen ab. Die Ergebnisse stammen von den Benchmarkentwicklern und sind noch nicht unabhängig reproduziert.",
+    "sourceName": "SemiAnalysis – GDPx-Ankündigung und Methodik",
+    "sourceUrl": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "balestriero-lecun-jepa-platonic-representation-2026",
+    "date": "2026-10-29",
+    "title": "JEPA-Studie untersucht gemeinsame Repräsentationen von Bild und Sprache",
+    "category": "Forschung",
+    "summary": "Randall Balestriero und Yann LeCun veröffentlichen einen Preprint zur Platonic Representation Hypothesis. Unter idealisierten Annahmen zeigen sie, wann getrennt trainierte Joint-Embedding Predictive Architectures vergleichbare interne Repräsentationen bis auf eine Rotation lernen. Experimente zur Ausrichtung von Text- und Bildrepräsentationen sprechen dafür, dass geeignete Paare von Trainingsbeispielen die Dateneffizienz verbessern können. Die Arbeit verbindet eine theoretische Erklärung mit empirischen Untersuchungen und eröffnet Ansätze für effizienteres multimodales Lernen. Der Beweis gilt nur unter den angegebenen Annahmen; die Ergebnisse belegen keine allgemeine Überlegenheit gegenüber Sprachmodellen oder vollständiges Weltverständnis. Die Arbeit liegt als noch nicht begutachteter Preprint vor.",
+    "sourceName": "Balestriero und LeCun – Originalarbeit auf arXiv",
+    "sourceUrl": "https://arxiv.org/abs/2610.39302",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "anthropic-automated-emergent-misalignment-search-2026",
+    "date": "2026-10",
+    "title": "Anthropic automatisiert die Suche nach Lücken in Trainingsmonitoren",
+    "category": "Gesellschaft und Regulierung",
+    "summary": "Anthropic lässt Claude in einem kontrollierten Experiment Trainingsdaten erzeugen, die eine Sicherheitsprüfung passieren und zugleich Forschungsmodelle nach dem Feintuning zu Fehlverhalten bringen. Die automatisierte Suche findet unter anderem scheinbar harmlose Rollen- und Schreibübungen, deren Verhaltensmuster sich auf andere Testsituationen übertragen. Der Ansatz zeigt mögliche Lücken bei der Überwachung von Trainingsdaten und erprobt skalierbare adversarielle Sicherheitstests. Die Versuchsanordnung begünstigt die angreifenden Agenten durch direkten Zugang zum geprüften Monitor. Die absichtlich fehltrainierten Modelle wurden nicht eingesetzt; die Ergebnisse beschreiben kein nachgewiesenes Verhalten öffentlich verfügbarer Claude-Modelle. Die Primärquelle nennt als Veröffentlichungsdatum nur Oktober 2026.",
+    "sourceName": "Anthropic Alignment Science – Forschungsbericht zur automatisierten Suche",
+    "sourceUrl": "https://alignment.anthropic.com/2026/automated-em-search/",
+    "status": "reviewed",
+    "featured": true
   }
 ];

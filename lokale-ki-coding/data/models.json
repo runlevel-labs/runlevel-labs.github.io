@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-31",
+  "updatedAt": "2026-11-02",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -194,7 +194,7 @@
         "ram": "24–32 GB System-RAM empfohlen",
         "vram": "ca. 10–12 GB für vollständige GPU-Ausführung",
         "context": "4.096 Tokens zum Einstieg; ein Nutzer",
-        "note": "Planungswerte für Q4_K_M, keine eigenen Messungen. MoE reduziert aktive Rechenarbeit, nicht die insgesamt zu speichernden Gewichte. Größere Kontexte, Denk-Ausgaben und parallele Anfragen brauchen zusätzliche Reserve."
+        "note": "Planungswerte für Q4_K_M, keine eigenen Messungen. MoE reduziert aktive Rechenarbeit, nicht die insgesamt zu speichernden Gewichte. Größere Kontexte, Denk-Ausgaben und parallele Anfragen brauchen zusätzliche Reserve. Optionales MTP benötigt zusätzlichen Speicher: Das kombinierte Q4_K_M-Modell mit MTP-Kopf umfasst ca. 8,3 GB statt ca. 8,1 GB; ein separat geladener BF16-Kopf ca. 1,8 GB zusätzlich. Die Speicherwerte dieser Karte beziehen sich weiterhin auf den normalen Q4_K_M-Betrieb ohne MTP."
       },
       "strengths": "Laut JetBrains auf Repository-Arbeit mit Werkzeugen trainiert: Fehler eingrenzen, Dateien bearbeiten und Änderungen mit Tests prüfen.",
       "languages": ["Python", "JavaScript", "TypeScript", "Java", "Bash"],
@@ -202,7 +202,7 @@
       "repo": "Datei- und Suchzugriff über einen lokalen Client bereitstellen. Das Modell kennt das Repository nicht automatisch; zunächst auf ausgewählte Dateien und kleine Änderungen begrenzen.",
       "agents": "Thinking-Ausgaben und Werkzeugaufrufe müssen zum Client passen. Die offizielle vLLM-Konfiguration nutzt den Qwen3-Reasoning-Parser und den Hermes-Tool-Parser. Diffs lesen und Tests lokal ausführen.",
       "tools": ["Ollama (offizielles HF-GGUF)", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (Originalgewichte; separates GPU-Setup)"],
-      "toolNote": "Die offiziellen GGUF-Dateien sind verfügbar. Der Ollama-Befehl lädt Q4_K_M direkt aus dem JetBrains-Repository auf Hugging Face. Aktuelle Runtimes und das enthaltene Chat-Template verwenden; vLLM getrennt mit den Originalgewichten planen.",
+      "toolNote": "Die offiziellen GGUF-Dateien sind verfügbar. Der Ollama-Befehl lädt Q4_K_M direkt aus dem JetBrains-Repository auf Hugging Face. Aktuelle Runtimes und das enthaltene Chat-Template verwenden; vLLM getrennt mit den Originalgewichten planen. JetBrains stellt außerdem einen optionalen Multi-Token-Prediction-Kopf für spekulative Dekodierung bereit. In llama.cpp ist dafür Build b11747 oder neuer mit --spec-type draft-mtp erforderlich; mit --spec-draft-n-max 1 beginnen. Das Hauptmodell prüft die vorgeschlagenen Tokens. Der Ollama-Startbefehl dieser Karte wählt weiterhin die normale Q4_K_M-Datei und aktiviert MTP nicht. Unterstützung in Ollama und LM Studio separat für die installierte Runtime prüfen.",
       "ollamaCommand": "ollama run hf.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF:Q4_K_M",
       "license": {
         "name": "Apache 2.0",
@@ -211,11 +211,11 @@
       },
       "offline": "Nach dem Download lokale Inferenz ohne Cloud-Modell-API möglich. Für vertraulichen Code müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal konfiguriert sein.",
       "verdict": "Ein kompakter Kandidat für beaufsichtigte Repo-Arbeit und Tests. Interessant, wenn die größeren Agentenmodelle zu viel Speicher brauchen und ein passender lokaler Client vorhanden ist.",
-      "limitations": "Thinking kann längere Ausgaben erzeugen. Geschwindigkeit und Zuverlässigkeit müssen am eigenen Projekt geprüft werden; Agentenqualität hängt auch von Backend, Werkzeugformat und Dateiauswahl ab.",
-      "checkedAt": "2026-10-13",
+      "limitations": "Thinking kann längere Ausgaben erzeugen. Geschwindigkeit und Zuverlässigkeit müssen am eigenen Projekt geprüft werden; Agentenqualität hängt auch von Backend, Werkzeugformat und Dateiauswahl ab. MTP garantiert keinen Geschwindigkeitsgewinn: Die dokumentierten llama.cpp-Tests auf einem Apple M2 Max zeigen je nach Konfiguration geringe Vorteile oder keinen Vorteil bei Q4_K_M. Mehr als ein vorgeschlagenes Token war in diesen Tests langsamer. Die Ergebnisse sind keine Zusage für Windows oder andere Hardware.",
+      "checkedAt": "2026-11-02",
       "sources": [
         { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking" },
-        { "label": "Offizielle GGUF-Dateien / Größe", "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF" }
+        { "label": "Offizielle GGUF-Dateien / Größen und optionale MTP-Nutzung", "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF" }
       ]
     },
     {
@@ -767,6 +767,60 @@
         {
           "label": "GGUF-Dateien und optionaler Bildprojektor / Größen",
           "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder/tree/main"
+        }
+      ]
+    },
+    {
+      "id": "zyr-zy-s2-15b",
+      "name": "ZY-S2 · 1.5B",
+      "provider": "ZYR AI · unabhängiger Qwen-Finetune",
+      "profile": "Kleines Python-Experiment für den CPU-Betrieb",
+      "parameters": "1,5 Mrd. · dichter Qwen2.5-Coder-Finetune",
+      "quantization": "GGUF Q5_K_M vom Modellautor",
+      "memory": {
+        "weightsGb": "ca. 1,13 GB für das Q5_K_M-GGUF des Modellautors",
+        "ram": "8–16 GB System-RAM als Planungswert mit IDE",
+        "vram": "ca. 2–4 GB für vollständige GPU-Ausführung; CPU-Betrieb möglich",
+        "context": "2.048–4.096 Tokens zum Einstieg; ein Nutzer",
+        "note": "Schätzungen für Q5_K_M, keine eigenen Messungen. Die Gewichtsdatei umfasst 1.125.049.984 Bytes; Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE brauchen zusätzliche Reserve. Die Konfiguration nennt maximal 32.768 Positionen; größere Kontexte sind kein sinnvoller Standard für jeden Rechner. Die CPU-Laufzeit auf älterer Hardware wurde hier nicht getestet."
+      },
+      "strengths": "Auf das Erzeugen kleiner Python-Funktionen ausgerichteter LoRA-Finetune von Qwen2.5-Coder-1.5B. Der Autor stellt zusammengeführte Safetensors-Gewichte und ein Q5_K_M-GGUF bereit und dokumentiert CPU-Inferenz mit llama.cpp. Die veröffentlichten Coding-Vergleiche stammen vom Entwickler.",
+      "languages": [
+        "Python"
+      ],
+      "useCases": [
+        "Code-Chat"
+      ],
+      "repo": "Für einzelne Funktionen und überschaubare Code-Ausschnitte verwenden. Keine belegte Empfehlung für das selbstständige Bearbeiten ganzer Repositories; relevante Ausschnitte gezielt zuführen.",
+      "agents": "Der Autor nennt Werkzeugnutzung, Computerbedienung und mehrstufiges Schlussfolgern als Schwächen. Keine Empfehlung für Coding-Agenten; erzeugte Funktionen lesen und mit lokalen Tests prüfen.",
+      "tools": [
+        "Ollama (GGUF vom Modellautor)",
+        "llama.cpp (GGUF; CPU oder GPU)",
+        "LM Studio (Qwen2-kompatible GGUF-Runtime)"
+      ],
+      "toolNote": "Der Ollama-Befehl lädt das Q5_K_M-GGUF aus dem Repository von ZYR AI, kein offizielles Qwen-Paket. Eine aktuelle Qwen2-kompatible Runtime mit dem mitgelieferten Chat-Template verwenden. Das Dokumentationsbeispiel nutzt llama.cpp im lokalen CPU-Betrieb; die Geschwindigkeit hängt von CPU, Kontext und Laufzeit ab.",
+      "ollamaCommand": "ollama run hf.co/zyr-AGENT/ZY-S2:Q5_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die Modellkarte nennt Apache 2.0 für den Finetune und sein Qwen2.5-Coder-Basismodell. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/zyr-AGENT/ZY-S2#license-and-credit"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne externe Modell-API möglich. Für vertraulichen Code auch IDE-Anbindung, Dateisuche und Zusatzwerkzeuge lokal konfigurieren.",
+      "verdict": "Ein kleines experimentelles Zusatzmodell für klar begrenzte Python-Funktionen auf einem Rechner ohne große GPU. Die Coding-Qualität und Geschwindigkeit wurden hier nicht selbst getestet; zunächst mit dem vorhandenen Modell am eigenen Code vergleichen.",
+      "limitations": "Kleine Modellgröße mit faktischen Fehlern und Schwächen bei Mathematik, längerem Schlussfolgern und Agentenaufgaben. Der Autor weist auf mögliche unsichere Code-Ausgaben hin. Englisch und Python stehen im Mittelpunkt; andere Sprachen sind weniger geprüft. Entwickler-Benchmarks belegen keine allgemeine Überlegenheit oder zuverlässige Alltagstauglichkeit.",
+      "checkedAt": "2026-11-02",
+      "sources": [
+        {
+          "label": "Modellkarte / Einsatzgrenzen und CPU-Inferenz",
+          "url": "https://huggingface.co/zyr-AGENT/ZY-S2"
+        },
+        {
+          "label": "GGUF-Paket / Dateigröße und Modellkonfiguration",
+          "url": "https://huggingface.co/zyr-AGENT/ZY-S2/tree/main"
+        },
+        {
+          "label": "Ankündigung des Entwicklers vom 31. Oktober 2026",
+          "url": "https://discuss.huggingface.co/t/introducing-zy-s2-a-1-5b-open-source-coding-model-by-zyr-ai/191260"
         }
       ]
     }
