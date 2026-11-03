@@ -1054,5 +1054,27 @@
     "sourceUrl": "https://alignment.anthropic.com/2026/automated-em-search/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "meituan-longcat-25-api-release-2026",
+    "date": "2026-11-02",
+    "title": "Meituan veröffentlicht LongCat-2.5 für multimodale Agentenaufgaben",
+    "category": "Modelle",
+    "summary": "Meituan stellt LongCat-2.5 über seine API-Plattform bereit. Das Modell verbindet Bildverständnis mit Programmierung und länger laufenden Agentenaufgaben. Laut Anbieter unterstützt es mehrstufige Werkzeugnutzung, die Arbeit an komplexen Codebasen und vollständigen Softwareprojekten sowie visuelle Coding-, Design- und 3D-Aufgaben. Die Veröffentlichung erweitert das Angebot multimodaler Modelle für technische Arbeitsabläufe und die Einbindung in verschiedene Agentenclients. Der Eintrag bezieht sich auf den API-Start vom 2. November nach der Vorschau vom September. Die Fähigkeitsangaben stammen vom Hersteller und belegen keine allgemeine Zuverlässigkeit bei unbeaufsichtigter Projektarbeit oder einen verfügbaren lokalen Modellbetrieb.",
+    "sourceName": "Meituan LongCat – offizieller API-Changelog",
+    "sourceUrl": "https://longcat.chat/platform/docs/ChangeLog.html",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "agibot-go3-preview-embodied-foundation-model-2026",
+    "date": "2026-10-29",
+    "title": "AGIBOT stellt GO-3 Preview für robotisches Schlussfolgern und Handeln vor",
+    "category": "Robotik",
+    "summary": "AGIBOT stellt GO-3 Preview als neues KI-Grundmodell für Robotik vor. Die Architektur WRAM verbindet Aufgabenverständnis, Vorhersage künftiger Zustände und Aktionsgenerierung, damit Roboter Handlungsfolgen planen und auf veränderte Situationen reagieren können. Das vorgestellte Lernkonzept verknüpft Vortraining, Nachtraining und weitere Verbesserung durch Erfahrungen nach dem Einsatz. Der wesentliche KI-Beitrag liegt in der gemeinsamen Modellierung von Schlussfolgern, Vorhersage und physischem Handeln. AGIBOT berichtet über Demonstrationen und führende Ergebnisse in RoboDojo, RoboTwin und RoboColiseum. Diese Angaben stammen vom Hersteller; eine unabhängige Bestätigung breiter autonomer Alltagstauglichkeit ergibt sich daraus nicht. Der Meilenstein ist die Modellvorschau, nicht ein nachgewiesener flächendeckender Einsatz.",
+    "sourceName": "AGIBOT – offizielle Mitteilung zum Innovation Day über PR Newswire",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/agibot-introduces-worken-to-measure-productive-robot-work-at-agibot-innovation-day-2026-302923486.html",
+    "status": "reviewed",
+    "featured": true
   }
 ]

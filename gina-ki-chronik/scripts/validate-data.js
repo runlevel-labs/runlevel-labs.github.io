@@ -115,9 +115,11 @@ function validateEntry(entry, index, seenIds) {
 
 function main() {
   let data;
+  let metadata;
 
   try {
     data = JSON.parse(fs.readFileSync(dataPath, "utf8"));
+    metadata = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../data/chronik-meta.json"), "utf8"));
   } catch (error) {
     console.error(`FEHLER: JSON konnte nicht gelesen werden: ${error.message}`);
     process.exitCode = 1;
@@ -132,6 +134,11 @@ function main() {
 
   const seenIds = new Set();
   const errors = data.flatMap((entry, index) => validateEntry(entry, index, seenIds));
+
+  if (!metadata || typeof metadata.updatedAt !== "string" ||
+      !/^\d{4}-\d{2}-\d{2}$/.test(metadata.updatedAt) || !isValidDate(metadata.updatedAt)) {
+    errors.push("Metadaten: updatedAt muss ein gültiges vollständiges Datum sein.");
+  }
 
   if (errors.length > 0) {
     console.error(`Datenprüfung fehlgeschlagen (${errors.length} Fehler):`);

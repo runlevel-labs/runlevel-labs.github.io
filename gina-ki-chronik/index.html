@@ -8,7 +8,7 @@
       content="Eine quellenbasierte Timeline wichtiger Meilensteine der KI-Geschichte."
     >
     <title>Gina KI-Chronik · Runlevel Labs</title>
-    <link rel="stylesheet" href="css/style.css?v=20261020-1">
+    <link rel="stylesheet" href="css/style.css?v=20261103-2">
     <link rel="icon" href="../runlevel-labs-logo.png" type="image/png">
     <link rel="canonical" href="https://runlevel-labs.github.io/gina-ki-chronik/">
   </head>
@@ -48,6 +48,20 @@
               Robotik sowie Gesellschaft und Regulierung – sachlich zusammengefasst
               und mit nachvollziehbaren Quellen.
             </p>
+            <div class="intro__overview" aria-label="Chronik auf einen Blick">
+              <div id="chronik-overview-meta" hidden>
+                <p class="intro__facts">
+                  <span><strong id="chronik-entry-count"></strong> Meilensteine</span>
+                  <span aria-hidden="true">·</span>
+                  <span><strong id="chronik-category-count"></strong> Themenbereiche</span>
+                </p>
+                <p id="chronik-update" class="intro__updated" hidden>Zuletzt ergänzt: <time id="chronik-updated-at"></time></p>
+              </div>
+              <nav class="intro__jumps" aria-label="Direkt zur Chronik">
+                <a href="#latest-title">Neueste Entwicklungen <span aria-hidden="true">↓</span></a>
+                <a href="#timeline-title">Historische Timeline <span aria-hidden="true">↓</span></a>
+              </nav>
+            </div>
           </div>
           <div class="intro__image">
             <img src="../gina.png" alt="Gina – KI-Avatar" width="1024" height="1536">
@@ -83,7 +97,7 @@
       <section class="latest shell" aria-labelledby="latest-title">
         <div class="section-heading">
           <div>
-            <h2 id="latest-title">Neueste Entwicklungen</h2>
+            <h2 id="latest-title" tabindex="-1">Neueste Entwicklungen</h2>
             <p>Geprüfte, hervorgehobene Entwicklungen – neueste zuerst.</p>
           </div>
         </div>
@@ -93,7 +107,7 @@
       <section id="timeline" class="timeline-section shell" aria-labelledby="timeline-title">
         <div class="section-heading">
           <div>
-            <h2 id="timeline-title">Historische Timeline</h2>
+            <h2 id="timeline-title" tabindex="-1">Historische Timeline</h2>
             <p>Alle passenden Einträge – chronologisch aufsteigend.</p>
           </div>
         </div>
@@ -133,7 +147,7 @@
 
     <script src="../navigation.js" defer></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-    <script src="data/ai-history.js?v=20261102-1" defer></script>
-    <script src="js/app.js?v=20261019-1" defer></script>
+    <script src="data/ai-history.js?v=20261103-2" defer></script>
+    <script src="js/app.js?v=20261103-1" defer></script>
   </body>
 </html>

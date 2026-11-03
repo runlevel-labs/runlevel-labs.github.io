@@ -26,6 +26,14 @@ node scripts/build-data.js
 Der Befehl validiert die Daten und erzeugt die Browser-Datei neu.
 Beim Veröffentlichen die Versionsnummer des Daten-Scripts in `index.html` erhöhen.
 
+Die Kurzinfo im Intro berechnet Eintragszahl und Themenbereiche aus dem gesamten
+Datensatz; Such- und Kategoriefilter ändern diese Gesamtzahlen nicht. Der Hinweis
+„Zuletzt ergänzt“ nutzt das redaktionelle Datum `updatedAt` aus
+`data/chronik-meta.json`. Dieses Datum bei inhaltlichen Ergänzungen auf den Tag
+der Bearbeitung setzen, auch wenn der neue Meilenstein historisch ist. Anschließend
+den Daten-Build ausführen; er prüft das Datum und übernimmt die Metadaten in die
+Browser-Datei. Ein erneuter Build allein verändert den Datenstand nicht.
+
 ## Datenformat
 
 ```json

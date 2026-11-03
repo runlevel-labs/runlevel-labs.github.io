@@ -75,6 +75,17 @@
   margin-top: auto;
 }
 
+@media (min-width: 721px) {
+  /* Open details independently; shared rows only align collapsed card pairs. */
+  #model-list > .coding-model:has(> .coding-details[open]),
+  #model-list > .coding-model:nth-child(odd):has(+ .coding-model > .coding-details[open]),
+  #model-list > .coding-model:nth-child(odd):has(> .coding-details[open]) + .coding-model {
+    display: block;
+    grid-row: auto;
+    align-self: start;
+  }
+}
+
 .coding-model h3 {
   font-size: 1.3rem;
   overflow-wrap: anywhere;

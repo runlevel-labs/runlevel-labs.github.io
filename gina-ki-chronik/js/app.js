@@ -249,6 +249,28 @@ function render() {
   } in ${categoryText}.`;
 }
 
+function updateChronikOverview() {
+  const entries = state.entries;
+  document.querySelector("#chronik-entry-count").textContent = entries.length;
+  document.querySelector("#chronik-category-count").textContent = new Set(
+    entries.map((entry) => entry.category),
+  ).size;
+  document.querySelector("#chronik-overview-meta").hidden = false;
+
+  const updatedAt = window.GinaChronikMeta?.updatedAt;
+  const date = typeof updatedAt === "string" && /^\d{4}-\d{2}-\d{2}$/.test(updatedAt)
+    ? new Date(updatedAt + "T00:00:00Z")
+    : null;
+  if (date && !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === updatedAt) {
+    const time = document.querySelector("#chronik-updated-at");
+    time.dateTime = updatedAt;
+    time.textContent = new Intl.DateTimeFormat("de-DE", {
+      day: "numeric", month: "long", year: "numeric", timeZone: "UTC",
+    }).format(date);
+    document.querySelector("#chronik-update").hidden = false;
+  }
+}
+
 function loadTimeline() {
   try {
     const data = window.GinaChronikData;
@@ -258,6 +280,7 @@ function loadTimeline() {
     }
 
     state.entries = data;
+    updateChronikOverview();
     elements.loading.hidden = true;
     render();
   } catch (error) {
