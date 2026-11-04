@@ -133,9 +133,5 @@
 
   window.addEventListener("resize", handleMotionChange, { passive: true });
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", start, { once: true });
-  } else {
-    start();
-  }
+  // Der Start erfolgt einmalig durch das Ende der Kissen-Story.
 })();

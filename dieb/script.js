@@ -180,6 +180,67 @@
   });
 })();
 
+// Die Story beginnt einmalig, sobald ihre Bühne zu 40 % sichtbar ist.
+(() => {
+  const buehne = document.querySelector('.fuss-buehne');
+  if (!buehne) return;
+
+  let gestartet = false;
+  let observer;
+
+  function start() {
+    if (gestartet) return;
+    gestartet = true;
+    buehne.classList.add('story-gestartet');
+    if (observer) observer.disconnect();
+    window.removeEventListener('scroll', pruefeSichtbarkeit);
+    window.removeEventListener('resize', pruefeSichtbarkeit);
+  }
+
+  function pruefeSichtbarkeit() {
+    const r = buehne.getBoundingClientRect();
+    const sichtbareBreite = Math.max(0, Math.min(r.right, window.innerWidth) - Math.max(r.left, 0));
+    const sichtbareHoehe = Math.max(0, Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0));
+    if (r.width > 0 && r.height > 0 && sichtbareBreite * sichtbareHoehe >= r.width * r.height * 0.4) start();
+  }
+
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting && entry.intersectionRatio >= 0.4)) start();
+    }, { threshold: 0.4 });
+    observer.observe(buehne);
+  } else {
+    window.addEventListener('scroll', pruefeSichtbarkeit, { passive: true });
+    window.addEventListener('resize', pruefeSichtbarkeit, { passive: true });
+    pruefeSichtbarkeit();
+  }
+})();
+
+// Nach der Verfolgung blendet die Bühne zum gemeinsamen Schlussbild über.
+(() => {
+  const labor = document.querySelector('.fuss-szene-sechs');
+  if (!labor) return;
+
+  const buehne = labor.closest('.fuss-buehne');
+
+  labor.addEventListener('animationend', (event) => {
+    if (event.target !== labor || event.animationName !== 'fuss-szene-einblenden') return;
+    window.setTimeout(() => {
+      if (!window.GinaKissendieb?.show('ltr')) {
+        buehne.classList.add('story-abgeschlossen');
+        return;
+      }
+
+      const laufBeobachter = new MutationObserver(() => {
+        if (document.querySelector('.gina-kissendieb, .sir-codi-run')) return;
+        laufBeobachter.disconnect();
+        buehne.classList.add('story-abgeschlossen');
+      });
+      laufBeobachter.observe(document.body, { childList: true });
+    }, 1000);
+  }, { once: true });
+})();
+
 // Markiert den aktuell sichtbaren Hauptabschnitt in der Navigation.
 (() => {
   const navLinks = [...document.querySelectorAll('.nav-liste a[href^="#"]')];

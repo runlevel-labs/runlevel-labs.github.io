@@ -79,7 +79,6 @@
     wrapper.addEventListener("animationend", function (event) {
       if (event.target === wrapper) {
         removeActiveElement();
-        showEpilogue();
       }
     });
 
