@@ -1076,5 +1076,27 @@
     "sourceUrl": "https://www.prnewswire.com/news-releases/agibot-introduces-worken-to-measure-productive-robot-work-at-agibot-innovation-day-2026-302923486.html",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "robocolosseum-physical-robot-benchmark-2026",
+    "date": "2026-11-02",
+    "title": "RoboColosseum vergleicht KI-Steuerungen auf realen Robotern",
+    "category": "Robotik",
+    "summary": "Ein Forschungsverbund stellt RoboColosseum vor, einen Benchmark für KI-gestützte Robotersteuerung unter realen Bedingungen. In 5.699 Paarvergleichen an 124 Standorten untersucht das Team, wie gut spezialisierte Vision-Language-Action-Modelle und allgemeine KI-Agenten physische Aufgaben bewältigen. Eine separate Testreihe prüft die Anpassung spezialisierter Modelle mit gleich vielen Demonstrationen pro Aufgabe. Am humanoiden Unitree G1 löst nach dieser Feinabstimmung keines der fünf getesteten Modelle eine der fünf Aufgaben vollständig. Die Studie zeigt, wie sich die Übertragbarkeit und Zuverlässigkeit von KI-Steuerungen über verschiedene Robotertypen hinweg messen lassen.",
+    "sourceName": "Nguyen et al. – RoboColosseum-Preprint auf arXiv",
+    "sourceUrl": "https://arxiv.org/abs/2611.02497",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "tencent-hy4-vision-computer-use-2026",
+    "date": "2026-11-04",
+    "title": "Tencent veröffentlicht Hy4 mit Bildverständnis und Computerbedienung",
+    "category": "Modelle",
+    "summary": "Tencent veröffentlicht Hy4 über seine Cloud-API. Erstmals in der Hy-Reihe kann das Modell Bilder und Diagramme auswerten und sowohl grafische Oberflächen als auch die Kommandozeile bedienen. Tencent trainiert es gezielt für technische Arbeitsabläufe mit Software wie Blender und CAD-Anwendungen. Die Veröffentlichung erweitert die textbasierte Vorschau um visuelle Fähigkeiten und Computerbedienung. Die Modellgewichte und die technische Dokumentation zur neuen Version kündigt Tencent zum Start für einen späteren Zeitpunkt an.",
+    "sourceName": "Tencent – offizielle Mitteilung zur Hy4-Veröffentlichung",
+    "sourceUrl": "https://en.prnasia.com/releases/apac/tencent-launches-hy4-joining-the-ranks-of-the-world-s-leading-open-source-ai-models-554689.shtml",
+    "status": "reviewed",
+    "featured": true
   }
 ]
