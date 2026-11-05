@@ -1099,8 +1099,30 @@ window.GinaChronikData = [
     "sourceUrl": "https://en.prnasia.com/releases/apac/tencent-launches-hy4-joining-the-ranks-of-the-world-s-leading-open-source-ai-models-554689.shtml",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "openai-images-26-gif-svg-release-2026",
+    "date": "2026-11-04",
+    "title": "OpenAI veröffentlicht Images 2.6 mit GIF-Erzeugung und SVG-Ausgabe",
+    "category": "Modelle",
+    "summary": "OpenAI veröffentlicht Images 2.6 in ChatGPT, Codex und der API. Die neue Version unterstützt GIF-Erzeugung und soll Figuren, Produkte und Markendetails über mehrere Bearbeitungsschritte hinweg konsistenter erhalten. In der API ergänzen gezielte Bildmarkierungen, SVG-Ausgabe und eine Einstellung für die Komplexität der Generierung die Bildbearbeitung. Die API bietet die Varianten GPT-Image-2.6 Flare und Sunburst. Der Schritt erweitert KI-gestützte Bildgestaltung um Animation und zusätzliche Möglichkeiten zur Weiterverarbeitung. OpenAI nennt eine um 50 Prozent schnellere Generierung gegenüber der vorherigen Version. Diese Geschwindigkeits- und Qualitätsangaben stammen vom Anbieter.",
+    "sourceName": "OpenAI – offizielle Ankündigung zu Images 2.6",
+    "sourceUrl": "https://openai.com/index/introducing-images-2-6/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "ricursive-ripple-65b-preview-open-weights-2026",
+    "date": "2026-11-04",
+    "title": "Ricursive veröffentlicht Ripple-65B Preview für Coding und Agentenaufgaben",
+    "category": "Open Source",
+    "summary": "Ricursive Intelligence veröffentlicht Ripple-65B Preview, ein dichtes Transformer-Modell mit 65 Milliarden Parametern unter Apache 2.0. Das Modell wurde von Grund auf mit zwölf Billionen Tokens vortrainiert und anschließend auf Schlussfolgern, Programmierung und mehrstufige Agentenaufgaben ausgerichtet. Die Veröffentlichung umfasst Instruktionsgewichte in BF16 und NVFP4 sowie ein BF16-Basismodell. Laut Modellkarte unterstützt Ripple bis zu eine Million Tokens Kontext. Die Veröffentlichung erweitert das Angebot offener Coding-Modelle um eine eigenständig trainierte Architektur. Die veröffentlichten Leistungsvergleiche stammen vom Entwickler. Lokaler Betrieb erfordert eine kompatible Laufzeit für diese Architektur.",
+    "sourceName": "Ricursive Intelligence – offizielle Ripple-65B-Preview-Modellkarte",
+    "sourceUrl": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview",
+    "status": "reviewed",
+    "featured": true
   }
 ];
 window.GinaChronikMeta = {
-  "updatedAt": "2026-11-04"
+  "updatedAt": "2026-11-05"
 };
