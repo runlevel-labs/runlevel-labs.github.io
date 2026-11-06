@@ -1121,8 +1121,41 @@ window.GinaChronikData = [
     "sourceUrl": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "openai-gpt-6-cyber-daybreak-red-2026",
+    "date": "2026-11-05",
+    "title": "OpenAI stellt GPT-6 Cyber für autorisierte Sicherheitsarbeit vor",
+    "category": "Modelle",
+    "summary": "OpenAI stellt GPT-6 Cyber als auf Cybersicherheit spezialisierte Variante von GPT-6 Astra vor. Das Nachtraining verbindet die Suche nach Schwachstellen, die Reproduktion von Fehlern und die Entwicklung von Exploits mit gezielten Trainingssignalen für das Einhalten erteilter Befugnisse. Der Zugang ist über Daybreak Red eingeschränkt und setzt unter anderem Identitätsprüfung und organisatorische Sicherheitsmaßnahmen voraus. Der Meilenstein liegt in der Bereitstellung eines spezialisierten Sicherheitsmodells mit zusätzlichen Kontrollen für autorisierte Einsätze. Die veröffentlichte System Card dokumentiert Verbesserungen gegenüber GPT-5.6 Cyber sowie verbleibende Schwächen beim Einhalten von Grenzen und beim Berichten von Hindernissen.",
+    "sourceName": "OpenAI – offizielle GPT-6-Cyber-System-Card",
+    "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-cyber",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "baidu-ernie-55-flash-base-weights-2026",
+    "date": "2026-11-05",
+    "title": "Baidu veröffentlicht die Basisgewichte von ERNIE 5.5 Flash",
+    "category": "Open Source",
+    "summary": "Baidu veröffentlicht ERNIE 5.5 Flash Base als Ausgangspunkt für Forschung, Domänenanpassung und eigenes Nachtraining. Das von Grund auf mit 33,5 Billionen Tokens vortrainierte Mixture-of-Experts-Modell umfasst laut Anbieter 280 Milliarden Parameter und aktiviert etwa 14 Milliarden pro Token. Die Gewichte sind in FP8 und BF16 verfügbar. Die Architektur kombiniert komprimierte und sparse Aufmerksamkeit, um Rechenaufwand und Kontextspeicher zu verringern. Veröffentlicht wird der Stand am Ende des Vortrainings. Darauf können Instruction-Tuning und Reinforcement Learning aufbauen. Es gelten die Bedingungen der ERNIE 5.5 Flash Base Model License Agreement v1.0. Die Leistungsvergleiche stammen vom Entwickler.",
+    "sourceName": "Baidu ERNIE – offizielle ERNIE-5.5-Flash-Base-Modellkarte",
+    "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "open-humanwam-human-robot-pretraining-2026",
+    "date": "2026-11-04",
+    "title": "Open-HumanWAM untersucht Roboterlernen aus menschlichen Handlungsvideos",
+    "category": "Robotik",
+    "summary": "Ein Forschungsverbund stellt Open-HumanWAM vor, ein offenes Trainingskonzept für Robotikmodelle auf Basis von 50.000 Stunden Videos aus menschlicher Ego-Perspektive. Der wesentliche KI-Beitrag liegt im Übertragen menschlicher Handlungserfahrung auf World-Action-Modelle, die Wahrnehmung und robotische Steuerung verbinden. Die Arbeit untersucht den Zusammenhang zwischen Datenmenge und späterem Aufgabenerfolg sowie gemeinsames Vortraining mit menschlichen und robotischen Daten. Die Autoren berichten über Simulationstests und die Anpassung an neue visuelle Ziele auf realen Robotern ohne Aktualisierung der Modellparameter. Sie beschreiben die Freigabe von Daten, Trainingspipelines, Checkpoints und Auswertungscode. Der Preprint wurde am 4. November eingereicht und am 5. November überarbeitet.",
+    "sourceName": "Ma et al. – Open-HumanWAM-Originalarbeit auf arXiv",
+    "sourceUrl": "https://arxiv.org/abs/2611.06817",
+    "status": "reviewed",
+    "featured": true
   }
 ];
 window.GinaChronikMeta = {
-  "updatedAt": "2026-11-05"
+  "updatedAt": "2026-11-06"
 };

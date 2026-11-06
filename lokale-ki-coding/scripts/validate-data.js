@@ -53,7 +53,7 @@ function validateData(data) {
       text(source?.label, label + ".source.label");
       url(source?.url, label + ".source.url");
     });
-    if (typeof model.ollamaCommand !== "string" || !/^ollama run (?:[a-z0-9][a-z0-9.:-]*|hf\.co\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+:[A-Za-z0-9_.-]+)$/.test(model.ollamaCommand) || model.ollamaCommand.includes("cloud")) errors.push(label + ": Lokaler Ollama-Befehl ungültig.");
+    if (typeof model.ollamaCommand !== "string" || !/^ollama run (?:[a-z0-9][A-Za-z0-9_.:-]*|hf\.co\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+:[A-Za-z0-9_.-]+)$/.test(model.ollamaCommand) || model.ollamaCommand.includes("cloud")) errors.push(label + ": Lokaler Ollama-Befehl ungültig.");
   });
   if (errors.length) throw new Error(errors.join("\n"));
   return data;
