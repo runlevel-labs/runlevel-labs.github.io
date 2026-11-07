@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-07",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -885,6 +885,63 @@
         {
           "label": "GGUF-Dateien, Checkpoint und optionaler Bildprojektor",
           "url": "https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/tree/main"
+        }
+      ]
+    },
+    {
+      "id": "twil-8b",
+      "name": "TwIL-8B · 8,8B balanced",
+      "provider": "webAI · auf Basis von IBM Granite 4.2",
+      "profile": "Experimenteller Coding-Kandidat · nichtkommerziell",
+      "parameters": "8,79 Mrd. · dichtes Textmodell",
+      "quantization": "GGUF Q4_K_M · balanced gezielt auswählen",
+      "memory": {
+        "weightsGb": "ca. 5,35 GB (4,98 GiB) allein für das Q4_K_M-balanced-GGUF",
+        "ram": "16–24 GB System-RAM als Planungswert mit Editor",
+        "vram": "ca. 7–9 GB für vollständige GPU-Ausführung bei kurzem Kontext",
+        "context": "2.048–4.096 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen, keine eigenen Messungen. Die Datei umfasst 5.347.917.568 Bytes. Kontext-Cache, Laufzeitpuffer und Bildschirmausgabe benötigen zusätzlichen Speicher. Auf einer 8-GB-GPU mit kurzem Kontext testen; vollständiges GPU-Offloading ist nicht garantiert. Bei Bedarf Teile im System-RAM ausführen. Das geerbte maximale Kontextfenster von 131.072 Tokens ist kein Planungswert für diese Hardware."
+      },
+      "strengths": "Laut Modellautor für Code, Mathematik und Instruktionsbefolgung nachtrainiert. Kleine Programmieraufgaben, Erklärungen und Testentwürfe am eigenen Projekt vergleichen. Die Hersteller-Benchmarks vermischen teilweise balanced und verbose; daraus folgt keine gemessene Coding-Leistung dieser GGUF-Variante.",
+      "languages": [
+        "Englische Aufgabenstellungen",
+        "Programmiersprachen am eigenen Projekt prüfen"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Tests"
+      ],
+      "repo": "Relevante Funktionen und kleine Dateiausschnitte gezielt mitgeben. Selbstständige Repository-Suche benötigt zusätzliche lokale Werkzeuge und ist hier nicht erprobt.",
+      "agents": "Zunächst beaufsichtigte Einzelaufgaben verwenden. Zuverlässige Tool-Aufrufe und längere autonome Werkzeugketten sind hier nicht geprüft.",
+      "tools": [
+        "Ollama (Hugging-Face-GGUF)",
+        "llama.cpp (GGUF)",
+        "LM Studio (kompatible GGUF-Runtime)"
+      ],
+      "toolNote": "Der Ollama-Befehl verwendet den vollständigen Dateinamen als Tag und wählt dadurch balanced statt verbose. Aktuelle Granite-kompatible Runtime und korrektes Chat-Template verwenden; die Modellkarte dokumentiert llama.cpp mit expliziter Dateiauswahl. Laufzeitkompatibilität und Antwortformat wurden hier nicht praktisch getestet. Kontext und Ausgabelänge zunächst begrenzen.",
+      "ollamaCommand": "ollama run hf.co/webAI-Official/TwIL-8B:TwIL-8B-Q4_K_M-balanced.gguf",
+      "license": {
+        "name": "webAI Non-Commercial License ver. 1.0",
+        "note": "Abschnitt 3.3 beschränkt die Nutzung auf nichtkommerzielle Forschung und Bildung. Auch abgeleitete Modelle unterliegen dieser Einschränkung. Die Apache-2.0-Lizenz des Granite-Basismodells gilt nicht als Lizenz dieses Finetunes. Bei Weitergabe vollständige Lizenz und Herkunftshinweise beibehalten.",
+        "url": "https://huggingface.co/webAI-Official/TwIL-8B/blob/main/LICENSE.md"
+      },
+      "offline": "Nach dem Download lokale Textinferenz ohne externe Modell-API möglich. Nur im Rahmen der Lizenz für nichtkommerzielle Forschung und Bildung einsetzen; ergänzende Editor- und Suchwerkzeuge ebenfalls lokal konfigurieren.",
+      "verdict": "Experimenteller Kandidat zum Erproben kleiner Coding-Aufgaben in nichtkommerzieller Forschung und Bildung. Für eine 8-GB-GPU mit kurzem Kontext prüfen; hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Englisch ist die dokumentierte Modellsprache. Allgemeines Fachwissen ist laut Autor eine Schwäche. Reasoning kann viel Ausgabe erzeugen; verbose benötigt besonders viele Tokens. Herstellerwerte stammen überwiegend aus BF16-Tests und lassen sich nicht unmittelbar auf balanced in Q4_K_M übertragen. Code, Tests und Ressourcenverbrauch selbst prüfen.",
+      "checkedAt": "2026-11-07",
+      "sources": [
+        {
+          "label": "Offizielle Modellkarte / Varianten und Einsatzgrenzen",
+          "url": "https://huggingface.co/webAI-Official/TwIL-8B"
+        },
+        {
+          "label": "Q4_K_M balanced / konkrete GGUF-Datei",
+          "url": "https://huggingface.co/webAI-Official/TwIL-8B/blob/main/TwIL-8B-Q4_K_M-balanced.gguf"
+        },
+        {
+          "label": "Hugging Face / Ollama mit vollständigem Dateinamen",
+          "url": "https://huggingface.co/docs/hub/ollama"
         }
       ]
     }

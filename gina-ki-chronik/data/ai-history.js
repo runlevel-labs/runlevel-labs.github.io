@@ -1154,8 +1154,41 @@ window.GinaChronikData = [
     "sourceUrl": "https://arxiv.org/abs/2611.06817",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "metr-anthropic-ai-rd-acceleration-assessment-2026",
+    "date": "2026-11-05",
+    "title": "METR untersucht die Beschleunigung der KI-Forschung bei Anthropic",
+    "category": "Forschung",
+    "summary": "METR veröffentlicht eine unabhängige Untersuchung zur Beschleunigung der KI-Forschung bei Anthropic. Nach elf Wochen mit Zugang zu internen Daten und Gesprächen mit Forschenden schätzt METR, dass die im internen AECI gemessenen Modellfähigkeiten seit Oktober 2025 etwa 1,9-mal schneller fortschreiten als zuvor. Interviews und Nutzungsdaten sprechen dafür, dass KI-Unterstützung dazu beiträgt. Der Bericht erweitert die externe Bewertung von KI-gestützter KI-Entwicklung durch Einblicke in die Forschungspraxis eines führenden Labors. Der genaue kausale Anteil der KI-Nutzung und die Übertragbarkeit der Benchmarkentwicklung auf reale Arbeitsleistung bleiben unsicher. Teile der zugrunde liegenden Analyse wurden von Anthropic geschwärzt.",
+    "sourceName": "METR – unabhängige Untersuchung zur KI-Forschungsbeschleunigung bei Anthropic",
+    "sourceUrl": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "mit-sparks-weight-space-programming-2026",
+    "date": "2026-11-02",
+    "title": "MIT-Forscher untersuchen das Lesen und Verändern neuronaler Gewichte durch Sprachmodelle",
+    "category": "Forschung",
+    "summary": "Forschende des MIT CSAIL stellen erste Experimente zu Weight-Space Programming vor. GPT-6 Astra untersucht die numerischen Gewichte anderer neuronaler Netze, verändert bestehende Netze und erzeugt Gewichte kleiner neuer Netze anhand natürlichsprachlicher Aufgaben. Je nach Experiment arbeitet das Modell mit Gewichten als Text oder mit Python-Werkzeugen und begrenzten Rückmeldungen aus Testläufen. Die Gewichtsänderungen entstehen ohne gradientenbasiertes Training. Der Ansatz eröffnet Forschungsfragen zur Analyse, Reparatur und Optimierung neuronaler Modelle durch Sprachmodelle. Die Autoren kennzeichnen die Ergebnisse als vorläufig. Eine weitere explorative Arbeit mit Claude berichtet über Grenzen beim Interpretieren von Gewichten. Die Übertragbarkeit auf größere Netze und andere Modelle bleibt offen.",
+    "sourceName": "Takehi, Teoh, Zhang und Khattab – Originalbericht zu Weight-Space Programming",
+    "sourceUrl": "https://rikiyat.github.io/blog/weight-space-programming/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "nvidia-cosmos3-interactive-world-simulation-2026",
+    "date": "2026-11-05",
+    "title": "NVIDIA erweitert Cosmos 3 um vier Modelle für interaktive Weltsimulation",
+    "category": "Robotik",
+    "summary": "NVIDIA ergänzt die bestehende Cosmos-3-Familie um vier offene, nachtrainierte Modellvarianten. Transfer-Auto erzeugt synthetische Fahrszenen mit mehreren Kameraansichten und LiDAR-Daten. Sim-Auto unterstützt deren fortlaufende Generierung anhand aktualisierter Steuerdaten. Sim-Transfer erzeugt Bildbeobachtungen aus den Zuständen eines Physiksimulators, während Sim-Bimanual die visuellen Folgen von Roboter- und Kamerabewegungen vorhersagt. Der wesentliche KI-Beitrag liegt in der aktionsabhängigen Vorhersage und Erzeugung von Beobachtungen für die Entwicklung und Untersuchung von Robotik- und Fahrstrategien. Die Modellgewichte stehen unter OpenMDW 1.1. NVIDIA veröffentlicht zudem Nachtrainingsrezepte. NVIDIA beschreibt die Bewertung von physikalischer Treue und Eignung für das Lernen und Prüfen von Steuerungsmodellen als weitere Forschungsaufgabe.",
+    "sourceName": "NVIDIA – Originalbericht zu interaktiver Cosmos-3-Weltsimulation",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+    "status": "reviewed",
+    "featured": true
   }
 ];
 window.GinaChronikMeta = {
-  "updatedAt": "2026-11-06"
+  "updatedAt": "2026-11-07"
 };
