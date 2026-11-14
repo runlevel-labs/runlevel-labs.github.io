@@ -1,0 +1,180 @@
+.sir-codi-run {
+  --codi-size: clamp(112px, 10.5vw, 168px);
+  --codi-tour-duration: 11s;
+
+  position: fixed;
+  z-index: 899;
+  bottom: max(4px, env(safe-area-inset-bottom));
+  left: 0;
+  width: var(--codi-size);
+  aspect-ratio: 3 / 4;
+  overflow: visible;
+  pointer-events: none;
+  user-select: none;
+  contain: layout;
+  will-change: transform;
+}
+
+.sir-codi-run--ltr {
+  animation: sir-codi-tour-ltr var(--codi-tour-duration) linear both;
+}
+
+.sir-codi-run--rtl {
+  animation: sir-codi-tour-rtl var(--codi-tour-duration) linear both;
+}
+
+.sir-codi-run__sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url("./sir-codi-run-spritesheet.png?v=20260812-1");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 400% 200%;
+  animation: sir-codi-frames 880ms steps(1, end) infinite;
+}
+
+.sir-codi-run--rtl .sir-codi-run__sprite {
+  transform: scaleX(-1);
+}
+
+.sir-codi-run__speech {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 72%;
+  width: max-content;
+  max-width: min(150px, 44vw);
+  padding: 0.55rem 0.75rem;
+  border: 2px solid #07111d;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #07111d;
+  font: 700 clamp(0.68rem, 1vw, 0.82rem) / 1.2 system-ui, sans-serif;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.sir-codi-run__speech::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: -10px;
+  width: 16px;
+  height: 16px;
+  border-right: 2px solid #07111d;
+  border-bottom: 2px solid #07111d;
+  background: #ffffff;
+  transform: skewY(-35deg) rotate(45deg);
+}
+
+.sir-codi-run--rtl .sir-codi-run__speech {
+  right: 72%;
+  left: auto;
+}
+
+.sir-codi-run--rtl .sir-codi-run__speech::after {
+  right: 16px;
+  left: auto;
+  transform: skewY(35deg) rotate(45deg);
+}
+
+@keyframes sir-codi-frames {
+  0% { background-position: 0 0; }
+  12.5% { background-position: 33.333333% 0; }
+  25% { background-position: 66.666667% 0; }
+  37.5% { background-position: 100% 0; }
+  50% { background-position: 0 100%; }
+  62.5% { background-position: 33.333333% 100%; }
+  75% { background-position: 66.666667% 100%; }
+  87.5% { background-position: 100% 100%; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes sir-codi-tour-ltr {
+  from { transform: translate3d(calc(-100% - 2vw), 0, 0); }
+  to { transform: translate3d(calc(100vw + 2vw), 0, 0); }
+}
+
+@keyframes sir-codi-tour-rtl {
+  from { transform: translate3d(calc(100vw + 2vw), 0, 0); }
+  to { transform: translate3d(calc(-100% - 2vw), 0, 0); }
+}
+
+@media (max-width: 480px) {
+  .sir-codi-run {
+    --codi-size: 96px;
+  }
+
+  .sir-codi-run__speech {
+    padding: 0.42rem 0.58rem;
+  }
+}
+
+@media (max-width: 340px), (prefers-reduced-motion: reduce) {
+  .sir-codi-run {
+    display: none !important;
+    animation: none !important;
+  }
+
+  .sir-codi-run__sprite {
+    animation: none !important;
+  }
+}
+
+/* A separate translate keeps the running bounce intact in either direction. */
+@keyframes sir-codi-run-bounce {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -3px; }
+}
+
+.sir-codi-run__speech {
+  top: -12%;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  animation: sir-codi-run-call 420ms 900ms both;
+}
+.sir-codi-run--rtl .sir-codi-run__speech {
+  left: 50%;
+  right: auto;
+}
+.sir-codi-run__speech::after,
+.sir-codi-run--rtl .sir-codi-run__speech::after {
+  left: calc(50% - 8px);
+  right: auto;
+}
+@keyframes sir-codi-run-call {
+  from { opacity: 0; translate: 0 5px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+/* The case remains open after both runners have left the screen. */
+.kissendieb-epilogue {
+  position: fixed;
+  z-index: 901;
+  left: 50%;
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  padding: 12px 18px;
+  border: 1px solid rgba(115, 218, 255, 0.45);
+  border-radius: 16px;
+  background: rgba(7, 17, 29, 0.96);
+  color: #e7f6ff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  font: 500 13px / 1.5 system-ui, sans-serif;
+  text-align: center;
+  pointer-events: none;
+  animation: kissendieb-epilogue-fade 5.5s ease both;
+}
+
+@keyframes kissendieb-epilogue-fade {
+  0%, 100% { opacity: 0; }
+  8%, 85% { opacity: 1; }
+}
+
+@media (max-width: 340px), (prefers-reduced-motion: reduce) {
+  .kissendieb-epilogue { display: none; animation: none; }
+}

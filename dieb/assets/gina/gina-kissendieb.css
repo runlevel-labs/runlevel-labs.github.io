@@ -1,0 +1,120 @@
+.gina-kissendieb {
+  --gina-size: clamp(96px, 9vw, 144px);
+  --gina-tour-duration: 11s;
+
+  position: fixed;
+  z-index: 900;
+  bottom: max(6px, env(safe-area-inset-bottom));
+  left: 0;
+  width: var(--gina-size);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  contain: layout paint;
+  will-change: transform;
+}
+
+.gina-kissendieb--ltr {
+  animation: gina-kissendieb-tour-ltr var(--gina-tour-duration) linear both;
+}
+
+.gina-kissendieb--rtl {
+  animation: gina-kissendieb-tour-rtl var(--gina-tour-duration) linear both;
+}
+
+.gina-kissendieb__sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url("./gina-kissendieb-spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 400% 200%;
+  animation: gina-kissendieb-frames 640ms steps(1, end) infinite,
+    gina-kissendieb-bounce 320ms ease-in-out infinite;
+}
+
+.gina-kissendieb--rtl .gina-kissendieb__sprite {
+  transform: scaleX(-1);
+}
+
+@keyframes gina-kissendieb-frames {
+  0% {
+    background-position: 0 0;
+  }
+
+  12.5% {
+    background-position: 33.333333% 0;
+  }
+
+  25% {
+    background-position: 66.666667% 0;
+  }
+
+  37.5% {
+    background-position: 100% 0;
+  }
+
+  50% {
+    background-position: 0 100%;
+  }
+
+  62.5% {
+    background-position: 33.333333% 100%;
+  }
+
+  75% {
+    background-position: 66.666667% 100%;
+  }
+
+  87.5% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes gina-kissendieb-tour-ltr {
+  from {
+    transform: translate3d(calc(-100% - 2vw), 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(100vw + 2vw), 0, 0);
+  }
+}
+
+@keyframes gina-kissendieb-tour-rtl {
+  from {
+    transform: translate3d(calc(100vw + 2vw), 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-100% - 2vw), 0, 0);
+  }
+}
+
+@media (max-width: 480px) {
+  .gina-kissendieb {
+    --gina-size: 82px;
+  }
+}
+
+@media (max-width: 340px), (prefers-reduced-motion: reduce) {
+  .gina-kissendieb {
+    display: none !important;
+    animation: none !important;
+  }
+
+  .gina-kissendieb__sprite {
+    animation: none !important;
+  }
+}
+
+/* A separate translate keeps the running bounce intact in either direction. */
+@keyframes gina-kissendieb-bounce {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -3px; }
+}
