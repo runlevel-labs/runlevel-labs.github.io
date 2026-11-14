@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101e32">
+  <meta name="description" content="Runlevel Labs – Aus dem Leben dreier Laborchaoten. Lokaler Bilderbuch-Prototyp.">
+  <title>Runlevel Labs – Aus dem Leben dreier Laborchaoten</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=20261113-4">
+  <link rel="stylesheet" href="navigation.css?v=20261113-4">
+  <script src="../navigation.js" defer></script>
+  <script src="content/pages.js" defer></script>
+  <script src="scripts/pagination.js" defer></script>
+  <script src="scripts/book.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="hero-nav-shell">
+      <a class="site-brand" href="../index.html" aria-label="Runlevel Labs – Startseite">
+        <img src="../runlevel-labs-logo.png" alt="" width="82" height="82">
+        <span>Runlevel Labs</span>
+      </a>
+      <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Hauptnavigation öffnen">
+        <span aria-hidden="true">☰</span> Menü
+      </button>
+      <nav id="main-navigation" class="hero-legal-nav" aria-label="Hauptnavigation">
+        <a href="../index.html">Startseite</a>
+        <a href="../werkstatt.html">Werkstatt</a>
+        <a href="../dieb/index.html">Kissen-404</a>
+        <a href="../orden/index.html">Orden</a>
+        <a href="../gina.html">Gina</a>
+        <a href="index.html" aria-current="page">Laborchaoten</a>
+        <a href="../gina-ki-chronik/index.html">KI-Chronik</a>
+        <a href="../lokale-ki-coding/index.html">Lokale KI</a>
+        <a href="../datenschutz.html">Datenschutz</a>
+        <a href="../impressum.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reader" aria-label="Interaktives Bilderbuch">
+    <section class="book-intro" aria-labelledby="book-title">
+      <p class="book-intro__eyebrow">RUNLEVEL LABS · LABORCHAOTEN</p>
+      <h1 id="book-title">Aus dem Leben dreier Laborchaoten</h1>
+      <p class="book-intro__tagline"><strong>Drei Freunde. Tausend Ideen. Und keiner war's!</strong></p>
+      <p class="book-intro__copy"><em>Tom, Gina und Sir Codi erleben kleine und große Katastrophen aus ihrem Technikalltag. Mit viel Fantasie, einer ordentlichen Portion Humor und garantiert nie genug Kaffee.</em></p>
+    </section>
+    <div class="book-stage" id="book-stage">
+      <div class="book-board is-closed" id="book" aria-label="Geschlossenes Buch" aria-busy="false">
+        <div class="book-pages" id="pages" hidden>
+          <article class="page page--left" id="left-page"></article>
+          <article class="page page--right" id="right-page"></article>
+          <div class="book-gutter" aria-hidden="true"></div>
+        </div>
+        <div class="book-cover" id="cover">
+          <div class="cover-face cover-front">
+            <div class="cover-frame">
+              <svg class="cover-icon" viewBox="0 0 32 28" aria-hidden="true"><path d="M16 6C12 2 7 2 2 3v20c5-1 10-1 14 3 4-4 9-4 14-3V3c-5-1-10-1-14 3Zm0 0v20"/></svg>
+              <p class="cover-brand">RUNLEVEL LABS</p>
+              <p class="cover-title">Aus dem Leben dreier Laborchaoten</p>
+              <hr class="cover-divider">
+              <div class="cover-motto">
+                <p>We build. We debug. We laugh.</p>
+                <p>And sometimes ... we celebrate!</p>
+              </div>
+              <p class="cover-signature">GINA · SIR CODI · TOM</p>
+            </div>
+          </div>
+          <div class="cover-face cover-back" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reader-controls">
+      <button class="cover-button" id="open-book" type="button" aria-controls="book">Buch öffnen <span aria-hidden="true">↗</span></button>
+      <nav class="page-navigation" id="navigation" aria-label="Buchnavigation" hidden>
+        <button class="arrow-button" id="previous" type="button" aria-label="Vorherige Seiten" aria-controls="pages"><span aria-hidden="true">←</span></button>
+        <p class="page-status" id="page-status"></p>
+        <button class="arrow-button" id="next" type="button" aria-label="Nächste Seiten" aria-controls="pages"><span aria-hidden="true">→</span></button>
+      </nav>
+      <button class="close-button" id="close-book" type="button" hidden>Buch schließen</button>
+      <p class="reading-hint" id="reading-hint"><span class="desktop-hint"><kbd>←</kbd> <kbd>→</kbd> oder Pfeiltasten verwenden</span><span class="mobile-hint">Zum Blättern wischen oder die Pfeile nutzen</span></p>
+      <p class="sr-only" id="announcement" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <noscript><p class="no-script">Bitte JavaScript aktivieren, um das Bilderbuch zu öffnen und darin zu blättern.</p></noscript>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <strong>Powered by Heart ❤️</strong>
+      <span>Tom + Gina + Sir Codi 👻</span>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer-Navigation">
+      <a href="../index.html">Startseite</a>
+      <a href="../werkstatt.html">Werkstatt</a>
+      <a href="../dieb/index.html">Kissen-404</a>
+      <a href="../orden/index.html">Orden</a>
+      <a href="../gina.html">Gina</a>
+      <a href="index.html" aria-current="page">Laborchaoten</a>
+      <a href="../gina-ki-chronik/index.html">KI-Chronik</a>
+      <a href="../lokale-ki-coding/index.html">Lokale KI</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+      <a href="../impressum.html">Impressum</a>
+    </nav>
+
+    <div class="footer-meta">
+      <span>© <span id="year"></span> Runlevel Labs</span>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

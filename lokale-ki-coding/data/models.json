@@ -1,0 +1,1328 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-14",
+  "models": [
+    {
+      "id": "qwen25-coder-7b",
+      "addedAt": null,
+      "name": "Qwen2.5-Coder 7B Instruct",
+      "provider": "Qwen / Alibaba Cloud",
+      "profile": "Kleiner Einstieg",
+      "parameters": "7,6 Mrd. · dichtes Modell",
+      "quantization": "GGUF Q4_K_M; Q5_K_M bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 4,7 GB bei Q4_K_M",
+        "ram": "16 GB System-RAM empfohlen",
+        "vram": "ca. 6–8 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg",
+        "note": "CPU-Betrieb ist möglich, aber langsamer. Die Reserve neben dem Modell wird für Kontext, Betriebssystem und IDE gebraucht."
+      },
+      "strengths": "Überschaubare Funktionen erklären, kleine Fehler eingrenzen und Testentwürfe erzeugen.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "SQL", "Bash"],
+      "useCases": ["Code-Chat", "Refactoring", "Tests"],
+      "repo": "Einzelne Dateien und gezielt ausgewählte Ausschnitte zuführen; für große Repositories einen lokalen Datei- oder Suchzugriff ergänzen.",
+      "agents": "Für beaufsichtigte kleine Schritte; längere Werkzeugketten sind nicht der Schwerpunkt dieser Auswahl.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Ollama ist der einfache Start. Das hier verlinkte 7B-Paket nutzt Q4_K_M.",
+      "ollamaCommand": "ollama run qwen2.5-coder:7b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokal ohne Cloud-Inferenz nutzbar. IDE-Anbindung und Zusatzwerkzeuge müssen ebenfalls lokal arbeiten.",
+      "verdict": "Unser Einstieg für einen normalen Entwicklungsrechner: kleine Aufgaben klar eingrenzen, Änderungen prüfen und Tests selbst ausführen.",
+      "limitations": "Bei neuen APIs und größeren Änderungen passende Dokumentation mitgeben. Kleine Modelle verlieren bei langen Aufgaben leichter den roten Faden.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/qwen2.5-coder:7b" }
+      ]
+    },
+    {
+      "id": "qwen25-coder-14b",
+      "addedAt": null,
+      "name": "Qwen2.5-Coder 14B Instruct",
+      "provider": "Qwen / Alibaba Cloud",
+      "profile": "Mehr Spielraum für Code-Chat",
+      "parameters": "14,8 Mrd. · dichtes Modell",
+      "quantization": "GGUF Q4_K_M; Q5_K_M bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 9 GB bei Q4_K_M",
+        "ram": "24–32 GB System-RAM empfohlen",
+        "vram": "ca. 11–14 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg",
+        "note": "Eine 16-GB-GPU bietet mehr Reserve als eine 12-GB-Karte. Teilweises GPU-Offloading ist möglich, kostet aber Geschwindigkeit."
+      },
+      "strengths": "Code erklären, abgegrenzte Refactorings entwerfen und zusammenhängende Funktionen samt Testfällen bearbeiten.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "C++", "Go"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests"],
+      "repo": "Mehrere relevante Dateien gezielt mitgeben. Ein großes Kontextfenster ersetzt keine Suche nach den richtigen Stellen.",
+      "agents": "Beaufsichtigte Änderungen bevorzugen; mit kleinen Patches und wiederholten Prüfungen arbeiten.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Das verlinkte Ollama-Paket nutzt Q4_K_M. Für CPU-Betrieb genügend freien RAM einplanen.",
+      "ollamaCommand": "ollama run qwen2.5-coder:14b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokal ohne Cloud-Inferenz nutzbar. Repo-Suche und Embeddings bei Bedarf ebenfalls lokal betreiben.",
+      "verdict": "Ein sinnvoller nächster Versuch, wenn der 7B-Einstieg zu knapp wird und der Rechner genug Speicher hat. Für regelmäßigen Chat ist GPU-Beschleunigung angenehm.",
+      "limitations": "Kein automatischer Ersatz für Projektwissen. Bei komplexen Umbauten Abhängigkeiten und vorhandene Tests ausdrücklich mitgeben.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/qwen2.5-coder:14b" }
+      ]
+    },
+    {
+      "id": "deepseek-coder-v2-lite",
+      "addedAt": null,
+      "name": "DeepSeek-Coder V2 Lite Instruct",
+      "provider": "DeepSeek",
+      "profile": "Alternative für Code-Aufgaben",
+      "parameters": "16 Mrd. gesamt · 2,4 Mrd. aktiv (MoE)",
+      "quantization": "GGUF Q4_K_M; Ollama-Standardpaket: Q4_0",
+      "memory": {
+        "weightsGb": "ca. 8,9 GB im Ollama-Q4_0-Paket; Q4_K_M abweichend",
+        "ram": "24–32 GB System-RAM empfohlen",
+        "vram": "ca. 12–16 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg",
+        "note": "Richtwerte beziehen sich auf das verlinkte Q4_0-Paket. MoE spart Rechenarbeit, die vollständigen Modellgewichte müssen trotzdem gespeichert werden. Cache-Verhalten hängt vom Backend ab."
+      },
+      "strengths": "Code vervollständigen, Funktionen reparieren und Lösungsvorschläge für klar beschriebene Programmieraufgaben liefern.",
+      "languages": ["Python", "JavaScript", "Java", "C++", "Go", "Rust"],
+      "useCases": ["Code-Chat", "Refactoring", "Tests"],
+      "repo": "Relevante Ausschnitte mitgeben; für Repository-Fragen eine lokale Suche vor den Chat setzen.",
+      "agents": "Eher als Code-Assistent einsetzen. Für Agenten mit vielen Werkzeugaufrufen zuerst Qwen3-Coder oder Devstral prüfen.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Der einfache Ollama-Befehl lädt Q4_0. Für Q4_K_M eine passende GGUF-Datei mit erhaltenem Chat-Template auswählen.",
+      "ollamaCommand": "ollama run deepseek-coder-v2:16b",
+      "license": {
+        "name": "DeepSeek Model License",
+        "note": "Kommerzielle Nutzung wird erlaubt, es gelten eigene Nutzungsbedingungen. Die MIT-Lizenz des Repository-Codes gilt nicht als Modelllizenz.",
+        "url": "https://github.com/deepseek-ai/DeepSeek-Coder-V2/blob/main/LICENSE-MODEL"
+      },
+      "offline": "Modellgewichte lokal betreibbar, ohne DeepSeek-Cloudkonto. Die eigene Modelllizenz vor einem Firmeneinsatz berücksichtigen.",
+      "verdict": "Eine bewusst ältere Alternative für klassische Code-Aufgaben. Interessant zum Vergleich am eigenen Projekt, wenn bereits ein 16B-Modell in den Speicher passt.",
+      "limitations": "Neuere Framework-APIs benötigen zusätzliche Dokumentation. Für verlässliche Werkzeugketten nicht unsere erste Wahl.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/deepseek-coder-v2:16b" }
+      ]
+    },
+    {
+      "id": "devstral-small-2",
+      "addedAt": null,
+      "name": "Devstral Small 2 · 24B Instruct",
+      "provider": "Mistral AI",
+      "profile": "Repository-Arbeit & Agenten",
+      "parameters": "24 Mrd. · dichtes Modell",
+      "quantization": "GGUF Q4_K_M; Q5_K_M mit mehr Speicher",
+      "memory": {
+        "weightsGb": "ca. 15 GB bei Q4_K_M im Ollama-Paket",
+        "ram": "32 GB System-RAM, mit IDE lieber 48 GB",
+        "vram": "ca. 18–24 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg; Textbetrieb ohne Bilder",
+        "note": "24 GB VRAM schaffen Reserve für kleine Kontexte. Bildverarbeitung und längere Kontexte erhöhen den Bedarf; auf Unified-Memory-Geräten teilen Modell und Anwendungen denselben Speicher."
+      },
+      "strengths": "Für Software-Engineering-Agenten ausgelegt: Dateien untersuchen, Änderungen über mehrere Dateien planen und Werkzeuge einbinden.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "Go", "C++"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Ein lokaler Coding-Agent kann Dateien suchen und lesen. Das Modell allein hat ohne diesen Zugriff keine Kenntnis des Repositories.",
+      "agents": "Passendes Mistral-Chat-Template und Tool-Parser verwenden. Änderungen als Diff prüfen; Shell- und Testzugriff gezielt freigeben.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Ollama ab 0.13.3; aktuelle Backends und passende Templates verwenden. vLLM ist ein eigener Serverweg mit separat geplanter Quantisierung.",
+      "ollamaCommand": "ollama run devstral-small-2:24b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Diese Small-2-Variante steht unter Apache 2.0; nicht auf andere Devstral-Größen übertragen.",
+        "url": "https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512#license"
+      },
+      "offline": "Lokal nutzbar, auch mit einem lokalen Agenten. Bei Agenten zusätzlich Zielserver, Telemetrie und Netzwerkwerkzeuge kontrollieren.",
+      "verdict": "Unser Kandidat für beaufsichtigte Arbeit über mehrere Dateien. Passt eher auf eine gut ausgestattete Workstation als auf einen kleinen Laptop.",
+      "limitations": "Agentenqualität hängt stark von Runtime, Werkzeugen und Prompt ab. Die Speicherangaben hier gelten für Textbetrieb und einen einzelnen Nutzer.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/devstral-small-2:24b" }
+      ]
+    },
+    {
+      "id": "qwen3-coder-30b",
+      "addedAt": null,
+      "name": "Qwen3-Coder 30B-A3B Instruct",
+      "provider": "Qwen / Alibaba Cloud",
+      "profile": "Agenten auf der Workstation",
+      "parameters": "30,5 Mrd. gesamt · 3,3 Mrd. aktiv (MoE)",
+      "quantization": "GGUF Q4_K_M; Q5_K_M bei größerer Reserve",
+      "memory": {
+        "weightsGb": "ca. 19 GB bei Q4_K_M",
+        "ram": "32–48 GB System-RAM empfohlen",
+        "vram": "ca. 22–26 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg",
+        "note": "24 GB VRAM können bei kleinem Kontext reichen; Reserve prüfen. Die 3,3 Mrd. aktiven Parameter machen daraus kein 3B-Speichermodell. CPU-Offloading benötigt weiterhin RAM und kostet Tempo."
+      },
+      "strengths": "Auf Agenten-Coding und Werkzeugaufrufe ausgerichtet; Kandidat für Repo-Fragen, zusammenhängende Patches und Testarbeit.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "Go", "Rust", "C++"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Lokalen Datei- und Suchzugriff ergänzen. Große Modell-Kontextgrenzen nicht ungeprüft als sinnvolle Laptop-Einstellung übernehmen.",
+      "agents": "Qwen-kompatibles Tool-Calling und korrektes Chat-Template verwenden. Erst kleine Aufgaben mit Diff- und Testkontrolle ausprobieren.",
+      "tools": ["Ollama", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (separates GPU-Setup)"],
+      "toolNote": "Das verlinkte Ollama-Paket nutzt Q4_K_M. Für Agenten muss auch der Client das Werkzeugformat korrekt verarbeiten.",
+      "ollamaCommand": "ollama run qwen3-coder:30b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/blob/main/LICENSE"
+      },
+      "offline": "Mit lokalen Gewichten und lokal konfiguriertem Agenten ohne Cloud-Inferenz nutzbar. Online-Suche oder externe Werkzeuge ändern diese Aussage.",
+      "verdict": "Ein Kandidat für lokale Agentenarbeit, wenn genug Speicher vorhanden ist. Für einen kleinen Rechner lieber mit 7B beginnen, statt alles in RAM auszulagern.",
+      "limitations": "Lange Kontexte und parallele Nutzer erhöhen den Speicherbedarf erheblich. Repository-Arbeit bleibt auf gute Dateiauswahl und überprüfbare Patches angewiesen.",
+      "checkedAt": "2026-10-12",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct" },
+        { "label": "Ollama-Paket / Größe", "url": "https://ollama.com/library/qwen3-coder:30b" }
+      ]
+    },
+    {
+      "id": "mellum21-12b-thinking",
+      "addedAt": "2026-10-13",
+      "name": "Mellum2.1 · 12B-A2.5B Thinking",
+      "provider": "JetBrains",
+      "profile": "Beaufsichtigte Coding-Agenten",
+      "parameters": "12 Mrd. gesamt · 2,5 Mrd. aktiv (MoE)",
+      "quantization": "Offizielles GGUF Q4_K_M; Q6_K bei mehr Speicher",
+      "memory": {
+        "weightsGb": "ca. 8,1 GB bei Q4_K_M",
+        "ram": "24–32 GB System-RAM empfohlen",
+        "vram": "ca. 10–12 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg; ein Nutzer",
+        "note": "Planungswerte für Q4_K_M, keine eigenen Messungen. MoE reduziert aktive Rechenarbeit, nicht die insgesamt zu speichernden Gewichte. Größere Kontexte, Denk-Ausgaben und parallele Anfragen brauchen zusätzliche Reserve. Optionales MTP benötigt zusätzlichen Speicher: Das kombinierte Q4_K_M-Modell mit MTP-Kopf umfasst ca. 8,3 GB statt ca. 8,1 GB; ein separat geladener BF16-Kopf ca. 1,8 GB zusätzlich. Die Speicherwerte dieser Karte beziehen sich weiterhin auf den normalen Q4_K_M-Betrieb ohne MTP."
+      },
+      "strengths": "Laut JetBrains auf Repository-Arbeit mit Werkzeugen trainiert: Fehler eingrenzen, Dateien bearbeiten und Änderungen mit Tests prüfen.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Java", "Bash"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Datei- und Suchzugriff über einen lokalen Client bereitstellen. Das Modell kennt das Repository nicht automatisch; zunächst auf ausgewählte Dateien und kleine Änderungen begrenzen.",
+      "agents": "Thinking-Ausgaben und Werkzeugaufrufe müssen zum Client passen. Die offizielle vLLM-Konfiguration nutzt den Qwen3-Reasoning-Parser und den Hermes-Tool-Parser. Diffs lesen und Tests lokal ausführen.",
+      "tools": ["Ollama (offizielles HF-GGUF)", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (Originalgewichte; separates GPU-Setup)"],
+      "toolNote": "Die offiziellen GGUF-Dateien sind verfügbar. Der Ollama-Befehl lädt Q4_K_M direkt aus dem JetBrains-Repository auf Hugging Face. Aktuelle Runtimes und das enthaltene Chat-Template verwenden; vLLM getrennt mit den Originalgewichten planen. JetBrains stellt außerdem einen optionalen Multi-Token-Prediction-Kopf für spekulative Dekodierung bereit. In llama.cpp ist dafür Build b11747 oder neuer mit --spec-type draft-mtp erforderlich; mit --spec-draft-n-max 1 beginnen. Das Hauptmodell prüft die vorgeschlagenen Tokens. Der Ollama-Startbefehl dieser Karte wählt weiterhin die normale Q4_K_M-Datei und aktiviert MTP nicht. Unterstützung in Ollama und LM Studio separat für die installierte Runtime prüfen.",
+      "ollamaCommand": "ollama run hf.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die offiziellen Modellgewichte und GGUF-Varianten stehen unter Apache 2.0. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking#license"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Cloud-Modell-API möglich. Für vertraulichen Code müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal konfiguriert sein.",
+      "verdict": "Ein kompakter Kandidat für beaufsichtigte Repo-Arbeit und Tests. Interessant, wenn die größeren Agentenmodelle zu viel Speicher brauchen und ein passender lokaler Client vorhanden ist.",
+      "limitations": "Thinking kann längere Ausgaben erzeugen. Geschwindigkeit und Zuverlässigkeit müssen am eigenen Projekt geprüft werden; Agentenqualität hängt auch von Backend, Werkzeugformat und Dateiauswahl ab. MTP garantiert keinen Geschwindigkeitsgewinn: Die dokumentierten llama.cpp-Tests auf einem Apple M2 Max zeigen je nach Konfiguration geringe Vorteile oder keinen Vorteil bei Q4_K_M. Mehr als ein vorgeschlagenes Token war in diesen Tests langsamer. Die Ergebnisse sind keine Zusage für Windows oder andere Hardware.",
+      "checkedAt": "2026-11-02",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking" },
+        { "label": "Offizielle GGUF-Dateien / Größen und optionale MTP-Nutzung", "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF" }
+      ]
+    },
+    {
+      "id": "lfm25-24b-a2b",
+      "addedAt": "2026-10-17",
+      "name": "LFM2.5-24B-A2B",
+      "provider": "Liquid AI",
+      "profile": "Weitere Option für lokale Agenten",
+      "parameters": "24 Mrd. gesamt · rund 2 Mrd. aktiv (MoE)",
+      "quantization": "Offizielles GGUF Q4_K_M; Q5_K_M bei mehr Speicher",
+      "memory": {
+        "weightsGb": "ca. 14,5 GB bei Q4_K_M",
+        "ram": "32–48 GB System-RAM als Planungswert",
+        "vram": "ca. 18–24 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg; ein Nutzer",
+        "note": "Schätzungen für Q4_K_M, keine eigenen Messungen. Die rund 2 Mrd. aktiven Parameter reduzieren die Rechenarbeit; alle 24 Mrd. Parameter müssen trotzdem gespeichert werden. Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE benötigen zusätzliche Reserve."
+      },
+      "strengths": "Laut Liquid AI für lokale Agenten, Werkzeugaufrufe und mehrstufige Aufgaben trainiert. Als zusätzlichen Kandidaten für abgegrenzte Code-Fragen und beaufsichtigte Dateiänderungen ausprobieren.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Bash"],
+      "useCases": ["Code-Chat", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Dateien und Suche über einen lokalen Agentenclient bereitstellen. Zunächst wenige relevante Dateien auswählen und Änderungen als kleine Diffs prüfen.",
+      "agents": "Das Modell erzeugt Denk-Ausgaben vor der Antwort. Client und Runtime müssen das enthaltene Chat-Template, Thinking und Werkzeugaufrufe unterstützen; Dateiänderungen und Tests beaufsichtigen.",
+      "tools": ["Ollama (offizielles HF-GGUF)", "LM Studio (GGUF)", "llama.cpp (GGUF)", "vLLM (Originalgewichte; separates GPU-Setup)"],
+      "toolNote": "Der Ollama-Befehl lädt das offizielle Q4_K_M-Paket von Hugging Face. Eine aktuelle Runtime mit LFM2-MoE-Unterstützung verwenden. Die Speicherwerte gelten für GGUF, nicht für vLLM mit Originalgewichten.",
+      "ollamaCommand": "ollama run hf.co/LiquidAI/LFM2.5-24B-A2B-GGUF:Q4_K_M",
+      "license": {
+        "name": "LFM Open License v1.0",
+        "note": "Eigene Liquid-Lizenz mit Umsatzgrenze für die kostenlose kommerzielle Nutzung. Bei einem Unternehmensjahresumsatz ab 10 Mio. US-Dollar die gesonderten kommerziellen Bedingungen mit Liquid AI klären.",
+        "url": "https://www.liquid.ai/lfm-license"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Liquid-Cloud-API möglich. Für rein lokalen Betrieb auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal konfigurieren.",
+      "verdict": "Eine zusätzliche Option für lokale Agenten auf einem Rechner mit genügend Speicher. Die Coding-Qualität wurde hier nicht selbst getestet; zunächst an kleinen Aufgaben mit den vorhandenen Modellen vergleichen.",
+      "limitations": "Allgemeines Agentenmodell, keine neue Spitzenempfehlung fürs Coding. Hersteller-Benchmarks ersetzen keine Prüfung am eigenen Projekt. Denk-Ausgaben, größere Kontexte und Werkzeugketten können Laufzeit und Speicherbedarf erhöhen.",
+      "checkedAt": "2026-10-17",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B" },
+        { "label": "Offizielle GGUF-Dateien / Größe", "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-GGUF" },
+        { "label": "Liquid AI – Modellvorstellung", "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b" }
+      ]
+    },
+    {
+      "id": "bonsai2-9b",
+      "addedAt": "2026-10-20",
+      "name": "Bonsai 2 · 9B",
+      "provider": "PrismML",
+      "profile": "Sparsame zusätzliche Option",
+      "parameters": "ca. 9 Mrd. Sprachmodell-Parameter; zusätzlicher Bildencoder",
+      "quantization": "Ternär komprimierte Gewichte im Ollama-9B-Paket",
+      "memory": {
+        "weightsGb": "ca. 3,2 GB Download im Ollama-9B-Paket inklusive Bildprojektor",
+        "ram": "16 GB System-RAM als Planungswert",
+        "vram": "ca. 6–8 GB für vollständige GPU-Ausführung",
+        "context": "8.192–16.384 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen für das verlinkte Ollama-Paket, keine eigenen Messungen. Die Downloadgröße ist nicht der gesamte Speicherbedarf. Kontext-Cache, Laufzeitpuffer, Denk-Ausgaben, Bildverarbeitung, Betriebssystem und IDE benötigen zusätzliche Reserve."
+      },
+      "strengths": "PrismML veröffentlicht Coding-Auswertungen und beschreibt Werkzeugaufrufe sowie Bildverarbeitung. Als zusätzlichen Kandidaten für kleine Funktionen, Code-Erklärungen und Testentwürfe ausprobieren.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Bash"],
+      "useCases": ["Code-Chat", "Tests", "Agenten"],
+      "repo": "Zunächst einzelne Dateien oder gezielte Ausschnitte mitgeben. Für Repository-Fragen einen lokalen Datei- und Suchzugriff ergänzen; kleine Änderungen anfordern.",
+      "agents": "Werkzeugaufrufe und Thinking müssen zum Client passen. Nur kurze, beaufsichtigte Aufgaben starten, Diffs lesen und Tests selbst ausführen. Die Qualität längerer Agentenabläufe wurde hier nicht geprüft.",
+      "tools": ["Ollama", "llama.cpp (passendes GGUF und Build)", "MLX (Apple Silicon; separates Modellpaket)"],
+      "toolNote": "Der Ollama-Befehl lädt ausdrücklich das 9B-Paket. Eine aktuelle Version mit Bonsai-2-Unterstützung verwenden. Bei manuellem GGUF-Betrieb die Modellkarte beachten: PQ2_0 und PTQ1_0 benötigen den PrismML-Fork; Q2_0 benötigt einen passenden aktuellen llama.cpp-Build. Die Speicherwerte gelten für das Ollama-Paket.",
+      "ollamaCommand": "ollama run bonsai-2:9b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die veröffentlichten Gewichte stehen unter Apache 2.0. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-9B-gguf#license"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne PrismML-Cloudkonto möglich. Für rein lokalen Betrieb müssen auch Client, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Eine sparsame zusätzliche Option für kleine Coding-Aufgaben. Die Coding-Qualität wurde hier nicht selbst getestet; zunächst am eigenen Projekt mit dem vorhandenen Einstieg vergleichen.",
+      "limitations": "Allgemeines Modell auf Basis von Qwen3.5-9B, keine neue Spitzenempfehlung fürs Coding. Hersteller-Auswertungen belegen keine zuverlässige Arbeit an großen Repositories. Thinking kann lange Ausgaben erzeugen; für kurze Antworten deaktivieren. Die verschiedenen ternären Pakete sind nicht mit jeder Runtime kompatibel.",
+      "checkedAt": "2026-10-20",
+      "sources": [
+        { "label": "Offizielle Modellkarte / GGUF-Formate", "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-9B-gguf" },
+        { "label": "Ollama-9B-Paket / Größe", "url": "https://ollama.com/library/bonsai-2:9b" },
+        { "label": "PrismML – Modellvorstellung", "url": "https://prismml.com/news/bonsai-2-family" }
+      ]
+    },
+    {
+      "id": "spark-x26-4b",
+      "addedAt": "2026-10-21",
+      "name": "Spark-X2.6 · 4B",
+      "provider": "XHToken / SparkLLM",
+      "profile": "Kompakte zusätzliche Option",
+      "parameters": "ca. 4 Mrd. · dichtes Modell",
+      "quantization": "Offizielles GGUF Q4_K_M",
+      "memory": {
+        "weightsGb": "ca. 3,54 GB bei Q4_K_M",
+        "ram": "12–16 GB System-RAM als Planungswert",
+        "vram": "ca. 5–7 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer",
+        "note": "Schätzungen für das offizielle Q4_K_M-Paket, keine eigenen Messungen. Bei CPU-Betrieb ca. 5–7 GB für den Modellprozess einplanen; Betriebssystem und IDE brauchen weitere Reserve. Kontext-Cache, Laufzeitpuffer und längere Denk-Ausgaben erhöhen den Bedarf. Das beworbene maximale Kontextfenster ist keine Empfehlung für einen kleinen Rechner."
+      },
+      "strengths": "Der Hersteller beschreibt Verbesserungen bei Coding und Werkzeugnutzung. Als zusätzlichen Kandidaten für kleine Funktionen, Code-Erklärungen und Testentwürfe ausprobieren.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Bash"],
+      "useCases": ["Code-Chat", "Tests", "Agenten"],
+      "repo": "Zunächst einzelne Dateien oder gezielte Ausschnitte mitgeben. Für Repository-Fragen einen lokalen Datei- und Suchzugriff ergänzen; kleine Änderungen anfordern.",
+      "agents": "Werkzeugaufrufe und Thinking müssen zum Client passen. Nur kurze, beaufsichtigte Aufgaben starten, Diffs lesen und Tests selbst ausführen. Die Qualität längerer Agentenabläufe wurde hier nicht geprüft.",
+      "tools": ["Ollama (offizielles HF-GGUF)", "LM Studio (GGUF)", "llama.cpp (GGUF)"],
+      "toolNote": "Der Ollama-Befehl lädt ausdrücklich das offizielle Q4_K_M-Paket von Hugging Face. Laut Hersteller Ollama ab 0.34.1, llama.cpp ab b10828 oder LM Studio ab 0.4.0 verwenden. Das enthaltene Chat-Template beibehalten. Das separate Ollama-Standardpaket SparkLLM/Spark-X2.6-4B ist ca. 8,2 GB groß; die Speicherwerte hier gelten dafür nicht.",
+      "ollamaCommand": "ollama run hf.co/XHToken/Spark-X2.6-4B-GGUF:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die veröffentlichten Modellgewichte und offiziellen GGUF-Varianten stehen unter Apache 2.0. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF#license"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Cloud-Modell-API möglich. Für rein lokalen Betrieb müssen auch Client, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Ein kompakter zusätzlicher Kandidat für kleine Coding-Aufgaben und beaufsichtigte Werkzeugnutzung. Die Coding-Qualität wurde hier nicht selbst getestet; zunächst am eigenen Projekt mit den vorhandenen Modellen vergleichen.",
+      "limitations": "Allgemeines Modell, keine neue Spitzenempfehlung fürs Coding. Hersteller-Benchmarks belegen keine zuverlässige Arbeit an großen Repositories. Längere Denk-Ausgaben und Werkzeugketten können Laufzeit und Speicherbedarf erhöhen.",
+      "checkedAt": "2026-10-21",
+      "sources": [
+        { "label": "Offizielle Modellkarte", "url": "https://huggingface.co/XHToken/Spark-X2.6-4B" },
+        { "label": "Offizielle GGUF-Dateien / Größe", "url": "https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF/tree/main" },
+        { "label": "XHToken – Veröffentlichung / lokale Runtimes", "url": "https://github.com/XHToken/Spark-X2.6" }
+      ]
+    },
+    {
+      "id": "recursive-flint-40b",
+      "addedAt": "2026-10-22",
+      "name": "Recursive Flint · 40B-A2.5B",
+      "provider": "Recursive",
+      "profile": "Lokale Coding-Agenten mit mehr Speicher",
+      "parameters": "39,8 Mrd. gesamt · rund 2,5 Mrd. aktiv (MoE)",
+      "quantization": "Offizielles GGUF Q4_1; NVIDIA-NVFP4 als separates Paket",
+      "memory": {
+        "weightsGb": "ca. 26 GB bei Q4_1 im verlinkten GGUF- und Ollama-Paket",
+        "ram": "48–64 GB System-RAM als Planungswert",
+        "vram": "48 GB VRAM als konservativer Planungswert; passende Runtime erforderlich",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer",
+        "note": "Planungswerte für Q4_1, keine eigenen Messungen. Recursive nennt für das Q4_1-Paket mindestens 48 GB Unified Memory auf Apple Silicon. Die rund 2,5 Mrd. aktiven Parameter reduzieren die Rechenarbeit, nicht die insgesamt zu speichernden Gewichte. Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE brauchen Reserve. Das separate NVIDIA-NVFP4-Paket ist ca. 22,9 GB groß und hat eigene Hardwareanforderungen; die Formate nicht gleichsetzen."
+      },
+      "strengths": "Für Coding-Agenten ausgelegt: Code untersuchen, Fehler beheben, Funktionen umsetzen und Tests schreiben. Unterstützt laut Hersteller Schlussfolgern und Werkzeugnutzung über mehrere Schritte.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Bash"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Repo-Fragen",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Datei- und Suchzugriff über einen lokalen Agentenclient bereitstellen. Zunächst relevante Dateien auswählen, Aufgaben eingrenzen und Änderungen als kleine Diffs prüfen.",
+      "agents": "Client und Runtime müssen Thinking, Werkzeugaufrufe und das Flint-Chat-Template unterstützen. Beim Fortsetzen von Gesprächen die Denk-Ausgaben entsprechend der Modellkarte erhalten; Änderungen und Tests beaufsichtigen.",
+      "tools": [
+        "Ollama (offizielles HF-GGUF)",
+        "llama.cpp (GGUF)",
+        "LM Studio (passende Flint-Runtime)",
+        "vLLM ab 0.33.0 (Originalgewichte; separates GPU-Server-Setup)"
+      ],
+      "toolNote": "Der Ollama-Befehl lädt ausdrücklich das offizielle Q4_1-GGUF mit ca. 26 GB von Hugging Face. Eine aktuelle Runtime mit Flint-Unterstützung verwenden. Seit Ollama 0.40.9 vom 22. Oktober 2026 wird Flint neben macOS ausdrücklich auch unter Windows und Linux unterstützt; Hardware und Backend müssen zum gewählten Paket passen. NVIDIA-NVFP4 benötigt ein separates Paket und passende CUDA-Unterstützung. LM Studio 0.4.28 vom 31. Oktober 2026 behebt das Chat-Template-Parsing für Flint; bei Nutzung mit LM Studio mindestens diese Version und eine passende Flint-Runtime einsetzen. vLLM 0.33.0 vom 2. November 2026 ergänzt Recursive Flint als unterstütztes Modell. Dieser Serverweg verwendet separat geplante Originalgewichte und ist nicht mit dem Q4_1-GGUF des Ollama-Befehls gleichzusetzen. Die fertigen NVIDIA-CUDA-Pakete dieser vLLM-Version wechseln auf CUDA 13.0; Hardware, Treiber und Backend vor einem Wechsel prüfen.",
+      "ollamaCommand": "ollama run hf.co/RecursiveSI/flint-int4-gguf:Q4_1",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die veröffentlichten Modellgewichte und offiziellen quantisierten Pakete stehen unter Apache 2.0. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Recursive-Cloud-API möglich. Für vertraulichen Code müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Ein zusätzlicher Kandidat für beaufsichtigte Repo-Arbeit auf einem Rechner mit mehr Speicher. Die Coding-Qualität wurde hier nicht selbst getestet; zunächst am eigenen Projekt mit den vorhandenen Agentenmodellen vergleichen.",
+      "limitations": "Hersteller-Benchmarks und Geschwindigkeitsangaben hängen von Hardware, Quantisierung und Agentenclient ab. Kein Modell für einen kleinen 16-GB-Rechner. Lange Kontexte und Denk-Ausgaben erhöhen den Bedarf; die maximale Kontextlänge ist keine sinnvolle Standardeinstellung für jeden Rechner.",
+      "checkedAt": "2026-11-03",
+      "sources": [
+        {
+          "label": "Offizielle Modellkarte",
+          "url": "https://huggingface.co/RecursiveSI/flint"
+        },
+        {
+          "label": "Offizielles Q4_1-GGUF / Hardware",
+          "url": "https://huggingface.co/RecursiveSI/flint-int4-gguf"
+        },
+        {
+          "label": "Ollama-Q4_1-Paket / Größe",
+          "url": "https://ollama.com/library/flint:40b-a2b-q4_1"
+        },
+        {
+          "label": "Offizielles NVIDIA-NVFP4-GGUF",
+          "url": "https://huggingface.co/RecursiveSI/flint-nvfp4-gguf"
+        },
+        {
+          "label": "Ollama 0.40.9 – Flint unter Windows und Linux",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.9"
+        },
+        {
+          "label": "LM Studio 0.4.28 – Fix für Flint-Chat-Templates",
+          "url": "https://lmstudio.ai/changelog/lmstudio"
+        },
+        {
+          "label": "vLLM 0.33.0 – Flint-Unterstützung und CUDA-Pakete",
+          "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0"
+        }
+      ]
+    },
+    {
+      "id": "qwen38-27b",
+      "addedAt": "2026-10-23",
+      "name": "Qwen3.8 · 27B",
+      "provider": "Qwen / Alibaba Cloud",
+      "profile": "Coding und Agenten mit mehr Spielraum",
+      "parameters": "ca. 27,3 Mrd. · dichtes Sprachmodell; zusätzlicher Bildencoder",
+      "quantization": "GGUF Q4_K_M im Ollama-27B-Paket",
+      "memory": {
+        "weightsGb": "ca. 18 GB Download im Ollama-27B-Paket einschließlich Bildprojektor",
+        "ram": "32–48 GB System-RAM als Planungswert",
+        "vram": "ca. 24–32 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen für das verlinkte Q4_K_M-Paket, keine eigenen Messungen. Die Downloadgröße ist nicht der gesamte Speicherbedarf. Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE benötigen zusätzliche Reserve. Bild- und Videoverarbeitung, längere Denk-Ausgaben und parallele Anfragen erhöhen den Bedarf. CPU-Betrieb und teilweises GPU-Offloading sind langsamer."
+      },
+      "strengths": "Laut Qwen auf Coding, professionelle Aufgaben und mehrstufige Agentenabläufe ausgerichtet. Ein zusätzlicher Kandidat für Code-Erklärungen, abgegrenzte Refactorings, Repository-Fragen und Tests.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Java",
+        "Bash"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Repo-Fragen",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Datei- und Suchzugriff über einen lokalen Client bereitstellen. Relevante Dateien gezielt zuführen; ein großes Kontextfenster liest das Repository nicht automatisch. Kleine Diffs anfordern und Tests lokal ausführen.",
+      "agents": "Thinking und Werkzeugaufrufe müssen zur Runtime und zum Agentenclient passen. Qwen empfiehlt für mehrstufige Aufgaben, die Denk-Ausgaben im Gesprächsverlauf zu erhalten. Zunächst kurze, beaufsichtigte Aufgaben mit Diff- und Testkontrolle ausprobieren.",
+      "tools": [
+        "Ollama",
+        "LM Studio (passendes GGUF)",
+        "llama.cpp (GGUF)",
+        "vLLM (Originalgewichte; separates GPU-Setup)"
+      ],
+      "toolNote": "Der Ollama-Befehl startet das lokale 27B-Paket mit Q4_K_M. Die Speicher-Richtwerte beziehen sich auf dieses Paket. Eine aktuelle Qwen3.8-kompatible Laufzeit mit passendem Chat-Template verwenden. Thinking ist standardmäßig aktiv und kann in unterstützten Clients deaktiviert werden. Nace AI bietet Q4_K_XL als zusätzliches GGUF für llama.cpp, LM Studio und Ollama an. Die 17,29 GB beziehen sich auf die Sprachmodellgewichte ohne Bildprojektor. Nace vergleicht Token-Vorhersagen mit BF16. Ein Vorteil bei konkreten Coding-Aufgaben ist damit nicht belegt.",
+      "ollamaCommand": "ollama run qwen3.8:27b",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die veröffentlichten Modellgewichte stehen unter Apache 2.0. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B#license"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Qwen-Cloud-API möglich. Für vertraulichen Code müssen auch IDE-Anbindung, Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Eine zusätzliche Option für Code-Chat und beaufsichtigte Agentenarbeit auf einem gut ausgestatteten Entwicklungsrechner. Die Coding-Qualität wurde hier nicht selbst getestet; zunächst am eigenen Projekt mit den vorhandenen Modellen vergleichen.",
+      "limitations": "Allgemeines multimodales Modell, keine hier gemessene neue Spitzenempfehlung fürs Coding. Hersteller-Benchmarks ersetzen keine Prüfung am eigenen Projekt. Das große maximale Kontextfenster ist keine sinnvolle Standardeinstellung für jeden Rechner; Thinking und lange Werkzeugketten können Laufzeit und Speicherbedarf erhöhen.",
+      "checkedAt": "2026-11-14",
+      "sources": [
+        {
+          "label": "Offizielle Modellkarte",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+        },
+        {
+          "label": "Ollama-27B-Paket / Größe und Quantisierung",
+          "url": "https://ollama.com/library/qwen3.8:27b"
+        },
+        {
+          "label": "Nace AI / Q4_K_XL-GGUF, Dateigröße und Startanleitungen",
+          "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-GGUF"
+        }
+      ]
+    },
+    {
+      "id": "nemotron35-bolt-e4b",
+      "addedAt": "2026-10-24",
+      "name": "Nemotron 3.5 Bolt · E4B",
+      "provider": "NVIDIA",
+      "profile": "Experimentelle Zusatzoption",
+      "parameters": "8 Mrd. gesamt · rund 4 Mrd. effektiv laut NVIDIA",
+      "quantization": "Offizielles NVIDIA-GGUF Q4_K_M; Textvariante",
+      "memory": {
+        "weightsGb": "ca. 6,18 GB für das offizielle Q4_K_M-GGUF ohne Drafter",
+        "ram": "16–24 GB System-RAM als Planungswert",
+        "vram": "ca. 10–12 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg; ein Nutzer, Textbetrieb ohne Drafter",
+        "note": "Schätzungen für das verlinkte NVIDIA-GGUF, keine eigenen Messungen. Die Bezeichnung 4GB beschreibt NVIDIAs Zielanwendungen und ist keine pauschale Speicherzusage für vollständige GPU-Ausführung. Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE benötigen Reserve. Ollamas separates E4B-Standardpaket ist je nach Backend ca. 7,2–7,9 GB groß; die Formate und Größen nicht gleichsetzen. Das optionale DFlash-Drafter-Modell benötigt weiteren Speicher."
+      },
+      "strengths": "Laut NVIDIA auf mehrstufige Werkzeugnutzung, Befolgen von Anweisungen und lokale Gesprächsassistenten ausgelegt. Als experimentellen Kandidaten für kleine Code-Erklärungen, Testentwürfe und kurze Werkzeugabläufe ausprobieren; die Coding-Qualität wurde hier nicht geprüft.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Bash"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Zunächst einzelne Dateien oder gezielte Ausschnitte zuführen. Für Repository-Fragen einen lokalen Datei- und Suchzugriff ergänzen. Kleine Aufgaben stellen und Änderungen als Diffs prüfen.",
+      "agents": "Client und Runtime müssen das Gemma-4-Chat-Template und die Werkzeugaufrufe unterstützen. Thinking und ein Modus für kurze Gesprächsantworten sind konfigurierbar. Zunächst kurze, beaufsichtigte Abläufe verwenden und Tests selbst ausführen.",
+      "tools": [
+        "Ollama (offizielles HF-GGUF)",
+        "llama.cpp (GGUF)",
+        "LM Studio (passende Gemma-4-Runtime)"
+      ],
+      "toolNote": "Der Ollama-Befehl lädt ausdrücklich das offizielle NVIDIA-Q4_K_M-GGUF von Hugging Face. Eine aktuelle Runtime mit Gemma-4-E4B-Unterstützung und passendem Chat-Template verwenden. Die Speicherwerte gelten für Textbetrieb ohne DFlash-Drafter. Der allgemeine Ollama-Tag nemotron-3.5-bolt lädt derzeit das größere 74B-Modell und ist nicht der Befehl für diese Karte.",
+      "ollamaCommand": "ollama run hf.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB:Q4_K_M",
+      "license": {
+        "name": "OpenMDW 1.1",
+        "note": "NVIDIA nennt OpenMDW 1.1 als maßgebliche Modelllizenz. Die Apache-2.0-Lizenz des Gemma-4-Basismodells ist davon zu unterscheiden; die verlinkten Bedingungen für den jeweiligen Einsatz beachten.",
+        "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB#licenseterms-of-use"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne NVIDIA-Cloud-API möglich. Für rein lokalen Betrieb müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Eine experimentelle zusätzliche Option für kleine Coding-Aufgaben und beaufsichtigte Werkzeugnutzung. Zunächst am eigenen Projekt mit den vorhandenen kompakten Modellen vergleichen; hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Der Schwerpunkt liegt auf lokalen Sprach- und Geräteassistenten, interaktiven Figuren und eingebetteten Schnittstellen. Die veröffentlichten Auswertungen belegen keine verlässliche Arbeit an großen Code-Repositories. Lange Denk-Ausgaben, größere Kontexte und Werkzeugketten können Laufzeit und Speicherbedarf erhöhen.",
+      "checkedAt": "2026-10-24",
+      "sources": [
+        {
+          "label": "Offizielle NVIDIA-Modellkarte",
+          "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB"
+        },
+        {
+          "label": "Offizielles GGUF / Dateigröße",
+          "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/tree/main"
+        },
+        {
+          "label": "NVIDIA – Veröffentlichung und Einsatzgebiete",
+          "url": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/"
+        },
+        {
+          "label": "Ollama – getrennte Modellvarianten",
+          "url": "https://ollama.com/library/nemotron-3.5-bolt/tags"
+        }
+      ]
+    },
+    {
+      "id": "mimo-v26-distill-qwen-9b",
+      "addedAt": "2026-10-25",
+      "name": "MiMo-V2.6-Distill-Qwen · 9B",
+      "provider": "Xiaomi MiMo",
+      "profile": "Experimentelles kompaktes Agentenmodell",
+      "parameters": "9 Mrd. laut Xiaomi · auf Qwen3.5-9B aufgebaut",
+      "quantization": "Ollama-9B-Paket mit GGUF Q4_K_M und Bildprojektor",
+      "memory": {
+        "weightsGb": "ca. 6,6 GB Download für das Ollama-Q4_K_M-Paket einschließlich Bildprojektor",
+        "ram": "16–24 GB System-RAM als Planungswert",
+        "vram": "ca. 10–12 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen für das Ollama-Q4_K_M-Paket bei kurzem Kontext und Textbetrieb, keine eigenen Messungen. Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE benötigen zusätzliche Reserve. Bildverarbeitung und parallele Anfragen erhöhen den Bedarf. Der allgemeine 9b-Tag kann je nach Backend auch ein anderes Format wählen; für diese Karte ist das Q4_K_M-Paket ausdrücklich festgelegt. Das separate bartowski-Q4_K_M-GGUF umfasst ca. 5,84 GB ohne Bildprojektor."
+      },
+      "strengths": "Xiaomi hat Qwen3.5-9B mit MiMo-generierten Daten für Coding, allgemeine Agentenaufgaben und visuelle Coding-Aufgaben nachtrainiert. Als kompakten experimentellen Kandidaten für Code-Erklärungen, abgegrenzte Refactorings, Testentwürfe und beaufsichtigte Werkzeugabläufe ausprobieren.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Bash"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Repo-Fragen",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Relevante Dateien gezielt zuführen und einen lokalen Datei- und Suchzugriff ergänzen. Zunächst kleine Änderungen mit klaren Prüfschritten anfordern; Ergebnisse als Diffs kontrollieren und Tests lokal ausführen.",
+      "agents": "Die Runtime muss Qwen3.5 und das MiMo-v2.6-Chat-Template unterstützen; Denk-Ausgaben und Werkzeugaufrufe müssen zum Client passen. Die offizielle SGLang-Anleitung verwendet den MiMo-Reasoning-Parser und ausdrücklich aktiviertes Thinking. Kurze, beaufsichtigte Abläufe bevorzugen.",
+      "tools": [
+        "Ollama (ab 0.40.15; lokales 9B-Paket)",
+        "llama.cpp (Community-GGUF)",
+        "LM Studio (Community-GGUF)",
+        "SGLang (Originalgewichte; separates GPU-Setup)"
+      ],
+      "toolNote": "Seit Ollama 0.40.15 ist das Modell direkt in der Ollama-Bibliothek unterstützt. Der Befehl wählt ausdrücklich das lokale 9B-Paket mit Q4_K_M. Die Paketliste nennt Bildverständnis, Thinking und Werkzeugnutzung. Werkzeugaufrufe im gewählten Agentenclient separat prüfen. Für llama.cpp und LM Studio bleibt das verlinkte bartowski-GGUF ein alternativer Einstieg mit passender Qwen3.5-Runtime und MiMo-Chat-Template.",
+      "ollamaCommand": "ollama run mimo-v2.6:9b-q4_K_M",
+      "license": {
+        "name": "MIT",
+        "note": "Die offizielle Xiaomi-Modellkarte nennt MIT als Modelllizenz; auch das Ollama-Paket verweist darauf. Lizenzhinweise der verwendeten Modell- und Runtime-Pakete beachten.",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B/blob/main/README.md"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Xiaomi-Cloud-API möglich. Für vertraulichen Code müssen auch IDE-Anbindung, Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Eine experimentelle zusätzliche Option für Coding und beaufsichtigte Agentenarbeit mit überschaubarer Modellgröße. Zunächst am eigenen Projekt mit den vorhandenen kompakten Modellen vergleichen; hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Xiaomi veröffentlicht diesen SFT-Checkpoint als Ausgangspunkt für Forschung an Agenten mit bestärkendem Lernen. Die Hersteller-Auswertungen sind keine eigenen Praxistests; Ergebnisse separat nachtrainierter RL-Varianten gelten nicht automatisch für dieses Paket. Quantisierung, Chat-Template und Agentenclient können die Qualität beeinflussen. Längere Aufgaben und Denk-Ausgaben erhöhen Laufzeit und Speicherbedarf.",
+      "checkedAt": "2026-11-06",
+      "sources": [
+        {
+          "label": "Offizielle Xiaomi-Modellkarte / SGLang-Anleitung",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B"
+        },
+        {
+          "label": "Ollama-Q4_K_M-Paket / Quantisierung und Komponenten",
+          "url": "https://ollama.com/library/mimo-v2.6:9b-q4_K_M"
+        },
+        {
+          "label": "Ollama 0.40.15 / native MiMo-Unterstützung",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.15"
+        },
+        {
+          "label": "Ollama-Paketvarianten / Downloadgrößen",
+          "url": "https://ollama.com/library/mimo-v2.6/tags"
+        },
+        {
+          "label": "Community-GGUF von bartowski / Alternative für GGUF-Runtimes",
+          "url": "https://huggingface.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF"
+        }
+      ]
+    },
+    {
+      "id": "nanbeige43-33b",
+      "addedAt": "2026-10-26",
+      "name": "Nanbeige4.3 · 33B",
+      "provider": "Nanbeige LLM Lab",
+      "profile": "Experimentelles Agentenmodell mit mehr Speicherbedarf",
+      "parameters": "33 Mrd. · dichtes Textmodell",
+      "quantization": "Community-GGUF Q4_K_M von bartowski; Q5_K_M bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 20,79 GB für das verlinkte Q4_K_M-GGUF",
+        "ram": "32–48 GB System-RAM als Planungswert",
+        "vram": "ca. 28–32 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen für das verlinkte Community-Q4_K_M-GGUF, keine eigenen Messungen. Die Dateigröße ist nicht der gesamte Speicherbedarf: Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE benötigen Reserve. Q5_K_M umfasst hier ca. 25,07 GB allein für die Gewichte. CPU-Betrieb und teilweises GPU-Offloading sind möglich, aber langsamer; längere Kontexte und parallele Anfragen erhöhen den Bedarf."
+      },
+      "strengths": "Laut Nanbeige für komplexe Coding-Aufgaben und mehrstufige Agentenarbeit entwickelt. Ein experimenteller Kandidat für Code-Erklärungen, abgegrenzte Refactorings, Repository-Fragen und Testentwürfe; die Coding-Qualität wurde hier nicht selbst geprüft.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Bash"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Repo-Fragen",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Datei- und Suchzugriff über einen lokalen Client bereitstellen. Relevante Dateien gezielt zuführen, kleine Diffs anfordern und Änderungen mit lokalen Tests prüfen. Das Modell liest ein Repository nicht von allein.",
+      "agents": "Thinking ist standardmäßig aktiv. Nanbeige empfiehlt, Denk-Ausgaben bei mehrstufiger Werkzeug- und Coding-Arbeit im Verlauf zu erhalten und Werkzeugaufrufe vorzugsweise im XML-Format zu verwenden. Chat-Template und Parser müssen zur Runtime und zum Client passen; zunächst kurze, beaufsichtigte Abläufe ausprobieren.",
+      "tools": [
+        "Ollama (Community-HF-GGUF)",
+        "llama.cpp (GGUF)",
+        "LM Studio (passende GGUF-Runtime)",
+        "SGLang / vLLM (Originalgewichte; separates GPU-Setup)"
+      ],
+      "toolNote": "Der Ollama-Befehl lädt das Q4_K_M-GGUF von bartowski auf Hugging Face, kein offizielles Nanbeige-Quantisierungspaket. Das Paket wurde mit llama.cpp b11845 erstellt; eine aktuelle kompatible Runtime und das passende Chat-Template verwenden. Werkzeugaufrufe im gewählten Client separat prüfen. Die Speicherwerte gelten für dieses GGUF, nicht für die Originalgewichte in SGLang oder vLLM.",
+      "ollamaCommand": "ollama run hf.co/bartowski/Nanbeige_Nanbeige4.3-33B-GGUF:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die offizielle Modellkarte und das verlinkte Community-GGUF nennen Apache 2.0. Die jeweiligen Lizenzbedingungen und Paket-Hinweise beachten.",
+        "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne Nanbeige-Cloud-API möglich. Für vertraulichen Code müssen auch IDE-Anbindung, Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Eine experimentelle zusätzliche Option für beaufsichtigte Coding- und Agentenarbeit auf einem Entwicklungsrechner mit mehr Speicher. Zunächst am eigenen Projekt mit den vorhandenen Modellen vergleichen; hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Die veröffentlichten Benchmarks stammen vom Hersteller und hängen von Agentenclient, Thinking-Einstellungen und Testumgebung ab. Quantisierung kann die Ergebnisse verändern. Das dichte 33B-Modell ist kein kleiner Einstieg für einen 16-GB-Rechner. Lange Denk-Ausgaben und das maximale Kontextfenster sind keine sinnvollen Standardeinstellungen für jede Hardware. Die angekündigte kleinere 3B-Variante ist nicht Bestandteil dieser Karte.",
+      "checkedAt": "2026-10-26",
+      "sources": [
+        {
+          "label": "Offizielle Modellkarte / Thinking und Werkzeugaufrufe",
+          "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"
+        },
+        {
+          "label": "Community-GGUF von bartowski / Größen und lokale Startbefehle",
+          "url": "https://huggingface.co/bartowski/Nanbeige_Nanbeige4.3-33B-GGUF"
+        }
+      ]
+    },
+    {
+      "id": "lfm3-17b",
+      "addedAt": "2026-10-28",
+      "name": "LFM3 · 1.7B",
+      "provider": "Liquid AI",
+      "profile": "Kompaktes Experiment für kleine Code-Fragen",
+      "parameters": "1,73 Mrd. · Tri-Hybrid-Textmodell",
+      "quantization": "Offizielles GGUF Q4_K_M; Q5_K_M bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 1,1 GB für das offizielle Q4_K_M-GGUF",
+        "ram": "8–16 GB System-RAM als Planungswert mit IDE",
+        "vram": "ca. 2–4 GB für vollständige GPU-Ausführung mit kompatibler Runtime",
+        "context": "4.096 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen für GGUF Q4_K_M, keine eigenen Messungen. Die Dateigröße ist nicht der gesamte Speicherbedarf; Kontext-Cache, Laufzeitpuffer und Anwendungen brauchen Reserve. Das separate Ollama-Standardpaket umfasst ca. 1,7 GB. Die maximale Kontextlänge von 256K Tokens erfordert mehr Speicher."
+      },
+      "strengths": "Für lokale Werkzeugaufrufe und strukturierte Ausgaben entwickelt. Kleine Funktionen erklären oder einfache Testentwürfe als Experiment ausprobieren; hier wurden keine eigenen Coding-Tests durchgeführt.",
+      "languages": ["Python", "JavaScript", "Bash"],
+      "useCases": ["Code-Chat", "Tests"],
+      "repo": "Nur wenige relevante Code-Ausschnitte zuführen. Für umfangreiche Repository-Arbeit ein größeres Coding-Modell aus der Auswahl vorziehen.",
+      "agents": "Liquid AI empfiehlt das kleine Modell ausdrücklich nicht für Coding-Agenten oder komplexes mehrstufiges Schlussfolgern. Thinking ist standardmäßig aktiv; allgemeine Werkzeugexperimente benötigen ein passendes Chat-Template und einen kompatiblen Client.",
+      "tools": ["Ollama (ab 0.40.13 auch Windows/Linux)", "llama.cpp (LFM3-kompatibler GGUF-Build)"],
+      "toolNote": "Der Befehl wählt das offizielle Q4_K_M-GGUF. Seit Ollama 0.40.13 läuft LFM3 neben Apple Silicon auch unter Windows und Linux. Für direkten GGUF-Betrieb weiterhin einen LFM3-kompatiblen llama.cpp-Build mit passendem Chat-Template verwenden.",
+      "ollamaCommand": "ollama run hf.co/LiquidAI/LFM3-1.7B-GGUF:Q4_K_M",
+      "license": {
+        "name": "LFM Open License v1.0",
+        "note": "Eigene Lizenz mit Umsatzgrenze für kostenlose kommerzielle Nutzung. Bei einem Unternehmensjahresumsatz ab 10 Mio. US-Dollar gesonderte kommerzielle Bedingungen mit Liquid AI klären.",
+        "url": "https://www.liquid.ai/lfm-license"
+      },
+      "offline": "Nach dem Download mit kompatibler lokaler Runtime ohne Liquid-Cloud-API nutzbar. IDE-Anbindung und Zusatzwerkzeuge ebenfalls lokal konfigurieren.",
+      "verdict": "Ein kleines Experiment für klar begrenzte Code-Fragen, keine Empfehlung für Coding-Agenten. Interessant bei wenig Modellspeicher; Vorschläge lesen und lokal testen.",
+      "limitations": "Kleine Modellgröße begrenzt komplexe Aufgaben. Hersteller-Benchmarks sind keine eigenen Praxistests; Quantisierung kann Ergebnisse verändern. Verfügbarkeit und Plattformunterstützung der Runtime vor dem Download prüfen.",
+      "checkedAt": "2026-10-29",
+      "sources": [
+        { "label": "Offizielle Modellkarte / Einsatzgrenzen", "url": "https://huggingface.co/LiquidAI/LFM3-1.7B" },
+        { "label": "Offizielles GGUF / Größen und lokale Nutzung", "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF" },
+        { "label": "Ollama 0.40.13 / Windows und Linux", "url": "https://github.com/ollama/ollama/releases/tag/v0.40.13" },
+        { "label": "Ollama-Standardpaket / abweichende Größe", "url": "https://ollama.com/library/lfm3:1.7b" }
+      ]
+    },
+    {
+      "id": "apex-35b-v1",
+      "addedAt": "2026-10-29",
+      "name": "Apex-35B · V1.0",
+      "provider": "Apex Intelligence",
+      "profile": "Experimenteller Kandidat für Coding und Forschung",
+      "parameters": "35 Mrd. gesamt · ca. 3 Mrd. aktiv (MoE)",
+      "quantization": "Offizielles GGUF Q4_K_M; Q5_K_M bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 21,7 GB für das offizielle Q4_K_M-GGUF",
+        "ram": "32–48 GB System-RAM als Planungswert",
+        "vram": "ca. 26–32 GB für vollständige GPU-Ausführung",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen für GGUF Q4_K_M, keine eigenen Messungen. Alle Gewichte benötigen Speicher, obwohl nur ein Teil pro Token aktiv ist. Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE brauchen zusätzliche Reserve. Q5_K_M umfasst ca. 25,3 GB allein für die Gewichte. Die BF16-Serverkonfigurationen der Modellkarte sind separat zu planen."
+      },
+      "strengths": "Auf Qwen3.6-35B-A3B aufgebaut und für Coding, Werkzeugnutzung sowie rechnergestützte Forschungsaufgaben weitertrainiert. Die veröffentlichten Vergleiche stammen vom Hersteller.",
+      "languages": ["Python", "JavaScript", "TypeScript", "Bash"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Datei- und Suchzugriff über einen lokalen Client bereitstellen. Relevante Dateien auswählen, kleine Diffs anfordern und Änderungen mit lokalen Tests prüfen.",
+      "agents": "Das Modell entscheidet dynamisch über Denk-Ausgaben. Das eigene eingebettete Chat-Template verwenden; bei llama.cpp mit --jinja aktivieren. Nicht durch das Qwen-Template ersetzen. Werkzeugparser und das Erhalten von Denk-Ausgaben im Verlauf müssen zum Client passen.",
+      "tools": ["Ollama (offizielles HF-GGUF; kompatible Runtime)", "llama.cpp (GGUF)", "SGLang / vLLM (Originalgewichte; separates GPU-Setup)"],
+      "toolNote": "Der Ollama-Befehl wählt das offizielle Q4_K_M-Paket auf Hugging Face. Eine aktuelle kompatible Runtime verwenden und Werkzeugaufrufe separat prüfen. Die Herstelleranleitung beschreibt lokalen GGUF-Betrieb mit llama.cpp sowie Serverbetrieb mit Originalgewichten.",
+      "ollamaCommand": "ollama run hf.co/Apexintelligence-AI/Apex-35B-V1.0-GGUF:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die offizielle Modellkarte und das GGUF-Paket nennen Apache 2.0. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0#license"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne externe Modell-API möglich. Für vertraulichen Code müssen auch Agentenclient, Dateisuche und Zusatzwerkzeuge lokal arbeiten.",
+      "verdict": "Eine experimentelle Ergänzung für beaufsichtigte Coding- und Forschungsaufgaben auf einer Workstation mit mehr Speicher. Zunächst am eigenen Projekt vergleichen; hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Hersteller-Benchmarks sind keine unabhängige Praxisprüfung. Quantisierung, Client und Denk-Ausgaben beeinflussen die Ergebnisse. Die rund 3 Mrd. aktiven Parameter machen das Modell nicht zu einem kleinen 3B-Speichermodell; für einen 16-GB-Rechner ist es kein sinnvoller Einstieg.",
+      "checkedAt": "2026-10-29",
+      "sources": [
+        { "label": "Offizielle Modellkarte / Deployment und Einsatzgebiete", "url": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0" },
+        { "label": "Offizielles GGUF / Größen und lokale Startbefehle", "url": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0-GGUF" }
+      ]
+    },
+    {
+      "id": "ccore-qwen35-4b-3d-coder",
+      "addedAt": "2026-10-31",
+      "name": "CCORE Qwen3.5-4B-3D-Coder",
+      "provider": "CCORE · unabhängiger Qwen-Finetune",
+      "profile": "Experimenteller Spezialist für Three.js und 3D-Webszenen",
+      "parameters": "4B-Modellfamilie · dichter Qwen3.5-Finetune",
+      "quantization": "GGUF Q4_K_M vom Modellautor; Q8_0 bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 2,71 GB für das Q4_K_M-GGUF des Modellautors",
+        "ram": "8–16 GB System-RAM als Planungswert mit IDE",
+        "vram": "ca. 4–6 GB für vollständige GPU-Ausführung im Textbetrieb",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen, keine eigenen Messungen. Q8_0 umfasst ca. 4,48 GB allein für die Gewichte. Die optionale Bildunterstützung benötigt zusätzlich den BF16-Projektor mit ca. 0,68 GB (644 MiB) und weiteren Laufzeitspeicher. Kontext-Cache, Betriebssystem und IDE brauchen Reserve. Die kurzen 64K-Visiontests des Modellautors sind keine Prüfung des vollständigen Kontextfensters; größere Kontexte erhöhen den Speicherbedarf."
+      },
+      "strengths": "Auf die Erzeugung interaktiver Three.js-Szenen in HTML und JavaScript spezialisiert. Seit 30. Oktober 2026 können die GGUF-Versionen mit passendem Projektor auch Referenzbilder verarbeiten. Der Autor stellt vollständige Gewichte, Trainingsdaten und einen technischen Bericht bereit; die Beispiele sind keine unabhängige Qualitätsmessung.",
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "useCases": [
+        "Code-Chat"
+      ],
+      "repo": "Für einzelne Webszenen und klar begrenzte Code-Ausschnitte einsetzen. Keine belegte Empfehlung für umfangreiche Repository-Arbeit. Erzeugtes HTML und JavaScript lokal im Browser prüfen.",
+      "agents": "Keine belegte Empfehlung für mehrstufige Coding-Agenten oder verlässliche Werkzeugaufrufe. Zunächst einzelne, beaufsichtigte Generierungen verwenden.",
+      "tools": [
+        "Ollama (GGUF vom Modellautor)",
+        "llama.cpp (Qwen3.5-kompatibler GGUF-Build)",
+        "LM Studio (GGUF; MTP deaktivieren)"
+      ],
+      "toolNote": "Der Befehl wählt das Q4_K_M-GGUF des unabhängigen Modellautors, kein offizielles Qwen-Paket. Eine aktuelle Qwen3.5-kompatible Runtime mit dem eingebetteten Chat-Template verwenden. In LM Studio laut Modellkarte Multi-Token Prediction (MTP) für dieses Modell deaktivieren. Für Bildreferenzen in llama.cpp das passende mmproj zusätzlich laden; der Autor nennt kurze lokale Tests mit Build b11889. Bildunterstützung in anderen Oberflächen separat prüfen.",
+      "ollamaCommand": "ollama run hf.co/ccore/Qwen3.5-4B-3D-Coder:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Modellkarte und LICENSE-Datei nennen Apache 2.0. Der unabhängige Finetune ist keine offizielle Veröffentlichung des Qwen-Teams. Die separat veröffentlichten Trainingsdaten stehen laut Autor unter MIT-Lizenz.",
+        "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne externe Modell-API möglich. Die Three.js-Beispiele des Autors laden eine Bibliothek von einem CDN; für vollständig offline nutzbare Webszenen auch diese Bibliothek lokal bereitstellen. IDE-Anbindung und Zusatzwerkzeuge ebenfalls lokal halten.",
+      "verdict": "Ein kleiner experimenteller Spezialist für Three.js-Prototypen und kreative 3D-Webszenen. Interessant als Ergänzung zum allgemeinen Coding-Modell; hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Frühe Vorschau, die weitertrainiert wird. Der Autor nennt unter anderem doppelte Variablennamen als beobachtete Fehler. Bildreferenzen werden interpretiert und nicht detailgetreu reproduziert. Allgemeine Coding-Qualität, Agentenfähigkeit und Laufzeit auf der eigenen Hardware sind nicht unabhängig bestätigt.",
+      "checkedAt": "2026-10-31",
+      "sources": [
+        {
+          "label": "Modellkarte des Autors / Einstellungen und Bildunterstützung",
+          "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder"
+        },
+        {
+          "label": "GGUF-Dateien und optionaler Bildprojektor / Größen",
+          "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder/tree/main"
+        }
+      ]
+    },
+    {
+      "id": "zyr-zy-s2-15b",
+      "addedAt": "2026-11-02",
+      "name": "ZY-S2 · 1.5B",
+      "provider": "ZYR AI · unabhängiger Qwen-Finetune",
+      "profile": "Kleines Python-Experiment für den CPU-Betrieb",
+      "parameters": "1,5 Mrd. · dichter Qwen2.5-Coder-Finetune",
+      "quantization": "GGUF Q5_K_M vom Modellautor",
+      "memory": {
+        "weightsGb": "ca. 1,13 GB für das Q5_K_M-GGUF des Modellautors",
+        "ram": "8–16 GB System-RAM als Planungswert mit IDE",
+        "vram": "ca. 2–4 GB für vollständige GPU-Ausführung; CPU-Betrieb möglich",
+        "context": "2.048–4.096 Tokens zum Einstieg; ein Nutzer",
+        "note": "Schätzungen für Q5_K_M, keine eigenen Messungen. Die Gewichtsdatei umfasst 1.125.049.984 Bytes; Kontext-Cache, Laufzeitpuffer, Betriebssystem und IDE brauchen zusätzliche Reserve. Die Konfiguration nennt maximal 32.768 Positionen; größere Kontexte sind kein sinnvoller Standard für jeden Rechner. Die CPU-Laufzeit auf älterer Hardware wurde hier nicht getestet."
+      },
+      "strengths": "Auf das Erzeugen kleiner Python-Funktionen ausgerichteter LoRA-Finetune von Qwen2.5-Coder-1.5B. Der Autor stellt zusammengeführte Safetensors-Gewichte und ein Q5_K_M-GGUF bereit und dokumentiert CPU-Inferenz mit llama.cpp. Die veröffentlichten Coding-Vergleiche stammen vom Entwickler.",
+      "languages": [
+        "Python"
+      ],
+      "useCases": [
+        "Code-Chat"
+      ],
+      "repo": "Für einzelne Funktionen und überschaubare Code-Ausschnitte verwenden. Keine belegte Empfehlung für das selbstständige Bearbeiten ganzer Repositories; relevante Ausschnitte gezielt zuführen.",
+      "agents": "Der Autor nennt Werkzeugnutzung, Computerbedienung und mehrstufiges Schlussfolgern als Schwächen. Keine Empfehlung für Coding-Agenten; erzeugte Funktionen lesen und mit lokalen Tests prüfen.",
+      "tools": [
+        "Ollama (GGUF vom Modellautor)",
+        "llama.cpp (GGUF; CPU oder GPU)",
+        "LM Studio (Qwen2-kompatible GGUF-Runtime)"
+      ],
+      "toolNote": "Der Ollama-Befehl lädt das Q5_K_M-GGUF aus dem Repository von ZYR AI, kein offizielles Qwen-Paket. Eine aktuelle Qwen2-kompatible Runtime mit dem mitgelieferten Chat-Template verwenden. Das Dokumentationsbeispiel nutzt llama.cpp im lokalen CPU-Betrieb; die Geschwindigkeit hängt von CPU, Kontext und Laufzeit ab.",
+      "ollamaCommand": "ollama run hf.co/zyr-AGENT/ZY-S2:Q5_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die Modellkarte nennt Apache 2.0 für den Finetune und sein Qwen2.5-Coder-Basismodell. Lokaler und kommerzieller Einsatz nach den Lizenzbedingungen möglich.",
+        "url": "https://huggingface.co/zyr-AGENT/ZY-S2#license-and-credit"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne externe Modell-API möglich. Für vertraulichen Code auch IDE-Anbindung, Dateisuche und Zusatzwerkzeuge lokal konfigurieren.",
+      "verdict": "Ein kleines experimentelles Zusatzmodell für klar begrenzte Python-Funktionen auf einem Rechner ohne große GPU. Die Coding-Qualität und Geschwindigkeit wurden hier nicht selbst getestet; zunächst mit dem vorhandenen Modell am eigenen Code vergleichen.",
+      "limitations": "Kleine Modellgröße mit faktischen Fehlern und Schwächen bei Mathematik, längerem Schlussfolgern und Agentenaufgaben. Der Autor weist auf mögliche unsichere Code-Ausgaben hin. Englisch und Python stehen im Mittelpunkt; andere Sprachen sind weniger geprüft. Entwickler-Benchmarks belegen keine allgemeine Überlegenheit oder zuverlässige Alltagstauglichkeit.",
+      "checkedAt": "2026-11-02",
+      "sources": [
+        {
+          "label": "Modellkarte / Einsatzgrenzen und CPU-Inferenz",
+          "url": "https://huggingface.co/zyr-AGENT/ZY-S2"
+        },
+        {
+          "label": "GGUF-Paket / Dateigröße und Modellkonfiguration",
+          "url": "https://huggingface.co/zyr-AGENT/ZY-S2/tree/main"
+        },
+        {
+          "label": "Ankündigung des Entwicklers vom 31. Oktober 2026",
+          "url": "https://discuss.huggingface.co/t/introducing-zy-s2-a-1-5b-open-source-coding-model-by-zyr-ai/191260"
+        }
+      ]
+    },
+    {
+      "id": "ccore-qwen35-4b-glb-3d-coder",
+      "addedAt": "2026-11-05",
+      "name": "CCORE Qwen3.5-4B-GLB-3D-Coder",
+      "provider": "CCORE · unabhängiger Qwen-Finetune",
+      "profile": "Experimenteller Spezialist für 3D-Spielobjekte mit GLB-Export",
+      "parameters": "4B-Modellfamilie · dichter Qwen3.5-Finetune",
+      "quantization": "GGUF Q4_K_M vom Modellautor; Q8_0 bei Speicherreserve",
+      "memory": {
+        "weightsGb": "ca. 2,71 GB für das Q4_K_M-GGUF des Modellautors",
+        "ram": "8–16 GB System-RAM als Planungswert mit Browser und Editor",
+        "vram": "ca. 4–6 GB für vollständige GPU-Ausführung im Textbetrieb",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen, keine eigenen Messungen. Q8_0 umfasst ca. 4,48 GB allein für die Gewichte. Der optionale Bildprojektor benötigt zusätzlich ca. 0,68 GB (644 MiB) und weiteren Laufzeitspeicher. Kontext-Cache, Laufzeitpuffer, Browser und Editor brauchen Reserve. Detaillierte Szenen erfordern ausreichend Ausgabetokens für die vollständige HTML-Datei."
+      },
+      "strengths": "Erzeugt aus englischen Beschreibungen vollständige Three.js-Seiten mit Vorschau und GLB-Export für Low-Poly-Figuren, Gegenstände, Gebäude und prozedurale Szenen. Die exportierten Objekte lassen sich etwa in Godot weiterverwenden. Der am 5. November 2026 veröffentlichte Checkpoint u008186 ist auf Spielobjekte ausgerichtet. Der Autor demonstriert statische und animierte Objekte; die Beispiele sind keine unabhängige Qualitätsmessung.",
+      "languages": [
+        "JavaScript",
+        "HTML"
+      ],
+      "useCases": [
+        "Code-Chat"
+      ],
+      "repo": "Für einzelne Spielobjekte und überschaubare Szenen einsetzen. Generierte HTML-Datei im Browser prüfen und den GLB-Export im Ziel-Editor kontrollieren.",
+      "agents": "Für einzelne beaufsichtigte Generierungen verwenden. Die gezeigte Spielintegration nutzt zusätzlich ein System zur Orchestrierung und Prüfung. Eigenständige Projektarbeit und zuverlässige Werkzeugaufrufe sind für dieses Modell nicht separat belegt.",
+      "tools": [
+        "Ollama (GGUF vom Modellautor)",
+        "llama.cpp (Qwen3.5-kompatibler GGUF-Build)",
+        "LM Studio (Qwen3.5-kompatible GGUF-Runtime)"
+      ],
+      "toolNote": "Der Befehl lädt das Q4_K_M-GGUF aus dem Repository des Modellautors. Eine aktuelle Qwen3.5-kompatible Runtime mit dem eingebetteten Chat-Template verwenden. Der Autor nennt Temperature 0.8, Top K 40, Top P 0.95, Min P 0.0 und Repeat Penalty 1.0. Ältere Downloads vor dem 5. November 2026 durch die aktualisierten Gewichte ersetzen, da die Dateinamen gleich geblieben sind. Bildreferenzen benötigen zusätzlich den passenden Projektor und eine kompatible multimodale Laufzeit.",
+      "ollamaCommand": "ollama run hf.co/ccore/Qwen3.5-4B-GLB-3D-Coder:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Modellkarte und LICENSE-Datei nennen Apache 2.0 für den unabhängigen, auf Qwen3.5-4B basierenden Finetune. Lizenz- und Herkunftshinweise bei Weitergabe beibehalten. Die Trainingsdaten sind zum Veröffentlichungsstand für einen späteren Zeitpunkt angekündigt.",
+        "url": "https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokale Inferenz ohne externe Modell-API möglich. Die erzeugten HTML-Seiten können Three.js und Erweiterungen von einem CDN laden. Für vollständig offline nutzbare Vorschauen diese Abhängigkeiten lokal bereitstellen. GLB-Dateien anschließend lokal im Ziel-Editor öffnen.",
+      "verdict": "Ein kleiner experimenteller Spezialist für Spielobjekte mit GLB-Export, etwa für Godot. Ergänzt den vorhandenen CCORE-Coder für interaktive Webszenen um einen eigenen Checkpoint für exportierbare Objekte. Hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Manche Anfragen benötigen einen neuen Versuch oder eine Codekorrektur. Materialien, Beleuchtung und Animationen können im exportierten GLB von der Browser-Vorschau abweichen. Animation ausdrücklich anfordern und nach dem Export prüfen. Beispiele und Demonstrationen stammen vom Entwickler; Qualität und Geschwindigkeit auf der eigenen Hardware selbst erproben.",
+      "checkedAt": "2026-11-05",
+      "sources": [
+        {
+          "label": "Modellkarte / GLB-Export, Einstellungen und Einsatzgrenzen",
+          "url": "https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder"
+        },
+        {
+          "label": "GGUF-Dateien, Checkpoint und optionaler Bildprojektor",
+          "url": "https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/tree/main"
+        }
+      ]
+    },
+    {
+      "id": "twil-8b",
+      "addedAt": "2026-11-07",
+      "name": "TwIL-8B · 8,8B balanced",
+      "provider": "webAI · auf Basis von IBM Granite 4.2",
+      "profile": "Experimenteller Coding-Kandidat · nichtkommerziell",
+      "parameters": "8,79 Mrd. · dichtes Textmodell",
+      "quantization": "GGUF Q4_K_M · balanced gezielt auswählen",
+      "memory": {
+        "weightsGb": "ca. 5,35 GB (4,98 GiB) allein für das Q4_K_M-balanced-GGUF",
+        "ram": "16–24 GB System-RAM als Planungswert mit Editor",
+        "vram": "ca. 7–9 GB für vollständige GPU-Ausführung bei kurzem Kontext",
+        "context": "2.048–4.096 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen, keine eigenen Messungen. Die Datei umfasst 5.347.917.568 Bytes. Kontext-Cache, Laufzeitpuffer und Bildschirmausgabe benötigen zusätzlichen Speicher. Auf einer 8-GB-GPU mit kurzem Kontext testen; vollständiges GPU-Offloading ist nicht garantiert. Bei Bedarf Teile im System-RAM ausführen. Das geerbte maximale Kontextfenster von 131.072 Tokens ist kein Planungswert für diese Hardware."
+      },
+      "strengths": "Laut Modellautor für Code, Mathematik und Instruktionsbefolgung nachtrainiert. Kleine Programmieraufgaben, Erklärungen und Testentwürfe am eigenen Projekt vergleichen. Die Hersteller-Benchmarks vermischen teilweise balanced und verbose; daraus folgt keine gemessene Coding-Leistung dieser GGUF-Variante.",
+      "languages": [
+        "Englische Aufgabenstellungen",
+        "Programmiersprachen am eigenen Projekt prüfen"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Tests"
+      ],
+      "repo": "Relevante Funktionen und kleine Dateiausschnitte gezielt mitgeben. Selbstständige Repository-Suche benötigt zusätzliche lokale Werkzeuge und ist hier nicht erprobt.",
+      "agents": "Zunächst beaufsichtigte Einzelaufgaben verwenden. Zuverlässige Tool-Aufrufe und längere autonome Werkzeugketten sind hier nicht geprüft.",
+      "tools": [
+        "Ollama (Hugging-Face-GGUF)",
+        "llama.cpp (GGUF)",
+        "LM Studio (kompatible GGUF-Runtime)"
+      ],
+      "toolNote": "Der Ollama-Befehl verwendet den vollständigen Dateinamen als Tag und wählt dadurch balanced statt verbose. Aktuelle Granite-kompatible Runtime und korrektes Chat-Template verwenden; die Modellkarte dokumentiert llama.cpp mit expliziter Dateiauswahl. Laufzeitkompatibilität und Antwortformat wurden hier nicht praktisch getestet. Kontext und Ausgabelänge zunächst begrenzen.",
+      "ollamaCommand": "ollama run hf.co/webAI-Official/TwIL-8B:TwIL-8B-Q4_K_M-balanced.gguf",
+      "license": {
+        "name": "webAI Non-Commercial License ver. 1.0",
+        "note": "Abschnitt 3.3 beschränkt die Nutzung auf nichtkommerzielle Forschung und Bildung. Auch abgeleitete Modelle unterliegen dieser Einschränkung. Die Apache-2.0-Lizenz des Granite-Basismodells gilt nicht als Lizenz dieses Finetunes. Bei Weitergabe vollständige Lizenz und Herkunftshinweise beibehalten.",
+        "url": "https://huggingface.co/webAI-Official/TwIL-8B/blob/main/LICENSE.md"
+      },
+      "offline": "Nach dem Download lokale Textinferenz ohne externe Modell-API möglich. Nur im Rahmen der Lizenz für nichtkommerzielle Forschung und Bildung einsetzen; ergänzende Editor- und Suchwerkzeuge ebenfalls lokal konfigurieren.",
+      "verdict": "Experimenteller Kandidat zum Erproben kleiner Coding-Aufgaben in nichtkommerzieller Forschung und Bildung. Für eine 8-GB-GPU mit kurzem Kontext prüfen; hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Englisch ist die dokumentierte Modellsprache. Allgemeines Fachwissen ist laut Autor eine Schwäche. Reasoning kann viel Ausgabe erzeugen; verbose benötigt besonders viele Tokens. Herstellerwerte stammen überwiegend aus BF16-Tests und lassen sich nicht unmittelbar auf balanced in Q4_K_M übertragen. Code, Tests und Ressourcenverbrauch selbst prüfen.",
+      "checkedAt": "2026-11-07",
+      "sources": [
+        {
+          "label": "Offizielle Modellkarte / Varianten und Einsatzgrenzen",
+          "url": "https://huggingface.co/webAI-Official/TwIL-8B"
+        },
+        {
+          "label": "Q4_K_M balanced / konkrete GGUF-Datei",
+          "url": "https://huggingface.co/webAI-Official/TwIL-8B/blob/main/TwIL-8B-Q4_K_M-balanced.gguf"
+        },
+        {
+          "label": "Hugging Face / Ollama mit vollständigem Dateinamen",
+          "url": "https://huggingface.co/docs/hub/ollama"
+        }
+      ]
+    },
+    {
+      "id": "arete-27b",
+      "addedAt": "2026-11-09",
+      "name": "Arete-27B · Qwen3.8-Finetune",
+      "provider": "Nous Research",
+      "profile": "Experimentelle Qwen-Alternative · 27B",
+      "parameters": "27B-Modellfamilie · dichtes Qwen3.8-Nachtraining",
+      "quantization": "Community-GGUF Q4_K_M von bartowski",
+      "memory": {
+        "weightsGb": "ca. 17,20 GB (16,02 GiB) allein für die Q4_K_M-Textgewichte",
+        "ram": "32–48 GB System-RAM als Planungswert mit Editor",
+        "vram": "ca. 20–24 GB für vollständige GPU-Ausführung im Textbetrieb",
+        "context": "4.096–8.192 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen, keine eigenen Messungen. Die ausgewählte GGUF-Datei umfasst 17.203.416.064 Bytes. Kontext-Cache, Laufzeitpuffer, Betriebssystem und Editor benötigen zusätzliche Reserve. Die Gewichte allein passen nicht vollständig in 8 GB VRAM; Teil-Offloading benötigt ausreichend System-RAM und kann deutlich langsamer sein. Ein optionaler Bildprojektor benötigt rund 0,93 GB zusätzlich; Bildbetrieb ist hier nicht geprüft. Die beim Nachtraining verwendeten 64K Tokens sind kein Speicherplanungswert für diese Auswahl."
+      },
+      "strengths": "Alternative für Code-Chat, Refactoring und beaufsichtigte Agentenaufgaben auf Basis von Qwen3.8-27B. Das Nachtraining zielt vor allem darauf, politisch geprägte Antwortmuster zu verändern. Der Hersteller berichtet über erhaltene allgemeine und agentische Fähigkeiten; einen eigenständigen Coding-Vorteil gegenüber dem Ausgangsmodell leitet er daraus nicht ab.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Bash"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Repo-Fragen",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Relevante Dateien gezielt zuführen oder mit einer lokalen Repository-Suche verbinden. Das Modell hat ohne angebundene Werkzeuge keinen eigenen Projektzugriff.",
+      "agents": "Als experimentelle Alternative zum vorhandenen Qwen3.8 testen. Passendes Chat-Template und Werkzeugformat verwenden; Änderungen und Werkzeugaufrufe beaufsichtigen.",
+      "tools": [
+        "Ollama (Hugging-Face-GGUF)",
+        "llama.cpp (Qwen3.8-kompatibler Build)",
+        "LM Studio (kompatible GGUF-Runtime)"
+      ],
+      "toolNote": "Der Befehl wählt ausdrücklich bartowskis Q4_K_M-Datei. Die GGUFs wurden mit llama.cpp b12174 erzeugt; aktuelle kompatible Laufzeiten und das eingebettete Chat-Template verwenden. Ollama- und LM-Studio-Kompatibilität wurden hier nicht praktisch getestet. Diese Karte plant Textbetrieb; Bildunterstützung benötigt zusätzlich einen passenden Projektor.",
+      "ollamaCommand": "ollama run hf.co/bartowski/NousResearch_Arete-27B-GGUF:NousResearch_Arete-27B-Q4_K_M.gguf",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die offizielle Modellkarte nennt Apache 2.0. Lizenz- und Herkunftshinweise bei Weitergabe beibehalten; das Community-GGUF stammt von bartowski.",
+        "url": "https://huggingface.co/NousResearch/Arete-27B/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokale Textinferenz ohne externe Modell-API möglich. Editor-Anbindung, Repository-Suche und ergänzende Werkzeuge ebenfalls lokal konfigurieren.",
+      "verdict": "Experimentelle Alternative zum vorhandenen Qwen3.8-27B für Rechner mit mehr Speicher. Der Schwerpunkt des Nachtrainings liegt auf verändertem Antwortverhalten; ein Coding-Vorteil ist nicht belegt. Hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Die veröffentlichten Vergleiche stammen vom Hersteller und sind keine unabhängige Qualitätsmessung. Veränderungen politischer Antwortmuster garantieren weder allgemeine Neutralität noch fehlerfreien Code. Den Finetune und die Q4-Quantisierung am eigenen Projekt mit dem Ausgangsmodell vergleichen.",
+      "checkedAt": "2026-11-09",
+      "sources": [
+        {
+          "label": "Offizielle Modellkarte / Nachtraining und Grenzen",
+          "url": "https://huggingface.co/NousResearch/Arete-27B"
+        },
+        {
+          "label": "Community-GGUFs / Dateigrößen und Laufzeit",
+          "url": "https://huggingface.co/bartowski/NousResearch_Arete-27B-GGUF"
+        },
+        {
+          "label": "Herstellerbericht / Einordnung der Coding-Ergebnisse",
+          "url": "https://nousresearch.com/arete/"
+        }
+      ]
+    },
+    {
+      "id": "ripple-65b-preview",
+      "addedAt": "2026-11-09",
+      "name": "Ripple-65B Preview",
+      "provider": "Ricursive Intelligence",
+      "profile": "Großes Coding- und Agentenmodell · 65B Preview",
+      "parameters": "65 Mrd. · dichtes Transformer-Modell",
+      "quantization": "Offizielles Ollama-Standardpaket; alternativ GGUF Q4_K_M",
+      "memory": {
+        "weightsGb": "ca. 39–46 GB im offiziellen Ollama-Paket, abhängig vom Backend",
+        "ram": "64–96 GB System-RAM als Planungswert mit Editor",
+        "vram": "ca. 48–64 GB für vollständige GPU-Ausführung bei kurzem Kontext",
+        "context": "4.096 Tokens zum Einstieg; ein Nutzer, Textbetrieb",
+        "note": "Schätzungen, keine eigenen Messungen. Ollama listet je nach Backend unterschiedliche Paketgrößen von rund 39 bis 46 GB; dies ist kein gemessener Gesamtspeicherbedarf. Kontext-Cache, Laufzeitpuffer und gegebenenfalls weitere Komponenten benötigen Reserve. Eine 48-GB-GPU kann beim größeren Paket knapp werden; 64 GB bieten mehr Reserve. Die alternative Standard-Q4_K_M-Datei von AtomicChat umfasst ca. 38,80 GB, die getrennte AD-Q4_K_M-Datei ca. 40,43 GB. Für 8 GB VRAM kein vollständiger GPU-Betrieb; Teil-Offloading setzt viel System-RAM voraus. Große Kontextfenster erfordern eine eigene Speicherplanung."
+      },
+      "strengths": "Von Grund auf mit zwölf Billionen Tokens vortrainiertes Modell mit Nachtraining für Schlussfolgern, Programmierung und mehrstufige Agentenaufgaben. Interessant für beaufsichtigte Repository-Arbeit und Werkzeugketten auf einer leistungsfähigen Workstation. Die veröffentlichten Leistungsangaben stammen vom Entwickler.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Bash"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Repo-Fragen",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Mit einem lokalen Coding-Agenten gezielt Dateien suchen, lesen und Änderungen als Diff prüfen. Das große mögliche Kontextfenster ersetzt keine Auswahl relevanter Projektdateien.",
+      "agents": "Für mehrstufige Coding-Aufgaben ausgelegt. Chat-Template mit Reasoning und Werkzeugformat korrekt einbinden; Shell-Zugriffe und Änderungen beaufsichtigen und Tests selbst ausführen.",
+      "tools": [
+        "Ollama ab 0.40.16 (offizielles Ripple-Preview-Paket)",
+        "llama.cpp ab b12167 (GGUF)"
+      ],
+      "toolNote": "Ollama 0.40.16 vom 9. November 2026 veröffentlicht Ripple-Preview-Unterstützung und dokumentiert den Start mit ollama run ripple-preview. Das Standardpaket kann je nach Backend unterschiedlich ausfallen; vor dem Download Größe und freien Speicher prüfen. Den Kontext in der verwendeten Oberfläche oder API zunächst auf etwa 4.096 Tokens begrenzen. DFlash-2-Beschleunigung ist ausdrücklich für Ollamas MLX-Laufzeit auf Apple Silicon beschrieben und keine allgemeine Geschwindigkeitszusage für Windows. Alternativ bleibt llama.cpp ab b12167 mit der ricursive-Architektur nutzbar; Standard- und AD-GGUF dabei gezielt unterscheiden und das eingebettete Chat-Template aktivieren. Keine eigenen Laufzeittests.",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Die offizielle Modellkarte und das Ollama-Modellpaket nennen Apache 2.0. Lizenz- und Herkunftshinweise bei Weitergabe beibehalten. Alternative GGUF-Dateien stammen von der Community, etwa AtomicChat.",
+        "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download lokale Textinferenz über das offizielle Ollama-Paket oder ein passendes llama.cpp-GGUF möglich. Der erste Modellabruf benötigt Internet. Coding-Agent, Suchwerkzeuge und Tests ebenfalls lokal betreiben.",
+      "verdict": "Zusätzliche experimentelle Option für Coding und beaufsichtigte Agentenarbeit auf Rechnern mit viel Speicher. Inzwischen auch als offizielles Ollama-Paket verfügbar. Hier wurden keine eigenen Modelltests durchgeführt.",
+      "limitations": "Preview mit neuer Architektur: Laufzeitversion, Chat-Template und Tool-Parser müssen passen. Die Herstellervergleiche wurden in BF16 durchgeführt und sind nicht unmittelbar auf Q4_K_M übertragbar. Qualität, Geschwindigkeit und Verhalten längerer Werkzeugketten am eigenen Projekt prüfen; LM-Studio-Unterstützung hängt vom eingebundenen Backend ab.",
+      "checkedAt": "2026-11-10",
+      "sources": [
+        {
+          "label": "Offizielle Modellkarte / Architektur, Kontext und Grenzen",
+          "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview"
+        },
+        {
+          "label": "Community-GGUFs / Größen und llama.cpp-Unterstützung",
+          "url": "https://huggingface.co/AtomicChat/Ripple-65B-Preview-GGUF"
+        },
+        {
+          "label": "Ollama 0.40.16 / Ripple-Unterstützung und Änderungen",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16"
+        },
+        {
+          "label": "Offizielles Ollama-Paket / Start und Backend-Hinweise",
+          "url": "https://ollama.com/library/ripple-preview"
+        }
+      ],
+      "ollamaCommand": "ollama run ripple-preview"
+    },
+    {
+      "id": "wit-coder-4b",
+      "addedAt": "2026-11-11",
+      "name": "Wit-Coder-4B",
+      "provider": "Rangle2",
+      "profile": "Kompakter experimenteller Coding-Agent",
+      "parameters": "4B-Klasse · Qwen3.5-4B-Finetune",
+      "quantization": "GGUF Q4_K_M · Veröffentlichung des Modellautors",
+      "memory": {
+        "weightsGb": "ca. 2,78 GB (2,59 GiB) bei Q4_K_M",
+        "ram": "8–16 GB System-RAM als Planungswert für Textbetrieb",
+        "vram": "ca. 4–6 GB für vollständige GPU-Ausführung bei kurzem Kontext",
+        "context": "4.096 Tokens zum Einstieg",
+        "note": "Die Dateigröße beschreibt die Modellgewichte. Kontext-Cache, Laufzeitpuffer, Betriebssystem und Editor benötigen zusätzlichen Speicher. Die Angaben sind Planungswerte ohne eigene Messungen."
+      },
+      "strengths": "Englischsprachiges Finetune für Coding-Agenten. Das Nachtraining zielt auf das Abschließen lösbarer Aufgaben, das Erkennen von Blockaden und das Vermeiden von Wiederholungen. Die berichteten Ergebnisse stammen aus Entwicklungstests des Autors.",
+      "languages": [
+        "Englische Aufgabenbeschreibungen",
+        "Python als Einstieg"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Kleine, klar abgegrenzte Änderungen mit den betroffenen Dateien und einem konkreten Testauftrag ausprobieren. Der lokale Agent stellt den Dateizugriff und die Testwerkzeuge bereit.",
+      "agents": "Werkzeugaufrufe beaufsichtigen und die Ergebnisse anhand externer Tests prüfen. Das Modell kann blockierte Aufgaben weiterhin irrtümlich als abgeschlossen melden.",
+      "tools": [
+        "Ollama (Hugging-Face-GGUF)",
+        "llama.cpp (Qwen3.5-kompatible Laufzeit)"
+      ],
+      "toolNote": "Der Ollama-Befehl verweist auf die Q4_K_M-Datei des Modellautors. Das öffentliche Paketmanifest bestätigt die Modellgröße. Der Autor prüfte Aufbau und Prüfsummen der GGUF-Dateien. Die Ausführung und Qualität dieser Quantisierung sind noch ungeprüft. Das Agenten-Setup des Autors verwendet eine eigene Umgebung für Werkzeugaufrufe.",
+      "ollamaCommand": "ollama run hf.co/Rangle2/Wit-Coder-4B:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Der Modellautor veröffentlicht das Finetune unter Apache 2.0.",
+        "url": "https://huggingface.co/Rangle2/Wit-Coder-4B/blob/main/LICENSE"
+      },
+      "offline": "Nach dem Download ist lokale Textinferenz mit einer passenden Laufzeit vorgesehen. IDE, Agent und ergänzende Werkzeuge für vertraulichen Code ebenfalls lokal betreiben.",
+      "verdict": "Experimenteller Testkandidat für kurze englische Coding-Aufgaben auf Rechnern mit begrenztem Speicher.",
+      "limitations": "Die Agententests dienten der Entwicklung und Auswahl des Checkpoints. Die Ergebnisse beziehen sich auf das getestete Modell vor der Quantisierung. Verlässlichkeit bei längeren Aufgaben und mit anderen Agenten-Umgebungen ist offen.",
+      "checkedAt": "2026-11-11",
+      "sources": [
+        {
+          "label": "Modellkarte und Entwicklungsversuche",
+          "url": "https://huggingface.co/Rangle2/Wit-Coder-4B"
+        },
+        {
+          "label": "Q4_K_M-Datei und Größe",
+          "url": "https://huggingface.co/Rangle2/Wit-Coder-4B/blob/main/gguf/Wit-Coder-4B-Q4_K_M.gguf"
+        },
+        {
+          "label": "Ollama-Integration auf Hugging Face",
+          "url": "https://huggingface.co/docs/hub/ollama"
+        }
+      ]
+    },
+    {
+      "id": "qwopus38-27b-coder-flash",
+      "addedAt": "2026-11-12",
+      "name": "Qwopus3.8-27B-Coder-Flash",
+      "provider": "Jackrong · unabhängiger Qwen-Finetune",
+      "profile": "Experimentelles Coding-Finetune für Workstations",
+      "parameters": "27B-Klasse · dichtes Qwen3.8-Finetune",
+      "quantization": "GGUF Q4_K_M vom Modellautor",
+      "memory": {
+        "weightsGb": "ca. 16,8 GB (15,6 GiB) bei Q4_K_M",
+        "ram": "24–32 GB System-RAM als Planungswert",
+        "vram": "ca. 20–24 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg · ein Nutzer · Textbetrieb",
+        "note": "Planungswerte für das Q4_K_M-GGUF mit kleinem Kontext. Kontext-Cache, Laufzeit und bei Bildeingabe der separate Projektor benötigen zusätzlichen Speicher."
+      },
+      "strengths": "Das Nachtraining zielt auf Codeänderungen, Werkzeugaufrufe und die Korrektur fehlgeschlagener Aufrufe. Die Modellkarte beschreibt gezielte Coding- und Agententests des Autors.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Repo-Fragen",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Mit einer überschaubaren Änderung und einem reproduzierbaren Test beginnen. Relevante Projektdateien und Fehlermeldungen gezielt als Kontext bereitstellen.",
+      "agents": "Werkzeugaufrufe und Rückmeldungen mit dem lokalen Agenten erproben. Codeänderungen als Diff prüfen und die Projekttests ausführen.",
+      "tools": [
+        "llama.cpp (Qwen3.8-kompatibles Backend)",
+        "Transformers ab 5.8.0 (Vollcheckpoint)"
+      ],
+      "toolNote": "Der Startbefehl lädt das Q4_K_M-GGUF und nutzt dessen Chat-Template. Er ist für Textbetrieb mit vollständigem GPU-Offloading ausgelegt. Für Bilder ist zusätzlich der passende Projektor erforderlich.",
+      "startLabel": "llama.cpp-Start (Q4_K_M, Textbetrieb)",
+      "startCommand": "llama-server -hf Jackrong/Qwopus3.8-27B-Coder-Flash-GGUF --hf-file Qwopus3.8-27B-Coder-Flash-Q4_K_M.gguf --jinja -c 4096 -ngl 99",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Der Modellautor nennt Apache 2.0 für das Finetune.",
+        "url": "https://huggingface.co/Jackrong/Qwopus3.8-27B-Coder-Flash"
+      },
+      "offline": "Nach dem Download ist Textinferenz über llama.cpp lokal möglich. Für vertrauliche Projekte auch Agent, Werkzeuge und Tests lokal betreiben.",
+      "verdict": "Testkandidat für beaufsichtigte Coding-Arbeit auf einer 24-GB-GPU bei kurzem Kontext.",
+      "limitations": "Die kleinen, vom Autor ausgewählten Tests erlauben nur begrenzte Aussagen über größere Repositories und andere Agenten. Q4-Qualität, Durchsatz und Speicherbedarf sind hier nicht gemessen.",
+      "checkedAt": "2026-11-12",
+      "sources": [
+        {
+          "label": "Modellkarte / Finetune, Lizenz und Versuchsaufbau",
+          "url": "https://huggingface.co/Jackrong/Qwopus3.8-27B-Coder-Flash"
+        },
+        {
+          "label": "GGUF des Modellautors / Quantisierungen und Dateigrößen",
+          "url": "https://huggingface.co/Jackrong/Qwopus3.8-27B-Coder-Flash-GGUF"
+        }
+      ]
+    },
+    {
+      "id": "ornith-15-122b",
+      "addedAt": "2026-11-12",
+      "name": "Ornith-1.5-122B",
+      "provider": "Ornith Team",
+      "profile": "Großes Modell für Coding-Agenten und Repo-Arbeit",
+      "parameters": "122B-Klasse · Mixture of Experts · GGUF-Metadaten rund 125 Mrd.",
+      "quantization": "Ollama Q4_K_M mit Bildprojektor; alternativ GGUF für llama.cpp",
+      "memory": {
+        "weightsGb": "75,8 GB im GGUF; ca. 77 GB im Ollama-Paket",
+        "ram": "96–128 GB System-RAM als Planungswert",
+        "vram": "ca. 80–96 GB für vollständige GPU-Ausführung",
+        "context": "4.096 Tokens zum Einstieg · ein Nutzer · Textbetrieb",
+        "note": "Planungswerte für Q4_K_M. Der Hersteller beschreibt einen quantisierten Betrieb auf einer einzelnen 80-GB-GPU. Bei 80 GB hängt der Spielraum von Backend, Kontext-Cache und freiem VRAM ab. Größere Kontexte und Bildeingaben benötigen eigene Speicherplanung."
+      },
+      "strengths": "Für mehrstufige Aufgaben in Coding-Agenten ausgelegt. Das Modell unterstützt strukturierte Werkzeugaufrufe. Der Anbieter dokumentiert Beispiele für die Anbindung an lokale Coding-Werkzeuge.",
+      "languages": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Bash"
+      ],
+      "useCases": [
+        "Code-Chat",
+        "Refactoring",
+        "Repo-Fragen",
+        "Tests",
+        "Agenten"
+      ],
+      "repo": "Repository-Aufgaben in überprüfbare Schritte aufteilen. Die relevanten Dateien gezielt einlesen lassen und Änderungen mit vorhandenen Projekttests prüfen.",
+      "agents": "Das lokale Backend und der Agent müssen das Werkzeugformat des Modells korrekt verarbeiten. Dateiänderungen und Shell-Aufrufe beaufsichtigen.",
+      "tools": [
+        "Ollama (Bibliothekspaket Q4_K_M)",
+        "llama.cpp (GGUF des Modellautors)"
+      ],
+      "toolNote": "Der Befehl startet den expliziten Q4_K_M-Tag der Ollama-Bibliothek. Für einen kurzen Kontext in der Ollama-Konfiguration oder im Agenten mit 4.096 Tokens beginnen. Das separate GGUF des Modellautors ist eine Alternative für llama.cpp.",
+      "ollamaCommand": "ollama run ornith-1.5:122b-q4_K_M",
+      "license": {
+        "name": "MIT",
+        "note": "Die Modellkarte und das GGUF-Repository des Ornith Teams führen MIT als Lizenz.",
+        "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B"
+      },
+      "offline": "Nach dem Download ist lokale Inferenz mit Ollama oder llama.cpp möglich. Repo-Zugriff, Tests und weitere Werkzeuge können ebenfalls lokal laufen.",
+      "verdict": "Kandidat für beaufsichtigte Repo- und Agentenarbeit auf Workstations mit viel Speicher.",
+      "limitations": "Die veröffentlichten Bewertungen stammen vom Modellanbieter und verwenden teils angepasste Agenten-Umgebungen. Qualität, Geschwindigkeit und Speicherbedarf des Q4-Pakets sind hier nicht gemessen.",
+      "checkedAt": "2026-11-12",
+      "sources": [
+        {
+          "label": "Offizielle Modellkarte / Lizenz und Agenten-Integration",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B"
+        },
+        {
+          "label": "Offizielle GGUF-Varianten / Dateigrößen und llama.cpp",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-GGUF"
+        },
+        {
+          "label": "Ollama-Bibliothek / Q4_K_M-Tag und Paketgröße",
+          "url": "https://ollama.com/library/ornith-1.5:122b-q4_K_M"
+        }
+      ]
+    },
+    {
+      "id": "ccore-qwen3-17b-glb-3d-coder",
+      "addedAt": "2026-11-13",
+      "name": "CCORE Qwen3-1.7B-GLB-3D-Coder",
+      "provider": "CCORE · unabhängiger Qwen-Finetune",
+      "profile": "Kompakter Spezialist für Three.js und GLB-Spielobjekte",
+      "parameters": "1,7 Mrd. · dichter Qwen3-Finetune",
+      "quantization": "GGUF Q8_0 vom Modellautor",
+      "memory": {
+        "weightsGb": "ca. 1,83 GB für Q8_0",
+        "ram": "8–16 GB System-RAM als Planungswert mit Browser und Editor",
+        "vram": "ca. 3–4 GB für vollständige GPU-Ausführung",
+        "context": "8.192 Tokens zum Einstieg · ein Nutzer · Textbetrieb",
+        "note": "Die Schätzung gilt für Q8_0. Die Modellgewichte belegen etwa 1,83 GB. Kontext-Cache, Laufzeit, Browser und Editor benötigen zusätzlichen Speicher. Der CPU-Start benötigt keine dedizierte GPU."
+      },
+      "strengths": "Das Finetune erzeugt HTML und JavaScript für Low-Poly-Spielobjekte mit Three.js. Die Seite enthält eine interaktive Vorschau und einen GLB-Export für 3D-Editoren wie Godot. Die Modellkarte datiert den finalen Checkpoint auf den 13. November 2026.",
+      "languages": [
+        "JavaScript",
+        "HTML"
+      ],
+      "useCases": [
+        "Code-Chat"
+      ],
+      "repo": "Einzelne Objekte mit klaren Vorgaben erzeugen. Die HTML-Datei im Browser öffnen und das exportierte GLB im Ziel-Editor prüfen.",
+      "agents": "Der vorgesehene Ablauf besteht aus einer einzelnen Codegenerierung mit anschließender Sichtprüfung und Export.",
+      "tools": [
+        "llama.cpp (Qwen3-kompatible GGUF-Laufzeit)",
+        "LM Studio (GGUF)"
+      ],
+      "toolNote": "Der Startbefehl lädt die Q8_0-Datei von CCORE und startet llama.cpp auf der CPU. Den Systemprompt für Three.js und GLB aus der Modellkarte übernehmen. Für vollständige HTML-Dateien genügend Ausgabetokens einplanen.",
+      "startLabel": "llama.cpp-Start (Q8_0, CPU)",
+      "startCommand": "llama-server -hf ccore/Qwen3-1.7B-GLB-3D-Coder --hf-file Qwen3-1.7B-GLB-3D-Coder-Q8_0.gguf --jinja -c 8192 -ngl 0",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "CCORE nennt Apache 2.0 für die Modellgewichte.",
+        "url": "https://huggingface.co/ccore/Qwen3-1.7B-GLB-3D-Coder#license"
+      },
+      "offline": "Nach dem Download läuft die Inferenz lokal. Für eine vollständig offline nutzbare Vorschau auch Three.js und gegebenenfalls weitere JavaScript-Abhängigkeiten lokal bereitstellen.",
+      "verdict": "Experimentelle Option für kleine 3D-Spielobjekte auf Rechnern ohne dedizierte GPU oder mit wenig VRAM.",
+      "limitations": "Laut Modellautor schlagen Vorschau oder GLB-Export gelegentlich fehl. Q4_K_M lieferte in seinen Versuchen deutlich schwächere Ergebnisse als Q8_0 und F16. Die Beispiele stammen vom Autor. Eigene Modelltests liegen nicht vor.",
+      "checkedAt": "2026-11-13",
+      "sources": [
+        {
+          "label": "Modellkarte / Checkpoint, Systemprompt und Export",
+          "url": "https://huggingface.co/ccore/Qwen3-1.7B-GLB-3D-Coder"
+        },
+        {
+          "label": "Dateiliste / Q8_0-GGUF und Größe",
+          "url": "https://huggingface.co/ccore/Qwen3-1.7B-GLB-3D-Coder/tree/main"
+        }
+      ]
+    }
+  ]
+}
