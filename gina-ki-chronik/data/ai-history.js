@@ -1288,6 +1288,17 @@ window.GinaChronikData = [
     "featured": true
   },
   {
+    "id": "runway-praxis-1-open-weights-2026",
+    "date": "2026-11-11",
+    "title": "Runway veröffentlicht das Robotikmodell Praxis-1 mit offenen Gewichten",
+    "category": "Robotik",
+    "summary": "Runway veröffentlicht Praxis-1, ein auf Videos vortrainiertes Modell für die Robotersteuerung. Das Modell sagt gemeinsam voraus, wie sich die beobachtete Szene entwickelt und welche Bewegungen der Roboter dafür ausführen soll. Runway stellt die Modellgewichte sowie den Code für Inferenz und Nachtraining unter Apache 2.0 bereit. Damit können Entwickler das Modell an eigene Roboter, Kameras und Aufgaben anpassen. Die veröffentlichten Gewichte umfassen inzwischen auch eine Variante für den SO-101-Roboterarm.",
+    "sourceName": "Runway – Veröffentlichung von Praxis-1 mit Links zu Gewichten und Code",
+    "sourceUrl": "https://runway.com/news/company-news/praxis-1-is-now-available",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
     "id": "ntt-physics-world-model-robot-planning-2026",
     "date": "2026-11-11",
     "title": "NTT testet ein physikgestütztes Weltmodell für vorausschauende Roboterbewegungen",
@@ -1343,6 +1354,17 @@ window.GinaChronikData = [
     "featured": true
   },
   {
+    "id": "ggml-org-llama-cpp-ggml-1-2026",
+    "date": "2026-11-13",
+    "title": "llama.cpp und ggml erreichen Version 1.0",
+    "category": "Werkzeuge",
+    "summary": "ggml-org veröffentlicht die Bibliotheken libllama und libggml in Version 1.0.0. Sie bilden eine Grundlage für die Ausführung von KI-Modellen auf unterschiedlichen Betriebssystemen und Hardwareplattformen. Künftig kennzeichnen die Projekte inkompatible Änderungen an der öffentlichen Programmierschnittstelle oder der Binärschnittstelle mit einer neuen Hauptversion. Anwendungen, die diese Bibliotheken einbinden, können Aktualisierungen dadurch planbarer übernehmen.",
+    "sourceName": "ggml-org – Veröffentlichung und Versionsregeln für llama.cpp und ggml",
+    "sourceUrl": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
     "id": "google-gemini-4-teamwork-theoretical-computer-science-2026",
     "date": "2026-11-13",
     "title": "Google Research berichtet über KI-gestützte Lösungen für offene Informatikprobleme",
@@ -1355,5 +1377,5 @@ window.GinaChronikData = [
   }
 ];
 window.GinaChronikMeta = {
-  "updatedAt": "2026-11-14"
+  "updatedAt": "2026-11-15"
 };
