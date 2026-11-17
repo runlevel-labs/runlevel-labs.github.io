@@ -1277,13 +1277,24 @@ window.GinaChronikData = [
     "featured": true
   },
   {
+    "id": "google-deepmind-gemini-robotics-2-5-2026",
+    "date": "2026-11-10",
+    "title": "Google DeepMind stellt Gemini Robotics 2.5 vor und erprobt es im Autobau",
+    "category": "Robotik",
+    "summary": "Google DeepMind stellt Gemini Robotics 2.5 vor, ein Modell, das Kamerabilder und Anweisungen in Roboterbewegungen übersetzt. In einem Pilotversuch an laufenden Mercedes-Benz-Produktionslinien sortierte Apptroniks Apollo 2 Fahrzeugteile autonom in der benötigten Reihenfolge. Gemini Robotics 2.5 steuerte Arme und Hände, während Gemini Robotics ER den Arbeitsablauf überwachte. DeepMind meldet für den Pilotversuch eine Erfolgsquote von 96 Prozent.",
+    "sourceName": "Google DeepMind – Vorstellung von Gemini Robotics 2.5 und Bericht zum Pilotversuch",
+    "sourceUrl": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
     "id": "alibaba-qwen4-max-preview-2026",
     "date": "2026-11-11",
     "title": "Alibaba öffnet die befristete Vorschau von Qwen4-Max",
     "category": "Modelle",
-    "summary": "Alibaba stellt Qwen4-Max Preview als Flaggschiff der neuen Qwen-Generation bereit. Das Modell verarbeitet Text, Bilder und Videos, unterstützt Werkzeugaufrufe sowie strukturierte Ausgaben und hat laut offizieller Dokumentation ein Kontextfenster von einer Million Tokens. Zu den vorgesehenen Aufgaben zählen Programmierung, Frontend-Entwicklung und mehrstufige Arbeit mit Agenten. Die Vorschau macht das Modell über die QwenCloud-API im Token Plan zugänglich. Alibaba gibt den 25. November 2026 als Ende der Vorschau an.",
-    "sourceName": "QwenCloud – offizielle Dokumentation zu Qwen4-Max Preview",
-    "sourceUrl": "https://docs.qwencloud.com/developer-guides/getting-started/latest-model",
+    "summary": "Alibaba öffnet am 11. November eine befristete Vorschau von Qwen4-Max im QwenCloud Token Plan und stellt das Flaggschiff am 16. November regulär über die QwenCloud-API bereit. Das Modell verarbeitet Text, Bilder und Videos, unterstützt Werkzeugaufrufe und strukturierte Ausgaben und bietet laut QwenCloud ein Kontextfenster von einer Million Tokens. Zu den vorgesehenen Aufgaben zählen Programmierung und mehrstufige Agentenarbeit.",
+    "sourceName": "QwenCloud – Vorschau und regulärer Start von Qwen4-Max",
+    "sourceUrl": "https://docs.qwencloud.com/changelog/models",
     "status": "reviewed",
     "featured": true
   },
@@ -1374,8 +1385,19 @@ window.GinaChronikData = [
     "sourceUrl": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "openai-gpt-6-astra-craig-standard-model-lattice-2026",
+    "date": "2026-11-15",
+    "title": "GPT-6 Astra hilft bei einem Beweis zur Gitterformulierung des Standardmodells",
+    "category": "Forschung",
+    "summary": "Der Physiker Nathaniel Craig berichtet, wie GPT-6 Astra seine Idee für eine mathematische Formulierung des Standardmodells der Teilchenphysik auf einem Raumzeitgitter konkretisierte. Das Modell schlug vor, wie sich die Felder auf zunehmend feinere Gitter übertragen lassen, und übernahm laut Craig die Führung bei der Ausarbeitung des Beweises. Fachkollegen sichteten Teile der Arbeit. Der Preprint vom 6. Oktober beschreibt einen Kandidaten für eine Definition bei endlichem Gitterabstand. Ob die Konstruktion alle gewünschten Eigenschaften erfüllt, bleibt Gegenstand der Forschung.",
+    "sourceName": "Nathaniel Craig bei OpenAI – Forschungsbericht mit Link zum Preprint",
+    "sourceUrl": "https://openai.com/index/step-toward-defining-the-standard-model/",
+    "status": "reviewed",
+    "featured": true
   }
 ];
 window.GinaChronikMeta = {
-  "updatedAt": "2026-11-15"
+  "updatedAt": "2026-11-17"
 };

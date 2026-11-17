@@ -59,7 +59,11 @@ function validateData(data) {
     });
     if (model.startCommand !== undefined) {
       text(model.startLabel, label + ".startLabel");
-      if (model.ollamaCommand !== undefined || typeof model.startCommand !== "string" || !/^llama-server -hf [A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+ --hf-file [A-Za-z0-9_.-]+\.gguf --jinja -c [1-9][0-9]* -ngl [0-9]+$/.test(model.startCommand)) errors.push(label + ": Lokaler llama.cpp-Befehl ungültig.");
+      const llamaStart = /^llama-server -hf [A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(?::[A-Za-z0-9_.-]+| --hf-file [A-Za-z0-9_.-]+\.gguf) --jinja -c [1-9][0-9]* -ngl [0-9]+$/;
+      const edge0Start = /^\.\\build\\windows\\bin\\edge0-infer\.exe serve --model \.\\[A-Za-z0-9][A-Za-z0-9_-]*$/;
+      if (model.ollamaCommand !== undefined || typeof model.startCommand !== "string" || !(llamaStart.test(model.startCommand) || edge0Start.test(model.startCommand))) {
+        errors.push(label + ": Lokaler Startbefehl ungültig.");
+      }
     } else if (typeof model.ollamaCommand !== "string" || !/^ollama run (?:[a-z0-9][A-Za-z0-9_.:-]*|hf\.co\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+:[A-Za-z0-9_.-]+)$/.test(model.ollamaCommand) || model.ollamaCommand.includes("cloud")) errors.push(label + ": Lokaler Ollama-Befehl ungültig.");
   });
   if (errors.length) throw new Error(errors.join("\n"));

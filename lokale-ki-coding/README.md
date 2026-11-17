@@ -22,8 +22,9 @@ Modelle ohne bekanntes Aufnahmedatum stehen bei „Neueste zuerst“ am Ende.
 - `strengths`, `languages`, `useCases`, `repo`, `agents`: praktische Einordnung.
 - `tools`, `toolNote`, `ollamaCommand`: lokal nutzbare Wege und konkretes Paket.
   Für Modelle ohne belegten Ollama-GGUF-Weg stattdessen `startLabel` und
-  `startCommand` mit einem konkreten llama.cpp-Befehl verwenden. Beide
-  Befehlsvarianten schließen sich aus; der Validator prüft sie getrennt.
+  `startCommand` mit einem konkreten lokalen Befehl für llama.cpp oder Edge0
+  unter Windows verwenden. `ollamaCommand` und `startCommand` schließen sich
+  aus. Voraussetzungen und Modellordner in `toolNote` beschreiben.
 - `license`, `offline`: Modelllizenz und Bedingungen für rein lokalen Betrieb.
 - `verdict`, `limitations`: Einschätzung und Grenzen, keine behaupteten Eigenmessungen.
 - `sources`: offizielle Modellkarte und Quelle für das quantisierte Paket.
