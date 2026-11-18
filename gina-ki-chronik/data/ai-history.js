@@ -1396,8 +1396,41 @@ window.GinaChronikData = [
     "sourceUrl": "https://openai.com/index/step-toward-defining-the-standard-model/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "openai-gpt-6-2-astra-sol-2026",
+    "date": "2026-11-17",
+    "title": "OpenAI bringt GPT-6.2 Astra und Sol in Work, Codex und die API",
+    "category": "Modelle",
+    "summary": "Für Aufgaben mit viel Kontext und mehreren Arbeitsschritten bietet OpenAI zwei neue Modelle an. Astra ist auf anspruchsvolle Projekte ausgerichtet, Sol auf den regelmäßigen Einsatz. Bei Astra stuft OpenAI erstmals für ein extern verfügbares Modell die Fähigkeit, an der Entwicklung von KI-Modellen mitzuwirken, als hoch ein. In die Bewertung flossen unter anderem Tests zur Fehlersuche in Forschungsexperimenten und zur Beschleunigung von Rechenoperationen ein.",
+    "sourceName": "OpenAI – Modellstart mit verlinkter System Card",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "google-antigravity-hydrogen-robotics-2026",
+    "date": "2026-11-17",
+    "title": "Google ergänzt Antigravity um Werkzeuge zur Robotersteuerung",
+    "category": "Robotik",
+    "summary": "Ein neues Plugin verbindet Antigravity mit Simulatoren, Kameras und Roboterarmen. Gemini 4 Hydrogen setzt ein in Alltagssprache beschriebenes Ziel anhand von Kamerabildern in einzelne Schritte um. Das Modell schreibt und erprobt den nötigen Steuerungscode und kann ihn im Verlauf anpassen. Google zeigt anhand einzelner Anwendungen, wie Entwickler eine Aufgabe zunächst simulieren und anschließend mit einem realen Roboterarm testen können.",
+    "sourceName": "Google Developers – Antigravity-Plugin und Robotikbeispiele",
+    "sourceUrl": "https://developers.googleblog.com/en/gemini-hydrogen-for-robotics/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "microsoft-mai-code-2-copilot-2026",
+    "date": "2026-11-17",
+    "title": "Microsoft setzt MAI Code 2 und Code 2 Flash in GitHub Copilot ein",
+    "category": "Modelle",
+    "summary": "Für Programmieragenten in GitHub Copilot stehen zwei Modelle aus Microsofts eigener MAI-Reihe bereit. Code 2 ist für Arbeiten gedacht, bei denen ein Agent mehrere Dateien und ihre Abhängigkeiten berücksichtigen muss. Die Flash-Variante zielt auf kürzere Aufgaben wie kleine Codeänderungen. Über Azure AI Foundry können Entwickler beide Modelle auch außerhalb von Copilot nutzen.",
+    "sourceName": "Microsoft – Modellankündigungen zur Ignite 2026",
+    "sourceUrl": "https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/",
+    "status": "reviewed",
+    "featured": true
   }
 ];
 window.GinaChronikMeta = {
-  "updatedAt": "2026-11-17"
+  "updatedAt": "2026-11-18"
 };

@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../style.css?v=20261110-1">
   <link rel="stylesheet" href="css/models.css?v=20261107-4">
   <script src="../navigation.js" defer></script>
-  <script src="data/models.js?v=20261117-1" defer></script>
+  <script src="data/models.js?v=20261118-1" defer></script>
   <script src="js/app.js?v=20261109-1" defer></script>
 </head>
 <body class="coding-page">
@@ -150,8 +150,8 @@
         </article>
         <article class="card">
           <h3>vLLM</h3>
-          <p>Eher für einen GPU-Server im Firmennetz und mehrere Anfragen geeignet. Modellformat, Quantisierung, Tool-Parser und Parallelität separat planen. Die GGUF-Speicherwerte der Karten sind keine vLLM-Zusage. Version 0.33.0 vom 2. November 2026 ergänzt unter anderem Recursive Flint und erweitert MTP-Funktionen. Die fertigen NVIDIA-CUDA-Pakete wechseln auf CUDA 13.0; eine passende Hardware- und Treiberumgebung ist erforderlich.</p>
-          <p class="links"><a href="https://docs.vllm.ai/en/stable/models/supported_models/">Unterstützte Modelle</a> <a href="https://github.com/vllm-project/vllm/releases/tag/v0.33.0">Release 0.33.0</a></p>
+          <p>Für GPU-Server mit mehreren gleichzeitigen Anfragen. Version 0.34.0 unterstützt unter anderem Mistral Large 4, MiniMax M3.1 Flash und Ripple-65B Preview. Auf GPUs setzt sie Model Runner V2 voraus. Wer von einer älteren Installation umsteigt, prüft beim Upgrade die Runner-Einstellungen, das Paket für CUDA oder ROCm sowie den Bedarf für den Kontext-Cache. Die Speicherwerte der Modellkarten beziehen sich auf die jeweils angegebenen Pakete.</p>
+          <p class="links"><a href="https://docs.vllm.ai/en/stable/models/supported_models/">Unterstützte Modelle</a> <a href="https://github.com/vllm-project/vllm/releases/tag/v0.34.0">Release 0.34.0</a></p>
         </article>
       </div>
     </section>

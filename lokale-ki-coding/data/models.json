@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-17",
+  "updatedAt": "2026-11-18",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -1068,7 +1068,8 @@
       "agents": "Für mehrstufige Coding-Aufgaben ausgelegt. Chat-Template mit Reasoning und Werkzeugformat korrekt einbinden; Shell-Zugriffe und Änderungen beaufsichtigen und Tests selbst ausführen.",
       "tools": [
         "Ollama ab 0.40.16 (offizielles Ripple-Preview-Paket)",
-        "llama.cpp ab b12167 (GGUF)"
+        "llama.cpp ab b12167 (GGUF)",
+        "vLLM ab 0.34.0 (BF16 oder NVFP4)"
       ],
       "toolNote": "Ollama 0.40.16 vom 9. November 2026 veröffentlicht Ripple-Preview-Unterstützung und dokumentiert den Start mit ollama run ripple-preview. Das Standardpaket kann je nach Backend unterschiedlich ausfallen; vor dem Download Größe und freien Speicher prüfen. Den Kontext in der verwendeten Oberfläche oder API zunächst auf etwa 4.096 Tokens begrenzen. DFlash-2-Beschleunigung ist ausdrücklich für Ollamas MLX-Laufzeit auf Apple Silicon beschrieben und keine allgemeine Geschwindigkeitszusage für Windows. Alternativ bleibt llama.cpp ab b12167 mit der ricursive-Architektur nutzbar; Standard- und AD-GGUF dabei gezielt unterscheiden und das eingebettete Chat-Template aktivieren. Keine eigenen Laufzeittests.",
       "license": {
@@ -1079,7 +1080,7 @@
       "offline": "Nach dem Download lokale Textinferenz über das offizielle Ollama-Paket oder ein passendes llama.cpp-GGUF möglich. Der erste Modellabruf benötigt Internet. Coding-Agent, Suchwerkzeuge und Tests ebenfalls lokal betreiben.",
       "verdict": "Zusätzliche experimentelle Option für Coding und beaufsichtigte Agentenarbeit auf Rechnern mit viel Speicher. Inzwischen auch als offizielles Ollama-Paket verfügbar. Hier wurden keine eigenen Modelltests durchgeführt.",
       "limitations": "Preview mit neuer Architektur: Laufzeitversion, Chat-Template und Tool-Parser müssen passen. Die Herstellervergleiche wurden in BF16 durchgeführt und sind nicht unmittelbar auf Q4_K_M übertragbar. Qualität, Geschwindigkeit und Verhalten längerer Werkzeugketten am eigenen Projekt prüfen; LM-Studio-Unterstützung hängt vom eingebundenen Backend ab.",
-      "checkedAt": "2026-11-10",
+      "checkedAt": "2026-11-18",
       "sources": [
         {
           "label": "Offizielle Modellkarte / Architektur, Kontext und Grenzen",
@@ -1092,6 +1093,10 @@
         {
           "label": "Ollama 0.40.16 / Ripple-Unterstützung und Änderungen",
           "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16"
+        },
+        {
+          "label": "vLLM 0.34.0 / Formate und Ripple-Parser",
+          "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0"
         },
         {
           "label": "Offizielles Ollama-Paket / Start und Backend-Hinweise",
@@ -1554,6 +1559,53 @@
         {
           "label": "Veröffentlichungsdatum / Modellhistorie",
           "url": "https://huggingface.co/AJ-Gonzalez/coder-lfm3-1.7b-qwen4-max/commits/main"
+        }
+      ]
+    },
+    {
+      "id": "tess-45-27b",
+      "addedAt": "2026-11-18",
+      "name": "Tess-4.5-27B",
+      "provider": "Migel Tissera · Continuity Research",
+      "profile": "Qwen3.8-Finetune für Code und lokale Agenten",
+      "parameters": "27 Mrd. · dichtes Modell auf Basis von Qwen3.8-27B",
+      "quantization": "GGUF Q4_K_M vom Modellautor · auch Q6_K und Q8_0 verfügbar",
+      "memory": {
+        "weightsGb": "16,5 GB für Q4_K_M",
+        "ram": "32 GB System-RAM als Startwert bei teilweiser CPU-Ausführung",
+        "vram": "24 GB als Planungswert für Q4_K_M auf der GPU",
+        "context": "4.096 Tokens zum Einstieg · ein Nutzer · Textbetrieb",
+        "note": "Die Dateigröße zählt nur die Hauptgewichte. Rechenpuffer und Kontext-Cache benötigen zusätzlichen Speicher. Ein optionales MTP-Zusatzmodell erhöht den Bedarf."
+      },
+      "strengths": "Das Nachtraining richtet Tess auf Arbeit im Terminal aus. Ein Einstieg sind Fehleranalysen oder kleinere Änderungen, bei denen der Agent relevante Dateien auswählen und einen überprüfbaren Patch erzeugen soll.",
+      "languages": ["Python", "JavaScript", "TypeScript"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Dem Agenten den Projektordner und eine klar abgegrenzte Aufgabe geben. Änderungen als Diff durchsehen und mit den vorhandenen Projekttests prüfen.",
+      "agents": "Dateizugriff, Shell und Werkzeuge kommen vom Agentenclient. Das im GGUF enthaltene Chat-Template verwenden und Werkzeugaufrufe im gewählten Client prüfen.",
+      "tools": ["Ollama (GGUF vom Modellautor)", "llama.cpp (GGUF)"],
+      "toolNote": "Der Ollama-Befehl lädt das Q4_K_M-Hauptmodell von Hugging Face. Für den ersten Test genügt das Hauptmodell. Wer später spekulative Dekodierung mit dem optionalen MTP-Modell ausprobieren möchte, benötigt einen kompatiblen llama.cpp-Build und zusätzlichen Speicher.",
+      "ollamaCommand": "ollama run hf.co/migtissera/Tess-4.5-27B-GGUF:Q4_K_M",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Der Modellautor führt Apache 2.0 für das Finetune und die GGUF-Dateien an.",
+        "url": "https://huggingface.co/migtissera/Tess-4.5-27B-GGUF#license"
+      },
+      "offline": "Nach dem Download kann die Inferenz lokal laufen. Für einen vollständig lokalen Ablauf auch den Agentenclient und seine Werkzeuge lokal konfigurieren.",
+      "verdict": "Eine Alternative zum vorhandenen Qwen3.8-27B für beaufsichtigte Repo-Aufgaben auf einer Workstation mit ausreichend Speicher.",
+      "limitations": "Die Modellkarte beschreibt Vergleiche des Autors. Die Eignung für ein bestimmtes Repository und der tatsächliche Speicherbedarf hängen von Aufgabe, Kontext und Runtime ab. Eigene Lauf- und Coding-Messungen liegen nicht vor.",
+      "checkedAt": "2026-11-18",
+      "sources": [
+        {
+          "label": "Modellkarte / Basismodell und Nachtraining",
+          "url": "https://huggingface.co/migtissera/Tess-4.5-27B"
+        },
+        {
+          "label": "GGUF-Modellkarte / Dateigrößen und lokaler Start",
+          "url": "https://huggingface.co/migtissera/Tess-4.5-27B-GGUF"
+        },
+        {
+          "label": "Q4_K_M / konkrete Modelldatei",
+          "url": "https://huggingface.co/migtissera/Tess-4.5-27B-GGUF/blob/main/Tess-4.5-27B-Q4_K_M.gguf"
         }
       ]
     }
