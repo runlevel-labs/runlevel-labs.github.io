@@ -60,8 +60,10 @@ function validateData(data) {
     if (model.startCommand !== undefined) {
       text(model.startLabel, label + ".startLabel");
       const llamaStart = /^llama-server -hf [A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(?::[A-Za-z0-9_.-]+| --hf-file [A-Za-z0-9_.-]+\.gguf) --jinja -c [1-9][0-9]* -ngl [0-9]+$/;
+      const llamaWindowsCpuStart = /^\.\\build\\bin\\Release\\llama-server\.exe -m [A-Za-z0-9_-][A-Za-z0-9_.-]*\.gguf -ngl 0 -fa 1 -nr -c [1-9][0-9]* -np 1 --host 127\.0\.0\.1$/;
       const edge0Start = /^\.\\build\\windows\\bin\\edge0-infer\.exe serve --model \.\\[A-Za-z0-9][A-Za-z0-9_-]*$/;
-      if (model.ollamaCommand !== undefined || typeof model.startCommand !== "string" || !(llamaStart.test(model.startCommand) || edge0Start.test(model.startCommand))) {
+      const supportedStarts = [llamaStart, llamaWindowsCpuStart, edge0Start];
+      if (model.ollamaCommand !== undefined || typeof model.startCommand !== "string" || !supportedStarts.some(pattern => pattern.test(model.startCommand))) {
         errors.push(label + ": Lokaler Startbefehl ungültig.");
       }
     } else if (typeof model.ollamaCommand !== "string" || !/^ollama run (?:[a-z0-9][A-Za-z0-9_.:-]*|hf\.co\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+:[A-Za-z0-9_.-]+)$/.test(model.ollamaCommand) || model.ollamaCommand.includes("cloud")) errors.push(label + ": Lokaler Ollama-Befehl ungültig.");

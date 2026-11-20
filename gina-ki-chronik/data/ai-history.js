@@ -1429,8 +1429,52 @@ window.GinaChronikData = [
     "sourceUrl": "https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "google-gemini-4-neon-2026",
+    "date": "2026-11-18",
+    "title": "Google veröffentlicht Gemini 4 Neon für komplexe Coding-Aufgaben",
+    "category": "Modelle",
+    "summary": "Google führt Gemini 4 Neon in der Gemini API, in AI Studio und in Antigravity ein. Das Modell ist auf längere, mehrstufige Aufgaben in der Softwareentwicklung und Analyse ausgelegt. In Antigravity kann Neon ein Projekt koordinieren und Teilaufgaben an mehrere parallel arbeitende Gemini-4-Hydrogen-Agenten verteilen.",
+    "sourceName": "Google – Vorstellung und Verfügbarkeit von Gemini 4 Neon",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "google-genie-4-gemini-api-2026",
+    "date": "2026-11-19",
+    "title": "Google macht das interaktive Weltmodell Genie 4 über die Gemini API verfügbar",
+    "category": "Werkzeuge",
+    "summary": "Nach der Forschungsvorschau im Oktober startet Genie 4 am 18. November in Project Genie für Google-AI-Ultra-Abonnenten. Am Folgetag öffnet Google den Zugang über die Interactions API und Google AI Studio. Entwickler können damit interaktive Umgebungen samt synchronisiertem Ton aus Text oder Bildern erzeugen und sie während der Simulation per Tastatur und Texteingabe verändern.",
+    "sourceName": "Google – Freigabe von Genie 4 für die Gemini API und AI Studio",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "anthropic-nasdaq-ipo-2026",
+    "date": "2026-11-19",
+    "title": "Anthropic geht an die Nasdaq",
+    "category": "Gesellschaft und Regulierung",
+    "summary": "Die Aktien der Claude-Entwicklerin Anthropic werden erstmals am Nasdaq Global Select Market unter dem Kürzel ANT gehandelt. Damit erhalten öffentliche Anleger direkten Zugang zu einem der führenden KI-Modellentwickler. Anthropic meldet den Abschluss des Börsengangs am 20. November.",
+    "sourceName": "Anthropic – Mitteilung zum Börsengang und zum ersten Handelstag",
+    "sourceUrl": "https://www.anthropic.com/news/ipo-close",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "tencent-hy4-open-weights-2026",
+    "date": "2026-11-20",
+    "title": "Tencent veröffentlicht die Modellgewichte von Hy4",
+    "category": "Modelle",
+    "summary": "Nach dem Cloud-Start gibt Tencent die Gewichte des multimodalen Hy4 sowie einer FP8-Version und des vortrainierten Basismodells unter der Tencent Hy License frei. Das Sprachmodell umfasst 770 Milliarden Parameter, von denen pro Token 49 Milliarden aktiv sind. Die Veröffentlichung ermöglicht eine eigene Bereitstellung des Modells für Text-, Bild- und Videoeingaben.",
+    "sourceName": "Tencent – Hy4-Modellkarte mit Gewichten und Lizenz",
+    "sourceUrl": "https://huggingface.co/tencent/Hy4",
+    "status": "reviewed",
+    "featured": true
   }
 ];
 window.GinaChronikMeta = {
-  "updatedAt": "2026-11-18"
+  "updatedAt": "2026-11-20"
 };
