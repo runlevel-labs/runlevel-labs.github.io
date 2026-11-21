@@ -1473,8 +1473,30 @@ window.GinaChronikData = [
     "sourceUrl": "https://huggingface.co/tencent/Hy4",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "thinking-machines-inkling-2-mini-2026",
+    "date": "2026-11-20",
+    "title": "Thinking Machines Lab veröffentlicht Inkling 2 Mini mit wiederholten Schichtdurchläufen",
+    "category": "Modelle",
+    "summary": "Thinking Machines Lab veröffentlicht das multimodale Inkling 2 Mini mit offenen Gewichten unter Apache 2.0. Das Modell durchläuft seine mittleren Schichten pro Token dreimal mit denselben Gewichten. So kann es mehr Rechenschritte pro Token ausführen, ohne für jeden Durchlauf eigene Parameter zu speichern. Neben dem lokal nutzbaren Modell veröffentlicht das Labor eine Forschungsvariante mit variabler Zahl von Durchläufen, um deren Einfluss auf das Schlussfolgern und die Beobachtbarkeit der Modellarbeit zu untersuchen.",
+    "sourceName": "Thinking Machines Lab – Vorstellung und technische Beschreibung von Inkling 2 Mini",
+    "sourceUrl": "https://thinkingmachines.ai/news/inkling-2-mini/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "metr-ai-rd-capabilities-q4-2026",
+    "date": "2026-11-20",
+    "title": "METR untersucht die Fähigkeiten öffentlich verfügbarer Modelle für die KI-Forschung",
+    "category": "Forschung",
+    "summary": "METR vergleicht öffentlich verfügbare KI-Modelle bis zu Claude Opus 5.5 und GPT-6 Astra mit erfahrenen menschlichen Teilnehmenden. Bei vielen klar umrissenen Programmier- und Optimierungsaufgaben erreichen oder übertreffen die Modelle deren Leistung. Bei offenen Forschungsaufgaben zeigen sich Schwächen, etwa bei der Wahl vielversprechender Ansätze und der Prüfung eigener Ergebnisse. Der Bericht erläutert außerdem, warum Fortschritte schwieriger zu messen sind, wenn neuere Modelle viele Aufgaben der bisherigen Tests lösen.",
+    "sourceName": "METR – unabhängige Auswertung zu Fähigkeiten für KI-Forschung und -Entwicklung",
+    "sourceUrl": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/",
+    "status": "reviewed",
+    "featured": true
   }
 ];
 window.GinaChronikMeta = {
-  "updatedAt": "2026-11-20"
+  "updatedAt": "2026-11-21"
 };

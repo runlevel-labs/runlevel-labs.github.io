@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "models": [
     {
       "id": "qwen25-coder-7b",
@@ -1685,6 +1685,46 @@
         {"label": "Offizielles GGUF / Dateigrößen, Tests und Start", "url": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B-GGUF"},
         {"label": "Hersteller-Fork / Build und Einrichtung", "url": "https://github.com/OVHai-LLM/llama.cpp/blob/main/docs/olala-setup.md"},
         {"label": "llama.cpp / Windows-Build mit Visual Studio", "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md"}
+      ]
+    },
+    {
+      "id": "inkling-2-mini",
+      "addedAt": "2026-11-21",
+      "name": "Inkling 2 Mini",
+      "provider": "Thinking Machines Lab",
+      "profile": "Multimodales Modell für Code und mehrstufige Aufgaben",
+      "parameters": "26,4 Mrd. insgesamt · 3,4 Mrd. aktiv · 5,4 Mrd. Gewichtsaktivierungen pro Token einschließlich Wiederholungen",
+      "quantization": "GGUF IQ4_NL von ggml-org · Ollama-Paket mit NVFP4- und MXFP8-Gewichten",
+      "memory": {
+        "weightsGb": "17,6 GB für IQ4_NL von ggml-org · 20 GB für das Ollama-Paket",
+        "ram": "32 GB System-RAM als Planungswert bei CPU-Ausführung mit kleinem Kontext",
+        "vram": "24 GB als Planungswert für IQ4_NL auf der GPU bei kleinem Kontext",
+        "context": "4.096 Tokens zum Einstieg · ein Nutzer · Textbetrieb",
+        "note": "Die Paketgrößen enthalten keinen laufenden Kontext-Cache. Die wiederholten Schichtdurchläufe nutzen eigene Caches. Für Bildeingaben kann zusätzlicher Speicher für den Projektor anfallen."
+      },
+      "strengths": "Thinking Machines Lab veröffentlichte Inkling 2 Mini am 20. November 2026. Das Modell durchläuft seine mittleren Schichten pro Token dreimal und unterstützt Text- und Bildeingaben. Für den Einstieg eignen sich Code-Erklärungen, Testentwürfe und überschaubare Änderungen über mehrere Dateien.",
+      "languages": ["Python", "JavaScript", "TypeScript"],
+      "useCases": ["Code-Chat", "Refactoring", "Repo-Fragen", "Tests", "Agenten"],
+      "repo": "Mit einem klar umrissenen Auftrag und den relevanten Dateien beginnen. Änderungen im Diff kontrollieren und die Projekttests lokal ausführen.",
+      "agents": "Dateizugriff und Werkzeugausführung kommen vom Agentenclient. Das Modell unterstützt Werkzeugaufrufe. Prüfen, ob die gewählte Laufzeit und der Client sie mit dem Modell-Template korrekt verarbeiten.",
+      "tools": ["Llama App (Windows, IQ4_NL)", "llama.cpp (IQ4_NL)", "Ollama (separates 20-GB-Paket)"],
+      "toolNote": "Unter Windows die Llama App oder einen aktuellen llama.cpp-Build mit Unterstützung für Inkling 2 Mini verwenden. Der Startbefehl setzt llama-server im PATH voraus und lädt das IQ4_NL-GGUF von ggml-org für den CPU-Einstieg. Ollama dokumentiert den alternativen Befehl „ollama run inkling-2-mini“ und nennt einen Mac mit mindestens 32 GB gemeinsamem Speicher beziehungsweise DGX Spark.",
+      "startLabel": "llama.cpp-Start (IQ4_NL, CPU)",
+      "startCommand": "llama-server -hf ggml-org/Inkling-2-Mini-GGUF:IQ4_NL --jinja -c 4096 -ngl 0",
+      "license": {
+        "name": "Apache 2.0",
+        "note": "Thinking Machines Lab führt Apache 2.0 in der Modellkarte an.",
+        "url": "https://thinkingmachines.ai/model-card/inkling-2-mini/#license"
+      },
+      "offline": "Nach dem Download kann die Inferenz lokal laufen. Für einen vollständig lokalen Ablauf auch Editor, Agentenclient und Werkzeuge lokal konfigurieren.",
+      "verdict": "Option für lokale Coding-Aufgaben über mehrere Dateien auf einem Rechner mit ausreichend Speicher.",
+      "limitations": "Die Ergebnisse aus den veröffentlichten Coding-Tests hängen von Testaufbau und Laufzeit ab. Für das quantisierte Paket liegen hier keine eigenen Windows-, Speicher- oder Coding-Messungen vor.",
+      "checkedAt": "2026-11-21",
+      "sources": [
+        {"label": "Thinking Machines Lab / Modellkarte und Lizenz", "url": "https://thinkingmachines.ai/model-card/inkling-2-mini/"},
+        {"label": "ggml-org / IQ4_NL und Dateigröße", "url": "https://huggingface.co/ggml-org/Inkling-2-Mini-GGUF"},
+        {"label": "Hugging Face / Llama App unter Windows", "url": "https://huggingface.co/blog/inkling2mini"},
+        {"label": "Ollama / Paket und dokumentierte Hardware", "url": "https://ollama.com/library/inkling-2-mini"}
       ]
     }
   ]
