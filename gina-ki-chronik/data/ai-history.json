@@ -1494,5 +1494,27 @@
     "sourceUrl": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "zai-glm-5-4-loop-transformer-2026",
+    "date": "2026-11-23",
+    "title": "Z.ai stellt GLM-5.4 mit wiederholten Schichtdurchläufen vor",
+    "category": "Modelle",
+    "summary": "Mit GLM-5.4 setzt Z.ai wiederholte Schichtdurchläufe erstmals in einem eigenen Flaggschiff ein. Das Modell mit rund 750 Milliarden Parametern durchläuft 28 mittlere Schichten zweimal und verwendet dabei dieselben Gewichte. Den zusätzlichen Speicherbedarf begrenzt Z.ai, indem der zweite Durchlauf Teile des Zwischenspeichers für die Aufmerksamkeit wiederverwendet. Das Modell startet in Z.ai Chat, ZCode und im Coding Plan. Den allgemeinen API-Zugang und die Freigabe der Modellgewichte kündigt Z.ai für später an.",
+    "sourceName": "Z.ai – Vorstellung und Architekturbeschreibung zu GLM-5.4",
+    "sourceUrl": "https://z.ai/blog/glm-5.4",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "sensetime-sensenova-roborsi-27b-weights-2026",
+    "date": "2026-11-23",
+    "title": "SenseTime veröffentlicht die Gewichte des Robotikmodells SenseNova-RoboRSI-27B",
+    "category": "Robotik",
+    "summary": "SenseTime veröffentlicht die Gewichte von SenseNova-RoboRSI-27B unter Apache 2.0. Das Bild-Sprach-Modell nutzt Kamerabilder und den Zustand des Roboters, um eine Bewegung von einem separaten Steuerungsmodell anzufordern, eine vorgeschlagene Bewegungsbahn zu beurteilen oder per Code ein Greiferziel zu berechnen. Nach jeder Aktion entscheidet das Modell anhand neuer Beobachtungen, wie es weitergeht. SenseTime berichtet über bessere Ergebnisse als bei der Vorschau in der RoboDojo-Simulation und dokumentiert Versuche an zwei realen Roboterplattformen, Piper und Piper X.",
+    "sourceName": "SenseTime – Modellkarte, Gewichte und Robotikversuche",
+    "sourceUrl": "https://huggingface.co/sensenova/SenseNova-RoboRSI-27B",
+    "status": "reviewed",
+    "featured": true
   }
 ]
