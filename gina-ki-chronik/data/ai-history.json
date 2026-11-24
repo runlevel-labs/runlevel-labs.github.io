@@ -1516,5 +1516,38 @@
     "sourceUrl": "https://huggingface.co/sensenova/SenseNova-RoboRSI-27B",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "aleph-alpha-kolibri-1-1-2026",
+    "date": "2026-11-23",
+    "title": "Aleph Alpha veröffentlicht Kolibri 1.1 mit offenen Gewichten",
+    "category": "Modelle",
+    "summary": "Aleph Alpha veröffentlicht Kolibri 1.1 für Deutsch und Englisch unter Apache 2.0. Das Modell umfasst rund 75 Milliarden Parameter und aktiviert etwa drei Milliarden pro Token. Die neue Aufmerksamkeitsarchitektur wählt relevante Teile des Kontexts aus und nutzt zwischengespeicherte Informationen über mehrere Schichten hinweg erneut. In den eigenen Tests berichtet Aleph Alpha von rund einem Drittel der GPU-Zeit pro Aufgabe gegenüber Kolibri 1.0. Zum Start stehen auch offiziell quantisierte Gewichte bereit.",
+    "sourceName": "Aleph Alpha – Veröffentlichung und technische Einordnung von Kolibri 1.1",
+    "sourceUrl": "https://aleph-alpha.com/en/blog/kolibri-1-1/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "un-barbados-bridgetown-ai-safety-call-2026",
+    "date": "2026-11-23",
+    "title": "Barbados und die Vereinten Nationen rufen zu einem gemeinsamen Rahmen für KI-Sicherheit auf",
+    "category": "Gesellschaft und Regulierung",
+    "summary": "Zum Abschluss des Sondergipfels zur KI-Sicherheit in Bridgetown veröffentlichen die Premierministerin von Barbados, Mia Amor Mottley, und UN-Generalsekretär António Guterres einen gemeinsamen Aufruf. Er fordert die UN-Mitgliedstaaten auf, ihre Initiativen zur KI-Sicherheit zu koordinieren und innerhalb eines Jahres einen weltweit angelegten Rahmen für den Umgang mit KI-Risiken zu entwickeln. Der Vorschlag sieht eine unabhängige Aufsicht vor. Beim Gipfel diskutieren die Teilnehmenden außerdem unabhängige Prüfungen von KI-Systemen und die grenzüberschreitende Meldung von Vorfällen.",
+    "sourceName": "Barbados und Vereinte Nationen – offizielle Gipfelmitteilung zum Bridgetown-Aufruf",
+    "sourceUrl": "https://bridgetownaisummit.bb/wp-content/uploads/2026/11/PRESS-RELEASE-Bridgetown-Special-Summit-on-AI-Safety.pdf",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "baidu-ernie-55-flash-preview-open-weights-2026",
+    "date": "2026-11-24",
+    "title": "Baidu gibt die nachtrainierten Gewichte von ERNIE 5.5 Flash Preview frei",
+    "category": "Modelle",
+    "summary": "Nach der Veröffentlichung des Basismodells stellt Baidu die nachtrainierten Gewichte von ERNIE 5.5 Flash Preview bereit. Das Modell hat 280 Milliarden Parameter, davon rund 14 Milliarden aktiv pro Token, und unterstützt laut Modellkarte bis zu eine Million Tokens Kontext. Baidu bietet mehrere Präzisionsvarianten an. Die Preview-Gewichte stehen unter Apache 2.0. Für das zuvor veröffentlichte Basismodell gilt weiterhin dessen eigene Lizenz.",
+    "sourceName": "Baidu – Modellkarte und Lizenz von ERNIE 5.5 Flash Preview",
+    "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview",
+    "status": "reviewed",
+    "featured": true
   }
 ]
