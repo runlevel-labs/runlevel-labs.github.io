@@ -1549,5 +1549,38 @@
     "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview",
     "status": "reviewed",
     "featured": true
+  },
+  {
+    "id": "google-deepmind-humanitys-first-exam-2026",
+    "date": "2026-11-24",
+    "title": "Google DeepMind veröffentlicht Humanity’s First Exam zur Zuverlässigkeit von KI-Modellen",
+    "category": "Forschung",
+    "summary": "Google DeepMind startet den Benchmark Humanity’s First Exam auf Kaggle. Er umfasst 544 einfache Text- und Bildaufgaben zu 20 grundlegenden Fähigkeiten. Der Test misst, wie zuverlässig Modelle dieselbe Aufgabe bei Wiederholungen und leichten Varianten lösen. So werden Fehler sichtbar, die ein einzelner erfolgreicher Versuch verdecken kann. Google veröffentlicht eine Rangliste und einen Teil der Aufgaben.",
+    "sourceName": "Google DeepMind – Vorstellung von Humanity’s First Exam",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "prismml-ternary-bonsai-2-5-27b-2026",
+    "date": "2026-11-24",
+    "title": "PrismML veröffentlicht Ternary Bonsai 2.5 27B für lokales Coding",
+    "category": "Modelle",
+    "summary": "PrismML veröffentlicht Ternary Bonsai 2.5 27B auf Basis von Qwen3.8-27B unter Apache 2.0. Die kompakteste Gewichtsdatei bleibt mit 5,93 GB so groß wie beim Vorgänger Bonsai 2 27B. PrismML berichtet in eigenen Tests von besseren Ergebnissen bei mehrstufigen Programmieraufgaben und Werkzeugaufrufen. Für reguläres llama.cpp stellt PrismML eine größere Q2_0-Datei bereit.",
+    "sourceName": "PrismML – Veröffentlichung und technische Einordnung von Ternary Bonsai 2.5 27B",
+    "sourceUrl": "https://prismml.com/news/bonsai-2-5-27b",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
+    "id": "sand-ai-magi-2-higgsfield-launch-2026",
+    "date": "2026-11-25",
+    "title": "Sand.ai startet das Videomodell MAGI-2 auf Higgsfield",
+    "category": "Modelle",
+    "summary": "Sand.ai macht sein Videomodell MAGI-2 über Higgsfield zugänglich. Das Modell mit 400 Milliarden Parametern kann bis zu 20 Bild-, Video- und Audioreferenzen in einer Anfrage verarbeiten und bis zu 30 Sekunden Video mit 1080p und 25 Bildern pro Sekunde erzeugen. Die Referenzen können das Aussehen von Figuren und Schauplätzen sowie Bewegungen und Ton vorgeben. Sand.ai kündigt die Freigabe der Modellgewichte für später an.",
+    "sourceName": "Higgsfield – Ankündigung und Plattformstart von MAGI-2",
+    "sourceUrl": "https://higgsfield.ai/announcing-magi-2",
+    "status": "reviewed",
+    "featured": true
   }
 ]
