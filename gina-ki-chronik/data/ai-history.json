@@ -1540,6 +1540,17 @@
     "featured": true
   },
   {
+    "id": "anthropic-openai-vp-vnp-2026",
+    "date": "2026-11-23",
+    "title": "Anthropic und OpenAI veröffentlichen KI-erarbeitete Beweisentwürfe zu VP ≠ VNP",
+    "category": "Forschung",
+    "summary": "Anthropic und OpenAI veröffentlichen Manuskripte und Lean-Formalisierungen zur seit 1979 offenen Vermutung von Valiant. Sie behaupten, dass bestimmte Polynomfamilien in VNP keine arithmetischen Schaltkreise polynomialer Größe besitzen und deshalb außerhalb von VP liegen. Beide Labore schreiben ihre Ergebnisse internen KI-Modellen zu. Lean prüft die formalisierten Aussagen. Die fachliche Prüfung, ob die Formalisierungen die behaupteten Resultate vollständig abdecken, steht noch aus.",
+    "sourceName": "Anthropic – Manuskript und Lean-Formalisierung zur Vermutung von Valiant",
+    "sourceUrl": "https://github.com/anthropics/formal-math/blob/main/vp-vnp/README.md",
+    "status": "reviewed",
+    "featured": true
+  },
+  {
     "id": "baidu-ernie-55-flash-preview-open-weights-2026",
     "date": "2026-11-24",
     "title": "Baidu gibt die nachtrainierten Gewichte von ERNIE 5.5 Flash Preview frei",
